@@ -1,0 +1,277 @@
+/* Контейнер для фильтров */
+
+.filters {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px auto; 
+    gap: 20px; /* Отступы между селекторами */
+  }
+.container{
+   padding: 50px ;
+   margin: 0 auto;
+  h1{
+    color: #4CAF50;
+  }
+}
+  /* Стиль для селектора */
+  select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+    /* Добавим эффекты при наведении */
+    &:hover {
+      border-color: #4CAF50;
+    }
+  
+    /* Стиль для фокуса */
+    &:focus {
+      outline: none;
+      border-color: #4CAF50;
+    }
+  }
+  
+  /* Блок с матчами */
+  .con {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .teamSearch, .goalDifference, .matchLimit{
+    padding: 10px;
+    outline: none;
+    color: #4CAF50;
+    border-radius: 5px;
+    border: 1px solid #239B56;
+    font-family: "PT Mono", serif;
+    
+  }
+  /* Стиль для каждого блока с матчем */
+  .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    padding: 20px 80px;
+  }
+  /* Стиль для блока с деталями матча */
+  .matchDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Стиль для названия команды */
+  .teamName {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    width: 300px;
+    text-align: center;
+    /* Эффект наведения */
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .date{
+    color: #fff;
+  }
+  /* Стиль для счета */
+  .score {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    // color: #333;
+  }
+  
+  /* Стиль для пенальти */
+  .penalty {
+    margin-top: 10px;
+    color: #d9534f;
+  }
+  
+// Дополнительные пастельные оттенки для типов матчей
+// Вдохновленные небом и природой для типов матчей
+.tournament {
+
+  background-color: #A2D0A9; /* Светлый розово-лавандовый для Дружеских матчей */
+  color: #3C7D3E; /* Насыщенный зеленый для текста */
+
+}
+.league {
+  background-color: #D7A9D5; /* Нежный сиреневый для Лиги */
+  color: #5F4B8B; /* Темный фиолетовый для текста */
+}
+
+.cup {
+  background: linear-gradient(135deg, #ffdf00, #ffd700, #ffae00, #ffdf00);
+  background-size: 300% 300%;
+  animation: championGlow 7s ease infinite;
+  border: 8px solid #ffe700;
+  padding: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8), 0 0 10px #ffe700, 0 0 20px #ffdf00;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+  border-radius: 8px;
+}
+.regular{
+  background-color: #A4C8F0; /* Мягкий голубой с оттенком лаванды для Турнирных матчей */
+  color: #2A3D7A; /* Темно-синий для текста */
+}
+/* Кубок Англии */
+.englandCup {
+  background: linear-gradient(135deg, #00416A, #A0C8E6, #00416A); /* Середина более светлая */
+  background-size: 300% 300%;
+  color: #FFFFFF; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: gradientShine 4s infinite linear; /* Анимация блеска */
+}
+
+/* Кубок Испании */
+.spainCup {
+  background: linear-gradient(135deg, #D72638, #FFB6C1, #D72638); /* Середина более светлая */
+  background-size: 300% 300%;
+  color: #FFFFFF; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: gradientShine 4s infinite linear;
+}
+
+/* Кубок Италии */
+.italyCup {
+  background: linear-gradient(135deg, #239B56, #A3D9A3, #239B56); /* Середина более светлая */
+  background-size: 300% 300%;
+  color: #FFFFFF; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: gradientShine 4s infinite linear;
+}
+
+/* Кубок Франции */
+.franceCup {
+  background: linear-gradient(135deg, #0056A1, #7CBFF3, #0056A1); /* Середина более светлая */
+  background-size: 300% 300%;
+  color: #FFFFFF; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: gradientShine 4s infinite linear;
+}
+
+/* Кубок Португалии */
+.portugalCup {
+  background: linear-gradient(135deg, #FF8C00, #FFD699, #FF8C00); /* Середина более светлая */
+  background-size: 300% 300%;
+  color: #FFFFFF; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: gradientShine 4s infinite linear;
+}
+
+/* Кубок Германии */
+.germanyCup {
+  background: linear-gradient(135deg, #333333, #B0B0B0, #333333); /* Середина более светлая */
+  background-size: 300% 300%;
+  color: #FFFFFF; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: gradientShine 4s infinite linear;
+}
+@keyframes championGlow {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.8);
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+  }
+}
+
+/* Анимация блеска */
+@keyframes gradientShine {
+  0% {
+    background-position: 0% 30%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+p{
+  margin: 0;
+}
+@media screen and (max-width:1100px) {
+  .filters{
+    flex-wrap: wrap;
+  }
+ .teamName{
+  width: 200px;
+ }
+}
+@media screen and (max-width:700px) {
+  .teamName{
+    width: auto;
+  }
+  .block{
+    padding: 20px 30px;
+  }
+  .matchDetails{
+    gap: 20px;
+  }
+  .score{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .penalty{
+    margin: 0;
+  }
+  .filters{
+    margin: 30px 0;
+  }
+}
+@media screen and (max-width:520px) {
+  .container{
+    padding: 20px;
+    h1{
+      font-size: 30px;
+    }
+  }
+  .teamName{
+    font-size: 14px;
+  }
+  .score{
+    font-size: 14px;
+  }
+
+}

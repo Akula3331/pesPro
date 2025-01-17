@@ -1,0 +1,94 @@
+.tournamentTable {
+    text-align: center;
+    font-family: "PT Mono", serif;
+  }
+  
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    // margin-bottom: 20px;
+    font-family: "PT Mono", serif;
+  }
+  
+  .tournament {
+    margin-bottom: 30px;
+  }
+  
+  .tournamentName {
+    font-size: 36px;
+    font-weight: bold;
+    // margin-bottom: 15px;
+  }
+  
+  .matchesList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #1B5E20;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .emptyColumn {
+    flex: 0 1 50px; /* Пустая колонка с фиксированной шириной */
+  }
+  
+  .team {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .teamIcon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .teamName {
+    font-size: 20px;
+    font-family: "PT Mono", serif;
+    font-style: normal;
+font-weight: bolder;
+
+  }
+  
+  .matchResult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "PT Mono", serif;
+    font-weight: bolder;
+    gap: 10px;
+    font-size: 24px;
+  }
+  .penalty{
+    font-size: 16px;
+  }
+  .score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    color: #f1f1f1;
+    background-color: #1B5E20;
+  }
+  @media screen and (max-width:980px){
+    
+  }

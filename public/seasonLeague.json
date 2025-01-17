@@ -1,0 +1,130 @@
+{
+  "leagues": [
+    {
+      "id": 1,
+      "teams": [25, 39, 33, 31, 24, 48, 34, 26, 38, 40, 10, 32],
+      "matches": [
+        {
+          "id": 1,
+          "date": "14-01-2025",
+          "homeTeam": 25,
+          "awayTeam": 34,
+          "homeScore": 2,
+          "awayScore": 3,
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 2,
+          "date": "14-01-2025",
+          "homeTeam": 39,
+          "awayTeam": 26,
+          "homeScore": 3,
+          "awayScore": 2,
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 3,
+          "date": "14-01-2025",
+          "homeTeam": 33,
+          "awayTeam": 38,
+          "homeScore": 3,
+          "awayScore": 2,
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 4,
+          "date": "14-01-2025",
+          "homeTeam": 31,
+          "awayTeam": 40,
+          "homeScore": 4,
+          "awayScore": 3,
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 5,
+          "date": "14-01-2025",
+          "homeTeam": 24,
+          "awayTeam": 10,
+          "homeScore": 1,
+          "awayScore": 3,
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 6,
+          "date": "14-01-2025",
+          "homeTeam": 48,
+          "awayTeam": 32,
+          "homeScore": 3,
+          "awayScore": 3,
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 7,
+          "date": "15-01-2025",
+          "homeTeam": 25,
+          "awayTeam": 26,
+          "homeScore": 1,
+          "awayScore": 2,
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 8,
+          "date": "15-01-2025",
+          "homeTeam": 39,
+          "awayTeam": 38,
+          "homeScore": "",
+          "awayScore": "",
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 9,
+          "date": "15-01-2025",
+          "homeTeam": 33,
+          "awayTeam": 40,
+          "homeScore": "",
+          "awayScore": "",
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 10,
+          "date": "15-01-2025",
+          "homeTeam": 31,
+          "awayTeam": 10,
+          "homeScore": "",
+          "awayScore": "",
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 11,
+          "date": "15-01-2025",
+          "homeTeam": 24,
+          "awayTeam": 32,
+          "homeScore": "",
+          "awayScore": "",
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 12,
+          "date": "15-01-2025",
+          "homeTeam": 48,
+          "awayTeam": 34,
+          "homeScore": "",
+          "awayScore": "",
+          "matchType": "league",
+          "penalty": null
+        }
+      ]
+    }
+  ]
+}

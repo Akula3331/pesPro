@@ -1,0 +1,58 @@
+{
+  "leagues": [
+    {
+      "id": 1,
+      "name": "Лига 1",
+      "teams": [25, 39, 33, 31],
+      "matches": [
+        {
+          "id": 1,
+          "date": "29-12-2024",
+          "homeTeam": 25,
+          "awayTeam": 39,
+          "homeScore": "",
+          "awayScore": "",
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 2,
+          "date": "30-12-2024",
+          "homeTeam": 33,
+          "awayTeam": 31,
+          "homeScore": "",
+          "awayScore": "",
+          "matchType": "league",
+          "penalty": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Лига 2",
+      "teams": [48, 26, 38, 40],
+      "matches": [
+        {
+          "id": 3,
+          "date": "31-12-2024",
+          "homeTeam": 48,
+          "awayTeam": 26,
+          "homeScore": "",
+          "awayScore": "",
+          "matchType": "league",
+          "penalty": null
+        },
+        {
+          "id": 4,
+          "date": "01-01-2025",
+          "homeTeam": 38,
+          "awayTeam": 40,
+          "homeScore": "",
+          "awayScore": "",
+          "matchType": "league",
+          "penalty": null
+        }
+      ]
+    }
+  ]
+}

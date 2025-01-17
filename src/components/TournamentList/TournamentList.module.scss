@@ -1,0 +1,170 @@
+.tournamentTable {
+    padding: 20px;
+    font-family: "PT Mono", serif;
+  }
+  
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tournament {
+    // margin-bottom: 30px;
+  }
+  
+  .tournamentName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .matchesList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .emptyColumn {
+    flex: 0 1 50px; /* Пустая колонка с фиксированной шириной */
+  }
+  
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .teamIcon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .teamName {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .matchResult {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+  
+  .penalty {
+    font-style: italic;
+    font-weight: bolder;
+  }
+ /* Четвертьфинал */
+
+ .quarterFinal {
+    background: linear-gradient(135deg, #1f4037, #99f2c8, #1f4037);
+    background-size: 200% 200%;
+    animation: gradientShine 5s ease infinite;
+     
+    border-left: 8px solid #aed581;
+    padding: 20px;
+    color: #99f2c8;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .groupStage {
+    background: linear-gradient(135deg, #80cbc4, #a5d6a7, #80cbc4);
+    background-size: 400% 400%;
+    animation: gradientShine 3s linear infinite, sparkle 1.5s ease-in-out infinite;
+    border-left: 6px solid #26a69a;
+    padding: 20px;
+    color: #004d40;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(38, 166, 154, 0.8), 0 0 10px rgba(38, 166, 154, 0.5);
+  }
+
+  @keyframes sparkle {
+    0%, 100% {
+      text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      text-shadow: 1px 1px 8px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+  }
+  .semiFinal {
+    background: linear-gradient(135deg, #e91e63, #03a9f4, #e91e63);
+    background-size: 300% 300%;
+    animation: gradientMove 5s ease infinite;
+    border-left: 8px solid #f06292;
+    padding: 20px;
+    color: #03a9f3;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  
+    /* Тень текста для контраста */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+  
+  .final {
+    background: linear-gradient(135deg, #ffdf00, #ffd700, #ffae00, #ffdf00);
+    background-size: 300% 300%;
+    animation: championGlow 7s ease infinite;
+    border: 8px solid #ffe700;
+    padding: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8), 0 0 10px #ffe700, 0 0 20px #ffdf00;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+    border-radius: 8px;
+    
+  }
+  @keyframes gradientShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes championGlow {
+    0% {
+      background-position: 0% 50%;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+      background-position: 100% 50%;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.8);
+    }
+    100% {
+      background-position: 0% 50%;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+  }

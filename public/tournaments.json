@@ -1,0 +1,189 @@
+{
+  "tournaments": [
+    {
+      "id": 1,
+      "name": "Турнир 1",
+      "date": "2024-12-29",
+      "stages": [
+        {
+          "stageName": "Групповой этап",
+          "matches": [
+            {
+              "id": 1,
+              "homeTeam": 26,
+              "awayTeam": 31,
+              "homeScore": 5,
+              "awayScore": 1,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 2,
+              "homeTeam": 30,
+              "awayTeam": 45,
+              "homeScore": 2,
+              "awayScore": 1,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 3,
+              "homeTeam": 40,
+              "awayTeam": 39,
+              "homeScore": 3,
+              "awayScore": 2,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 4,
+              "homeTeam": 42,
+              "awayTeam": 33,
+              "homeScore": 5,
+              "awayScore": 1,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 5,
+              "homeTeam": 44,
+              "awayTeam": 47,
+              "homeScore": 3,
+              "awayScore": 4,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 6,
+              "homeTeam": 34,
+              "awayTeam": 29,
+              "homeScore": 3,
+              "awayScore": 1,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 7,
+              "homeTeam": 28,
+              "awayTeam": 57,
+              "homeScore": 4,
+              "awayScore": 2,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 8,
+              "homeTeam": 36,
+              "awayTeam": 56,
+              "homeScore": 5,
+              "awayScore": 1,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 9,
+              "homeTeam": 32,
+              "awayTeam": 25,
+              "homeScore": 1,
+              "awayScore": 3,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 10,
+              "homeTeam": 58,
+              "awayTeam": 41,
+              "homeScore": 2,
+              "awayScore": 4,
+              "matchType": "regular",
+              "penalty": null
+            }
+          ]
+        },
+        {
+          "stageName": "Четвертьфинал",
+          "matches": [
+            {
+              "id": 11,
+              "homeTeam": 30,
+              "awayTeam": 25,
+              "homeScore": 3,
+              "awayScore": 4,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 12,
+              "homeTeam": 40,
+              "awayTeam": 41,
+              "homeScore": 0,
+              "awayScore": 1,
+              "matchType": "regular",
+              "penalty": null
+            }
+          ]
+        },
+        {
+          "stageName": "Полуфинал",
+          "matches": [
+            {
+              "id": 13,
+              "homeTeam": 42,
+              "awayTeam": 25,
+              "homeScore": 1,
+              "awayScore": 1,
+                "penalty": {
+                  "homeTeamPenalties": 2,
+                  "awayTeamPenalties": 3
+                },
+              "matchType": "regular"
+            },
+            {
+              "id": 14,
+              "homeTeam": 34,
+              "awayTeam": 41,
+              "homeScore": 4,
+              "awayScore": 2,
+              "matchType": "regular",
+              "penalty": null
+            }
+          ]
+        },
+        {
+          "stageName": "Финал",
+          "matches": [
+            {
+              "id": 15,
+              "homeTeam": 26,
+              "awayTeam": 25,
+              "homeScore": 4,
+              "awayScore": 4,
+              "penalty": {
+                "homeTeamPenalties": 4,
+                "awayTeamPenalties": 2
+              },
+              "matchType": "regular"
+            }
+          ]
+        }
+      ],
+      "champion": {
+        "teamId": 26
+      },
+      "winners": [
+        {
+          "teamId": 26
+        },
+        {
+          "teamId": 28
+        },
+        {
+          "teamId": 36
+        },
+        {
+          "teamId": 34
+        }
+      ]
+    }
+  ]
+}

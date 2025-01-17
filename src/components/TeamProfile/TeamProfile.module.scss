@@ -1,0 +1,121 @@
+.container {
+  width: 700px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  border: 3px solid #1b5e20;
+  padding: 20px 40px;
+  gap: 30px;
+  border-radius: 10px;
+}
+.blockIcon {
+  width: 600px;
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  h1 {
+    color: #1b5e20;
+    text-align: start;
+    font-family: "Rubik Mono One", serif;
+  }
+}
+.block {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  width: 200px;
+  height: 200px;
+}
+
+.stats,
+.titul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: start;
+  h2 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: bold;
+    color: #1b5e20;
+  }
+  p {
+    color: #1b5e20;
+  }
+}
+@media screen and (max-width: 890px) {
+  .container {
+    width: 500px;
+    margin: 60px auto;
+  }
+  .blockIcon {
+    width: auto;
+    gap: 25px;
+  }
+  .block {
+    width: auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container {
+    width: 350px;
+    padding: 20px 25px;
+  }
+  .icon {
+    width: 150px;
+    height: 150px;
+  }
+  .blockIcon {
+    h1 {
+      font-size: 30px;
+      margin: 0;
+    }
+  }
+  .stats,
+  .titul {
+    h2 {
+      font-size: 26px;
+    }
+  }
+  .block {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .blockIcon {
+    flex-direction: column;
+  }
+  .container{
+    margin: 30px auto;
+    width: 200px;
+    align-items: center;
+  }
+  .icon{
+    width: 100px;
+    height: 100px;
+  }
+  .stats,
+  .titul {
+    h2 {
+      font-size: 22px;
+    }
+    p{
+        font-size: 14px;
+    }
+  }
+  .block {
+    gap: 20px;
+  }
+  .blockIcon{
+    gap: 5px;
+    h1{
+        font-size: 22px;
+        text-align: center;
+    }
+  }
+}
