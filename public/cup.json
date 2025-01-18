@@ -1,58 +1,257 @@
 {
-  "seasons": [
-    {
-      "season": 1,
-      "date": "090125",
-      "matches": [
-        {
-          "id": 1,
-          "homeTeam": 21,
-          "awayTeam": 39,
-          "homeScore": 4,
-          "awayScore": 4,
-          "matchType": "englandCup",
-          "penalty": {
-            "homeTeamPenalties": 1,
-            "awayTeamPenalties": 3
+    "countries": [
+      {
+        "name": "England",
+        "flag": "/image/england.svg",
+        "seasons": [
+          {
+            "season": 1,
+            "date": "09-01-25",
+            "matches": [
+              {
+                "id": 1,
+                "homeTeam": 21,
+                "awayTeam": 39,
+                "homeScore": 4,
+                "awayScore": 4,
+                "matchType": "englandCup",
+                "penalty": {
+                  "homeTeamPenalties": 1,
+                  "awayTeamPenalties": 3
+                }
+              }
+            ]
+          },
+          {
+            "season": 2,
+            "date": "09-02-25",
+            "matches": [
+              {
+                "id": 2,
+                "homeTeam": 25,
+                "awayTeam": 40,
+                "homeScore": 2,
+                "awayScore": 1,
+                "matchType": "englandCup",
+                "penalty": {
+                  "homeTeamPenalties": 0,
+                  "awayTeamPenalties": 0
+                }
+              }
+            ]
           }
-        }
-      ]
-    },
-    {
-      "season": 2,
-      "date": "090125",
-      "matches": [
-        {
-          "id": 2,
-          "homeTeam": 32,
-          "awayTeam": 45,
-          "homeScore": 3,
-          "awayScore": 2,
-          "matchType": "spainCup",
-          "penalty": {
-            "homeTeamPenalties": 2,
-            "awayTeamPenalties": 4
+        ]
+      },
+      {
+        "name": "Spain",
+        "flag": "/image/spain.svg",
+        "seasons": [
+          {
+            "season": 1,
+            "date": "09-01-25",
+            "matches": [
+              {
+                "id": 3,
+                "homeTeam": 32,
+                "awayTeam": 45,
+                "homeScore": 3,
+                "awayScore": 2,
+                "matchType": "spainCup",
+                "penalty": {
+                  "homeTeamPenalties": 2,
+                  "awayTeamPenalties": 4
+                }
+              }
+            ]
+          },
+          {
+            "season": 2,
+            "date": "09-02-25",
+            "matches": [
+              {
+                "id": 4,
+                "homeTeam": 50,
+                "awayTeam": 60,
+                "homeScore": 1,
+                "awayScore": 2,
+                "matchType": "spainCup",
+                "penalty": {
+                  "homeTeamPenalties": 1,
+                  "awayTeamPenalties": 3
+                }
+              }
+            ]
           }
-        }
-      ]
-    },
-    {
-      "season": 3,
-      "date": "090125",
-      "matches": [
-        {
-          "id": 3,
-          "homeTeam": 12,
-          "awayTeam": 22,
-          "homeScore": 2,
-          "awayScore": 2,
-          "matchType": "franceCup",
-          "penalty": {
-            "homeTeamPenalties": 3,
-            "awayTeamPenalties": 2
+        ]
+      },
+      {
+        "name": "France",
+        "flag": "/image/france.svg",
+        "seasons": [
+          {
+            "season": 1,
+            "date": "09-01-25",
+            "matches": [
+              {
+                "id": 5,
+                "homeTeam": 12,
+                "awayTeam": 22,
+                "homeScore": 2,
+                "awayScore": 2,
+                "matchType": "franceCup",
+                "penalty": {
+                  "homeTeamPenalties": 3,
+                  "awayTeamPenalties": 2
+                }
+              }
+            ]
+          },
+          {
+            "season": 2,
+            "date": "09-02-25",
+            "matches": [
+              {
+                "id": 6,
+                "homeTeam": 15,
+                "awayTeam": 23,
+                "homeScore": 1,
+                "awayScore": 3,
+                "matchType": "franceCup",
+                "penalty": {
+                  "homeTeamPenalties": 2,
+                  "awayTeamPenalties": 1
+                }
+              }
+            ]
           }
-        }
-      ]
-    }
-  ]
-}
+        ]
+      },
+      {
+        "name": "Germany",
+        "flag": "/image/germany.svg",
+        "seasons": [
+          {
+            "season": 1,
+            "date": "09-01-25",
+            "matches": [
+              {
+                "id": 7,
+                "homeTeam": 18,
+                "awayTeam": 21,
+                "homeScore": 3,
+                "awayScore": 1,
+                "matchType": "germanyCup",
+                "penalty": {
+                  "homeTeamPenalties": 0,
+                  "awayTeamPenalties": 0
+                }
+              }
+            ]
+          },
+          {
+            "season": 2,
+            "date": "09-02-25",
+            "matches": [
+              {
+                "id": 8,
+                "homeTeam": 28,
+                "awayTeam": 31,
+                "homeScore": 2,
+                "awayScore": 4,
+                "matchType": "germanyCup",
+                "penalty": {
+                  "homeTeamPenalties": 1,
+                  "awayTeamPenalties": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Italy",
+        "flag": "/image/italy.svg",
+        "seasons": [
+          {
+            "season": 1,
+            "date": "09-01-25",
+            "matches": [
+              {
+                "id": 9,
+                "homeTeam": 10,
+                "awayTeam": 20,
+                "homeScore": 4,
+                "awayScore": 0,
+                "matchType": "italyCup",
+                "penalty": {
+                  "homeTeamPenalties": 1,
+                  "awayTeamPenalties": 0
+                }
+              }
+            ]
+          },
+          {
+            "season": 2,
+            "date": "09-02-25",
+            "matches": [
+              {
+                "id": 10,
+                "homeTeam": 35,
+                "awayTeam": 40,
+                "homeScore": 2,
+                "awayScore": 3,
+                "matchType": "italyCup",
+                "penalty": {
+                  "homeTeamPenalties": 3,
+                  "awayTeamPenalties": 4
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Portugal",
+        "flag": "/image/portugal.svg",
+        "seasons": [
+          {
+            "season": 1,
+            "date": "09-01-25",
+            "matches": [
+              {
+                "id": 11,
+                "homeTeam": 5,
+                "awayTeam": 8,
+                "homeScore": 2,
+                "awayScore": 2,
+                "matchType": "portugalCup",
+                "penalty": {
+                  "homeTeamPenalties": 1,
+                  "awayTeamPenalties": 3
+                }
+              }
+            ]
+          },
+          {
+            "season": 2,
+            "date": "09-02-25",
+            "matches": [
+              {
+                "id": 12,
+                "homeTeam": 15,
+                "awayTeam": 25,
+                "homeScore": 3,
+                "awayScore": 4,
+                "matchType": "portugalCup",
+                "penalty": {
+                  "homeTeamPenalties": 2,
+                  "awayTeamPenalties": 1
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

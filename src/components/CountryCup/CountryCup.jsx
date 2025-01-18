@@ -1,18 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import cls from './CountryCup.module.scss';
 
-// Массив с флагами стран (можно использовать реальные URL-адреса изображений флагов)
-const countryFlags = {
-  england: '/path/to/england-flag.png',
-  spain: '/path/to/spain-flag.png',
-  france: '/path/to/france-flag.png',
-  germany: '/path/to/germany-flag.png',
-  italy: '/path/to/italy-flag.png',
-  brazil: '/path/to/brazil-flag.png',
-};
-
 function CountryCup() {
-  const [seasons, setSeasons] = useState([]);
+  const [countries, setCountries] = useState([]);
   const [teams, setTeams] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -21,10 +11,10 @@ function CountryCup() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Загружаем данные о кубках
+        // Загружаем данные о странах с их кубками и сезонами
         const cupResponse = await fetch('/cup.json');
         const cupData = await cupResponse.json();
-        setSeasons(cupData.seasons);
+        setCountries(cupData.countries);
 
         // Загружаем данные о командах
         const teamResponse = await fetch('/teams.json');
@@ -41,17 +31,15 @@ function CountryCup() {
     fetchData();
   }, []);
 
-  // Получаем команду по ID
+  // Функция для получения названия команды по её ID
   const getTeamById = (id) => {
-    return teams.find((team) => team.id === id) || { name: 'Неизвестная команда' };
+    return teams.find((team) => team.id === id) || { name: 'Неизвестная команда', icon: '' };
   };
 
   // Фильтрация сезонов по выбранной стране
   const filteredSeasons = selectedCountry
-    ? seasons.filter((season) =>
-        season.matches.some((match) => match.matchType === `${selectedCountry}Cup`)
-      )
-    : seasons;
+    ? selectedCountry.seasons
+    : [];
 
   // Отображаем информацию, если данные загружены
   if (loading) {
@@ -60,15 +48,15 @@ function CountryCup() {
 
   return (
     <div className={cls.container}>
-      <h1>Кубки разных стран</h1>
+      <h1 className={cls.title}>Кубки разных стран</h1>
 
       {/* Иконки флагов для выбора страны */}
       <div className={cls.flagContainer}>
-        {Object.keys(countryFlags).map((country) => (
+        {countries.map((country) => (
           <img
-            key={country}
-            src={countryFlags[country]}
-            alt={country}
+            key={country.name}
+            src={country.flag}
+            alt={country.name}
             className={cls.flagIcon}
             onClick={() => setSelectedCountry(country)}
           />
@@ -76,14 +64,15 @@ function CountryCup() {
       </div>
 
       {/* Отображаем кубки для выбранной страны */}
-      {filteredSeasons.length === 0 && <p>Нет кубков для выбранной страны.</p>}
+      {selectedCountry && filteredSeasons.length === 0 && <p>Нет кубков для выбранной страны.</p>}
 
       {filteredSeasons.map((season) => (
         <div key={season.season} className={cls.seasonBlock}>
-          <h2>Сезон {season.season}</h2>
-          <p>Дата: {season.date}</p>
-          
+          <h2 className={cls.blockTitle}>Сезон {season.season}</h2>
+          <p className={cls.data}>Дата: {season.date}</p>
+
           {season.matches.map((match) => {
+            // Получаем информацию о командах, включая их название и иконку
             const homeTeam = getTeamById(match.homeTeam);
             const awayTeam = getTeamById(match.awayTeam);
 
@@ -91,27 +80,26 @@ function CountryCup() {
               <div key={match.id} className={cls.match}>
                 <div className={cls.matchDetails}>
                   <div className={cls.team}>
-                    <h3>{homeTeam.name}</h3>
-                    <span>({match.homeScore})</span>
+                    {/* Отображаем иконку и название домашней команды */}
+                    <img src={homeTeam.icon} alt={homeTeam.name} className={cls.teamIcon} />
+                    <p className={cls.name}>{homeTeam.name}</p>
                   </div>
                   <div className={cls.matchScore}>
-                    <span>VS</span>
+                    <span className={cls.score}>{match.homeScore} - {match.awayScore}</span>
+                    {match.penalty && (
+                      <div className={cls.penalty}>
+                        <p>
+                          {match.penalty.homeTeamPenalties} - {match.penalty.awayTeamPenalties}
+                        </p>
+                      </div>
+                    )}
                   </div>
                   <div className={cls.team}>
-                    <h3>{awayTeam.name}</h3>
-                    <span>({match.awayScore})</span>
+                    {/* Отображаем иконку и название гостевой команды */}
+                    <img src={awayTeam.icon} alt={awayTeam.name} className={cls.teamIcon} />
+                    <p className={cls.name}>{awayTeam.name}</p>
                   </div>
                 </div>
-
-                {/* Если матч с пенальти, показываем информацию о пенальти */}
-                {match.penalty && (
-                  <div className={cls.penalty}>
-                    <p>
-                      Пенальти: {match.penalty.homeTeamPenalties} - {match.penalty.awayTeamPenalties}
-                    </p>
-                  </div>
-                )}
-                <p>Тип матча: {match.matchType}</p>
               </div>
             );
           })}
