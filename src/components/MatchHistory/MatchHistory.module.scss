@@ -130,75 +130,103 @@
 }
 /* Кубок Англии */
 .englandCup {
-  background: linear-gradient(135deg, #00416A, #A0C8E6, #00416A); /* Середина более светлая */
-  background-size: 300% 300%;
+  background: linear-gradient(135deg, #1E3C72, #2A5298); /* Темно-синий и мягкий голубой */
   color: #FFFFFF; /* Белый текст */
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 16px;
   text-align: center;
   font-weight: bold;
-  animation: gradientShine 4s infinite linear; /* Анимация блеска */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Кубок Испании */
 .spainCup {
-  background: linear-gradient(135deg, #D72638, #FFB6C1, #D72638); /* Середина более светлая */
-  background-size: 300% 300%;
+  background: linear-gradient(135deg, #FF4E50, #F9D423); /* Яркий красно-оранжевый и золотистый */
   color: #FFFFFF; /* Белый текст */
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 16px;
   text-align: center;
   font-weight: bold;
-  animation: gradientShine 4s infinite linear;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Кубок Италии */
 .italyCup {
-  background: linear-gradient(135deg, #239B56, #A3D9A3, #239B56); /* Середина более светлая */
-  background-size: 300% 300%;
+  background: linear-gradient(135deg, #11998E, #38EF7D); /* Глубокий зелёный и лаймово-зелёный */
   color: #FFFFFF; /* Белый текст */
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 16px;
   text-align: center;
   font-weight: bold;
-  animation: gradientShine 4s infinite linear;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Кубок Франции */
 .franceCup {
-  background: linear-gradient(135deg, #0056A1, #7CBFF3, #0056A1); /* Середина более светлая */
-  background-size: 300% 300%;
+  background: linear-gradient(135deg, #667EEA, #764BA2); /* Насыщенный синий и фиолетовый */
   color: #FFFFFF; /* Белый текст */
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 16px;
   text-align: center;
   font-weight: bold;
-  animation: gradientShine 4s infinite linear;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Кубок Португалии */
 .portugalCup {
-  background: linear-gradient(135deg, #FF8C00, #FFD699, #FF8C00); /* Середина более светлая */
-  background-size: 300% 300%;
+  background: linear-gradient(135deg, #FF8008, #FFC837); /* Яркий оранжевый и золотистый */
   color: #FFFFFF; /* Белый текст */
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 16px;
   text-align: center;
   font-weight: bold;
-  animation: gradientShine 4s infinite linear;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Кубок Германии */
 .germanyCup {
-  background: linear-gradient(135deg, #333333, #B0B0B0, #333333); /* Середина более светлая */
-  background-size: 300% 300%;
+  background: linear-gradient(135deg, #232526, #414345); /* Темный угольный и серый */
   color: #FFFFFF; /* Белый текст */
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 16px;
   text-align: center;
   font-weight: bold;
-  animation: gradientShine 4s infinite linear;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Кубок Бразилии */
+.brazilCup {
+  background: linear-gradient(135deg, #56AB2F, #A8E063); /* Яркий зеленый и светло-зеленый */
+  color: #FFFFFF; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Кубок Америки */
+.usaCup {
+  background: linear-gradient(135deg, #FF512F, #DD2476); /* Яркий оранжевый и розовый */
+  color: #FFFFFF; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Кубок Европы */
+.europeCup {
+  background: linear-gradient(135deg, #3A1C71, #D76D77, #FFAF7B); /* Фиолетовый, розовый и персиковый */
+  color: #FFFFFF; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 @keyframes championGlow {
   0% {
     background-position: 0% 50%;
@@ -214,18 +242,18 @@
   }
 }
 
-/* Анимация блеска */
-@keyframes gradientShine {
-  0% {
-    background-position: 0% 30%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+// /* Анимация блеска */
+// @keyframes gradientShine {
+//   0% {
+//     background-position: 0% 30%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
 
 p{
   margin: 0;

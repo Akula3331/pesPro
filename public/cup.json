@@ -251,6 +251,132 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Usa",
+        "flag": "/image/usa.svg",
+        "seasons": [
+          {
+            "season": 1,
+            "date": "09-01-25",
+            "matches": [
+              {
+                "id": 11,
+                "homeTeam": 5,
+                "awayTeam": 8,
+                "homeScore": 2,
+                "awayScore": 2,
+                "matchType": "usaCup",
+                "penalty": {
+                  "homeTeamPenalties": 1,
+                  "awayTeamPenalties": 3
+                }
+              }
+            ]
+          },
+          {
+            "season": 2,
+            "date": "09-02-25",
+            "matches": [
+              {
+                "id": 12,
+                "homeTeam": 15,
+                "awayTeam": 25,
+                "homeScore": 3,
+                "awayScore": 4,
+                "matchType": "usaCup",
+                "penalty": {
+                  "homeTeamPenalties": 2,
+                  "awayTeamPenalties": 1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Brazil",
+        "flag": "/image/brazil.svg",
+        "seasons": [
+          {
+            "season": 1,
+            "date": "09-01-25",
+            "matches": [
+              {
+                "id": 11,
+                "homeTeam": 5,
+                "awayTeam": 8,
+                "homeScore": 2,
+                "awayScore": 2,
+                "matchType": "portugalCup",
+                "penalty": {
+                  "homeTeamPenalties": 1,
+                  "awayTeamPenalties": 3
+                }
+              }
+            ]
+          },
+          {
+            "season": 2,
+            "date": "09-02-25",
+            "matches": [
+              {
+                "id": 12,
+                "homeTeam": 15,
+                "awayTeam": 25,
+                "homeScore": 3,
+                "awayScore": 4,
+                "matchType": "brazilCup",
+                "penalty": {
+                  "homeTeamPenalties": 2,
+                  "awayTeamPenalties": 1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Europe",
+        "flag": "/image/euro.svg",
+        "seasons": [
+          {
+            "season": 1,
+            "date": "09-01-25",
+            "matches": [
+              {
+                "id": 11,
+                "homeTeam": 5,
+                "awayTeam": 8,
+                "homeScore": 2,
+                "awayScore": 2,
+                "matchType": "europeCup",
+                "penalty": {
+                  "homeTeamPenalties": 1,
+                  "awayTeamPenalties": 3
+                }
+              }
+            ]
+          },
+          {
+            "season": 2,
+            "date": "09-02-25",
+            "matches": [
+              {
+                "id": 12,
+                "homeTeam": 15,
+                "awayTeam": 25,
+                "homeScore": 3,
+                "awayScore": 4,
+                "matchType": "europeCup",
+                "penalty": {
+                  "homeTeamPenalties": 2,
+                  "awayTeamPenalties": 1
+                }
+              }
+            ]
+          }
+        ]
       }
     ]
   }
