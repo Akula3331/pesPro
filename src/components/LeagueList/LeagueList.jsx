@@ -18,7 +18,7 @@ const LeagueList = () => {
 
   // Загружаем данные о лигах
   useEffect(() => {
-    fetch("/seasonLeague.json")
+    fetch("/league.json")
       .then((response) => response.json())
       .then((data) => {
         const league = data.leagues[0]; // Выбираем первую лигу (можно сделать выбор)

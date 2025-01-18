@@ -74,7 +74,8 @@ const TeamProfile = () => {
       }
     });
 
-    const rating = (wins / played) * 100;
+    // const rating = (wins / played) * 100;
+    const rating = ((wins + draws * 0.5) / played) * 100;
 
     setStats({
       wins,

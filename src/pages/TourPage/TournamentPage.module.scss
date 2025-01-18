@@ -5,11 +5,13 @@
 .title {
   font-size: 32px;
   margin-bottom: 20px;
+  color: #4caf50;
 }
 
 .sectionTitle {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #239B56;
 }
 
 .grid {
@@ -17,9 +19,31 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
 }
+.cardCup{
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+display: grid;
+gap: 20px;
+color: #333; /* Светлый серый для мягкого контраста */
+outline: none;
+text-decoration: none;
+// background: linear-gradient(45deg, #333333, #FF8C00,  #0056A1, #7CBFF3, #239B56,  #D72638,  #00416A, #A0C8E6);
+background: 
+  linear-gradient(45deg, #333333, #B0B0B0, #FF8C00, #FFD699),
+  linear-gradient(135deg, #0056A1, #7CBFF3, #239B56, #A3D9A3),
+  linear-gradient(225deg, #D72638, #FFB6C1, #00416A, #A0C8E6);
+background-size: 100% 100%, 100% 100%, 100% 100%;
+background-blend-mode: overlay;
 
+
+}
 .card {
-  background-color: #f4f4f4;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8), 0 0 10px #ffe700,
+  0 0 20px #ffdf00;
+box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+color: #ffffff;
+background: linear-gradient(135deg, #ffdf00, #ffd700, #ffae00, #ffdf00);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -39,5 +63,4 @@
 
 .cardDate, .cardSubtitle {
   font-size: 14px;
-  color: #666;
 }

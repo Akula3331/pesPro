@@ -14,6 +14,7 @@ import TournamentList from '../components/TournamentList/TournamentList';
 import LeagueTable from '../components/LeagueTable/LeagueTable';
 import TournamentTable from '../components/TournamentTable/TournamentTable';
 import LeagueList from '../components/LeagueList/LeagueList';
+import CountryCup from '../components/CountryCup/CountryCup';
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/history" element={<HistoryPage />} />
         <Route path="/league" element={<LeagueTable />} />
         <Route path="/tourNow" element={<TournamentTable />} />
+        <Route path="/countryCup" element={<CountryCup />}/>
         <Route path="/team/:teamId" element={<TeamProfile />} />
         <Route path="/tournament" element={<TournamentPage />} /> 
         <Route path="/tournament/:tournamentId" element={<TournamentList />} /> 

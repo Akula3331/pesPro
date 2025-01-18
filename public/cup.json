@@ -1,0 +1,58 @@
+{
+  "seasons": [
+    {
+      "season": 1,
+      "date": "090125",
+      "matches": [
+        {
+          "id": 1,
+          "homeTeam": 21,
+          "awayTeam": 39,
+          "homeScore": 4,
+          "awayScore": 4,
+          "matchType": "englandCup",
+          "penalty": {
+            "homeTeamPenalties": 1,
+            "awayTeamPenalties": 3
+          }
+        }
+      ]
+    },
+    {
+      "season": 2,
+      "date": "090125",
+      "matches": [
+        {
+          "id": 2,
+          "homeTeam": 32,
+          "awayTeam": 45,
+          "homeScore": 3,
+          "awayScore": 2,
+          "matchType": "spainCup",
+          "penalty": {
+            "homeTeamPenalties": 2,
+            "awayTeamPenalties": 4
+          }
+        }
+      ]
+    },
+    {
+      "season": 3,
+      "date": "090125",
+      "matches": [
+        {
+          "id": 3,
+          "homeTeam": 12,
+          "awayTeam": 22,
+          "homeScore": 2,
+          "awayScore": 2,
+          "matchType": "franceCup",
+          "penalty": {
+            "homeTeamPenalties": 3,
+            "awayTeamPenalties": 2
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import cls from './TournamentPage.module.scss';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import cls from "./TournamentPage.module.scss";
 
 const TournamentPage = () => {
   const [tournaments, setTournaments] = useState([]); // Инициализируем как пустой массив
@@ -14,8 +14,8 @@ const TournamentPage = () => {
   useEffect(() => {
     const fetchTournaments = async () => {
       try {
-        const response = await fetch('/tournaments.json');
-        if (!response.ok) throw new Error('Ошибка при загрузке турниров');
+        const response = await fetch("/tournaments.json");
+        if (!response.ok) throw new Error("Ошибка при загрузке турниров");
         const data = await response.json();
         setTournaments(data.tournaments || []); // Убедитесь, что data.tournaments всегда массив
       } catch (err) {
@@ -32,15 +32,17 @@ const TournamentPage = () => {
   useEffect(() => {
     const fetchLeagues = async () => {
       try {
-        const response = await fetch('/league.json');
+        const response = await fetch("/league.json");
         if (!response.ok) {
-          throw new Error(`Ошибка: ${response.status} - ${response.statusText}`);
+          throw new Error(
+            `Ошибка: ${response.status} - ${response.statusText}`
+          );
         }
         const data = await response.json();
         setLeagues(data.leagues || []);
       } catch (err) {
-        console.error('Ошибка загрузки данных:', err);
-        setError('Ошибка при загрузке данных');
+        console.error("Ошибка загрузки данных:", err);
+        setError("Ошибка при загрузке данных");
       } finally {
         setLoadingLeagues(false);
       }
@@ -71,7 +73,6 @@ const TournamentPage = () => {
                 onClick={() => navigate(`/tournament/${tournament.id}`)}
               >
                 <h3 className={cls.cardTitle}>{tournament.name}</h3>
-                <p className={cls.cardDate}>{tournament.date}</p>
               </div>
             ))}
           </div>
@@ -98,6 +99,13 @@ const TournamentPage = () => {
           </div>
         )}
       </section>
+      <div className={cls.cupCon}>
+        <h2 className={cls.sectionTitle}>Чемпионаты Стран</h2>
+        <Link to='/countryCup'  className={cls.cardCup}>
+          <div className={cls.cardTitle}>Кубки</div>
+          <p>Англии Франции Италии Испании Германии Португалии</p>
+        </Link>
+      </div>
     </div>
   );
 };

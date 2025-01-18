@@ -63,7 +63,8 @@ const TournamentList = () => {
     <div className={cls.tournamentTable}>
       <h1 className={cls.title}>{tournament.name}</h1>
       <div className={cls.date}>
-        <span>{tournament.date}</span>
+        <span>{tournament.startDate}</span>
+        <span>{tournament.endDate}</span>
       </div>
 
       {tournament.stages.map((stage, index) => (
