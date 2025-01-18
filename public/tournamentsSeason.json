@@ -30,8 +30,8 @@
               "id": 3,
               "homeTeam": 46,
               "awayTeam": 18,
-              "homeScore": "",
-              "awayScore": "",
+              "homeScore": 2,
+              "awayScore": 3,
               "matchType": "tournament",
               "penalty": null
             },

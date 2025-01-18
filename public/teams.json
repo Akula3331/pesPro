@@ -91,5 +91,8 @@
   { "id": 56, "name": "Club National", "icon": "/logo/national.svg" },
   { "id": 57, "name": "Al Hilal Riyadh", "icon": "/logo/hilal.svg" },
   { "id": 58, "name": "Al Nasr FC", "icon": "/logo/nasr.svg" },
-  { "id": 59, "name": "Barcelona SC", "icon": "/logo/barcafff.svg" }
+  { "id": 59, "name": "Barcelona SC", "icon": "/logo/barcafff.svg" },
+  { "id": 60, "name": "OGC Nice", "icon": "/logo/nice.svg" },
+  { "id": 61, "name": "US Lecce", "icon": "/logo/lecce.svg" },
+  { "id": 62, "name": "Paris FC", "icon": "/logo/paris.svg" }
 ]

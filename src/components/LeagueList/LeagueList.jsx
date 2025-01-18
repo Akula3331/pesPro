@@ -1,63 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; // Для получения параметра из URL
-import cls from './LeagueList.module.scss'; // Импорт стилей
+import React, { useState, useEffect } from "react";
+import cls from "./LeagueList.module.scss";
 
 const LeagueList = () => {
-  const { leagueId } = useParams(); // Получаем ID лиги из параметров маршрута
   const [teams, setTeams] = useState([]);
   const [currentLeague, setCurrentLeague] = useState(null);
   const [matches, setMatches] = useState([]);
   const [teamStats, setTeamStats] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   // Загружаем данные о командах
   useEffect(() => {
-    fetch('/teams.json')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Ошибка загрузки данных о командах');
-        }
-        return response.json();
-      })
+    fetch("/teams.json")
+      .then((response) => response.json())
       .then((data) => {
-        console.log('Данные команд:', data); // Логируем данные о командах
         setTeams(data);
-      })
-      .catch((error) => {
-        console.error(error); // Логируем ошибку, если она возникла
       });
   }, []);
 
-  // Загружаем данные о лиге
+  // Загружаем данные о лигах
   useEffect(() => {
-    if (!leagueId) {
-      setLoading(false);
-      return;
-    }
-
-    fetch('/league.json')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Ошибка загрузки данных о лиге');
-        }
-        return response.json();
-      })
+    fetch("/seasonLeague.json")
+      .then((response) => response.json())
       .then((data) => {
-        console.log('Данные лиги:', data); // Логируем данные о лиге
-        const league = data.leagues.find((league) => league.id === parseInt(leagueId));
-        if (league) {
-          setCurrentLeague(league);
-          setMatches(league.matches);
-        } else {
-          console.log('Лига не найдена');
-        }
-        setLoading(false); // Завершаем загрузку данных
-      })
-      .catch((error) => {
-        console.error(error); // Логируем ошибку, если она возникла
-        setLoading(false);
+        const league = data.leagues[0]; // Выбираем первую лигу (можно сделать выбор)
+        setCurrentLeague(league);
+        setMatches(league.matches);
       });
-  }, [leagueId]);
+  }, []);
 
   // Подсчет статистики для выбранной лиги
   useEffect(() => {
@@ -65,7 +33,10 @@ const LeagueList = () => {
       const calculateStats = () => {
         const stats = currentLeague.teams.map((teamId) => {
           const teamMatches = matches.filter(
-            (match) => match.homeTeam === teamId || match.awayTeam === teamId
+            (match) =>
+              (match.homeTeam === teamId || match.awayTeam === teamId) &&
+              match.homeScore !== "" &&
+              match.awayScore !== ""
           );
 
           let wins = 0;
@@ -79,10 +50,6 @@ const LeagueList = () => {
             const isHome = match.homeTeam === teamId;
             const teamScore = isHome ? match.homeScore : match.awayScore;
             const opponentScore = isHome ? match.awayScore : match.homeScore;
-
-            if (teamScore === "" || opponentScore === "") {
-              return;
-            }
 
             goalsScored += teamScore;
             goalsConceded += opponentScore;
@@ -98,6 +65,8 @@ const LeagueList = () => {
             }
           });
 
+          const goalDifference = goalsScored - goalsConceded;
+
           return {
             id: teamId,
             played: teamMatches.length,
@@ -106,8 +75,16 @@ const LeagueList = () => {
             draws,
             goalsScored,
             goalsConceded,
+            goalDifference,
             points,
           };
+        });
+
+        stats.sort((a, b) => {
+          if (b.points === a.points) {
+            return b.goalDifference - a.goalDifference;
+          }
+          return b.points - a.points;
         });
 
         setTeamStats(stats);
@@ -122,66 +99,73 @@ const LeagueList = () => {
     return team ? team.name : "Неизвестная команда";
   };
 
-  if (loading) {
-    return <p>Загрузка данных...</p>;
-  }
-
   if (!currentLeague) {
-    return <p>Лига не найдена.</p>;
+    return <p>Загрузка данных лиги...</p>;
   }
 
   return (
     <div className={cls.tableContainer}>
-      <h1>{currentLeague.name} - Таблица Лиги</h1>
+      <h1>Таблица Лиги</h1>
       <div className={cls.tableWrapper}>
-        <div>
+        <div className={cls.scrollContainer}>
           <div className={cls.title}>
             <p className={cls.name}>Команда</p>
-            <p className={cls.subtitle}>С</p>
+            <p className={cls.subtitle}>И</p>
             <p className={cls.subtitle}>В</p>
-            <p className={cls.subtitle}>П</p>
             <p className={cls.subtitle}>Н</p>
-            <p className={cls.subtitle}>Г</p>
-            <p className={cls.subtitle}>Очки</p>
+            <p className={cls.subtitle}>П</p>
+            <p className={cls.subtitle}>О</p>
+            <p className={cls.subtitle}>ЗМ</p>
+            <p className={cls.subtitle}>ПМ</p>
+            <p className={cls.subtitle}>РМ</p>
           </div>
-
-          <div>
-            {teamStats.map((team) => (
-              <div className={cls.point} key={team.id}>
-                <p className={cls.name}>{getTeamNameById(team.id)}</p>
-                <p className={cls.pointText}>{team.played}</p>
-                <p className={cls.pointText}>{team.wins}</p>
-                <p className={cls.pointText}>{team.losses}</p>
-                <p className={cls.pointText}>{team.draws}</p>
-                <p className={cls.pointText}>{team.goalsScored}/{team.goalsConceded}</p>
-                <p className={cls.pointText}>{team.points}</p>
-              </div>
-            ))}
-          </div>
+          {teamStats.map((team, index) => (
+            <div className={cls.point} key={team.id}>
+              <p className={cls.name}>
+                <p>{index + 1}</p> {getTeamNameById(team.id)}
+              </p>
+              <p className={cls.pointText}>{team.played}</p>
+              <p className={cls.pointText}>{team.wins}</p>
+              <p className={cls.pointText}>{team.draws}</p>
+              <p className={cls.pointText}>{team.losses}</p>
+              <p className={cls.pointText}>{team.points}</p>
+              <p className={cls.pointText}>{team.goalsScored}</p>
+              <p className={cls.pointText}>{team.goalsConceded}</p>
+              <p className={cls.pointText}>
+                {team.goalDifference > 0
+                  ? `${team.goalDifference}`
+                  : team.goalDifference}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
-
       <h2>История матчей</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Дата</th>
-            <th>Команда Дома</th>
-            <th>Команда Гостя</th>
-            <th>Счет</th>
-          </tr>
-        </thead>
-        <tbody>
-          {matches.map((match) => (
-            <tr key={match.id}>
-              <td>{match.date}</td>
-              <td>{getTeamNameById(match.homeTeam)}</td>
-              <td>{getTeamNameById(match.awayTeam)}</td>
-              <td>{match.homeScore ? `${match.homeScore} - ${match.awayScore}` : "Не завершен"}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+
+      <div className={cls.historyCon}>
+        {matches.map((match) => (
+          <div className={cls.matchBlock} key={match.id}>
+            <p className={cls.matchName}>{getTeamNameById(match.homeTeam)}</p>
+            <div className={cls.pointScore}>
+            <p className={cls.date}>
+                      {match.date.split("").reduce((acc, char, index) => {
+                        if (index === 2 || index === 4) {
+                          acc += ".";
+                        }
+                        acc += char;
+                        return acc;
+                      }, "")}
+                    </p>
+              <p>
+                {match.homeScore
+                  ? `${match.homeScore} - ${match.awayScore}`
+                  : "Не завершен"}
+              </p>
+            </div>
+            <p className={cls.matchName}>{getTeamNameById(match.awayTeam)}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

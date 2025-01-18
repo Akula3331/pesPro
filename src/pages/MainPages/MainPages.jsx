@@ -12,13 +12,7 @@ import TournamentPage from '../TourPage/TournamentPage';
 function MainPages() {
   return (
     <div>
-        {/* <TournamentTable/> */}
-        <TournamentList/>
-        {/* <LeagueTable/> */}
-        {/* <Leaderboard/> */}
-        {/* <MatchHistory/> */}
-        {/* <TeamList/> */}
-        {/* <TeamListPage/> */}
+        <Leaderboard/>
     </div>
   )
 }

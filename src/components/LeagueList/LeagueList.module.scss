@@ -1,128 +1,201 @@
-// LeagueTable.module.scss
-.title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #4CAF50;
-    border-radius: 15px 15px 0 0;
-    color: #f4f4f9;
-    padding: 10px 20px;
+.tableWrapper {
+  overflow-x: auto; /* Включаем горизонтальный скролл на всех устройствах */
+  -webkit-overflow-scrolling: touch; /* Для плавности на мобильных устройствах */
+  width: 100%; /* Контейнер должен занимать всю ширину */
+  display: block; /* Включаем блочное отображение */
+  white-space: nowrap; /* Запрещаем перенос строк в таблице */
 }
-.subtitle{
-    font-family: "Rubik Mono One", serif;
-    text-align: center;
-    width: 60px;
-    // border-left:1px solid #333;
-    margin: 0;
+
+.tableContainer {
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.point{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom:1px solid #4CAF50;
-    border-left: 1px solid #4CAF50;
-    border-right: 1px solid #4CAF50;
-    padding: 0 20px;
-    &:hover{
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4caf50;
+  border-radius: 15px 15px 0 0;
+  color: #f4f4f9;
+  padding: 10px 20px;
+}
+
+.subtitle {
+  font-family: "Rubik Mono One", serif;
+  text-align: center;
+  width: 60px;
+  margin: 0;
+}
+
+.point {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4caf50;
+  border-left: 1px solid #4caf50;
+  border-right: 1px solid #4caf50;
+  padding: 0 20px;
+  padding: 20px;
+  &:hover {
     background-color: #cecece;
-transition: .2s;
-    }
+    transition: 0.2s;
+  }
 }
-.point:nth-last-child(1){
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+.point:nth-last-child(1) {
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+  width: 200px;
+  display: flex;
+  gap: 30px;
+  p {
+    
+    font-weight: bold;
+  }
+}
+
+.pointText {
+  width: 60px;
+  text-align: center;
+  margin: 0;
+}
+
+.pointText:nth-child(6) {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+.historyCon{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+}
+.pointScore{
+  // background-color: #1B5E20;
+  padding: 10px;
+  color: #E1F5FE;
+  font-weight: normal;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.matchBlock{
+  padding: 20px;
+  display: flex;
+gap: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+.matchName{
+  font-size: 22px;
+  font-weight: bold;
+width: 200px;
+color: #E1F5FE;
+}
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto; /* Горизонтальная прокрутка, если контент не помещается */
+  // margin-bottom: 20px; /* Немного отступа внизу */
+}
+.tableWrapper::-webkit-scrollbar {
+  display: none; /* Скрывает скроллбар в Webkit-браузерах (например, Chrome, Safari) */
+}
+.scrollContainer {
+  display: inline-block;
+  min-width: 100%;
+  white-space: nowrap;
+}
+
+.title, .point {
+  // display: inline-block;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .matchName{
+    width: 150px;
+    font-size: 18px;
+  }
+  .matchBlock{
+    gap: 20px;
+  }
+  .tableWrapper {
+    overflow-x: auto; /* Горизонтальный скролл только на экранах до 768px */
+  }
+  .title{
+    border-radius: 0;
+  }
+  .tableContainer{
+    padding: 0;
+  }
+  .point:nth-last-child(1) {
+    border-radius: 0 ;
+  }
+ 
+  .point {
+    padding: 10px;
+  }
+.tableContainer{
+  h1{
+    margin: 20px 0;
+  }
+}
+  .name {
+    width: 150px;
+    
+    gap: 10px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+@media screen and (max-width:550px) {
+  .pointText{
+    width: 40px;
+  
+   }
+   .subtitle{
+    width: 40px;
+   }
+   .matchBlock{
+    padding: 15px;
+    gap: 10px;
+   }
+   .pointScore{
+    padding: 0;
+    font-size: 14px;
+   }
+   .matchName{
+    width: 80px;
+    font-size: 14px;
+   }
 
 }
-.name{
-    width: 200px;
-}
-.pointText{
-    width: 60px;
-    text-align: center;
-    margin: 0;
-}
-.pointText:nth-last-child(1){
-    color: #4CAF50;
-    font-weight: bold;
-}
-.tableContainer {
-    padding: 20px;
-    background-color: #f4f4f9;
-    border-radius: 8px;
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin-top: 40px;
-    color: #333;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  th, td {
-    padding: 12px 20px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  th {
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-  }
-  
-  td {
-    font-size: 1rem;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  th, td {
-    border-radius: 4px;
-  }
-  
-  th:first-child, td:first-child {
-    text-align: center;
-  }
-  
-  td:last-child {
-    text-align: center;
-  }
-  
-  .tableWrapper {
-    margin-bottom: 30px;
-  }
-  
-  @media (max-width: 768px) {
-    table {
-      font-size: 0.9rem;
-    }
-  
-    th, td {
-      padding: 10px;
-    }
-  }
-  

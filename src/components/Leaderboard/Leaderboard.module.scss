@@ -1,0 +1,48 @@
+.sortContainer {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+  
+  .gridContainer {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .gridHeader {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    background-color: #0077cc;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .gridRow {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  
+    &:nth-child(odd) {
+      background-color: #e0e0e0;
+    }
+  }
+  

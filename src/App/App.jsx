@@ -30,8 +30,8 @@ const App = () => {
         <Route path="/league" element={<LeagueTable />} />
         <Route path="/tourNow" element={<TournamentTable />} />
         <Route path="/team/:teamId" element={<TeamProfile />} />
-        <Route path="/tournament" element={<TournamentPage />} /> {/* Страница со списком турниров */}
-        <Route path="/tournament/:tournamentId" element={<TournamentList />} /> {/* Страница с подробностями турнира */}
+        <Route path="/tournament" element={<TournamentPage />} /> 
+        <Route path="/tournament/:tournamentId" element={<TournamentList />} /> 
         <Route path="/league/:leagueId" element={<LeagueList />} />
       </Routes>
       </div>

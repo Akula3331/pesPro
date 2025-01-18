@@ -81,7 +81,7 @@ function TournamentTable() {
                                                         )}
                                                     </div>
                                                 )}
-                                                
+                                                   
                                                 <div className={cls.column}>
                                                     <div className={cls.team}>
                                                         {awayTeam.icon && (

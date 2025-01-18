@@ -14,7 +14,7 @@ const TournamentPage = () => {
   useEffect(() => {
     const fetchTournaments = async () => {
       try {
-        const response = await fetch('/tournamentsSeason.json');
+        const response = await fetch('/tournaments.json');
         if (!response.ok) throw new Error('Ошибка при загрузке турниров');
         const data = await response.json();
         setTournaments(data.tournaments || []); // Убедитесь, что data.tournaments всегда массив
@@ -33,12 +33,9 @@ const TournamentPage = () => {
     const fetchLeagues = async () => {
       try {
         const response = await fetch('/league.json');
-        
-        // Проверка на успешный ответ
         if (!response.ok) {
           throw new Error(`Ошибка: ${response.status} - ${response.statusText}`);
         }
-  
         const data = await response.json();
         setLeagues(data.leagues || []);
       } catch (err) {
@@ -48,7 +45,7 @@ const TournamentPage = () => {
         setLoadingLeagues(false);
       }
     };
-  
+
     fetchLeagues();
   }, []);
 
