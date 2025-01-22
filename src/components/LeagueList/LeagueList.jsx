@@ -6,6 +6,7 @@ const LeagueList = () => {
   const [currentLeague, setCurrentLeague] = useState(null);
   const [matches, setMatches] = useState([]);
   const [teamStats, setTeamStats] = useState([]);
+  const [rounds, setRounds] = useState([]); // Для раундов
 
   // Загружаем данные о командах
   useEffect(() => {
@@ -99,6 +100,22 @@ const LeagueList = () => {
     return team ? team.name : "Неизвестная команда";
   };
 
+  // Разделяем матчи на раунды (каждый раунд содержит 6 матчей)
+  useEffect(() => {
+    const rounds = [];
+    let roundMatches = [];
+    
+    matches.forEach((match, index) => {
+      roundMatches.push(match);
+      if (roundMatches.length === 6 || index === matches.length - 1) {
+        rounds.push(roundMatches);
+        roundMatches = [];
+      }
+    });
+
+    setRounds(rounds);
+  }, [matches]);
+
   if (!currentLeague) {
     return <p>Загрузка данных лиги...</p>;
   }
@@ -140,29 +157,34 @@ const LeagueList = () => {
           ))}
         </div>
       </div>
-      <h2>История матчей</h2>
 
+      <h2>История матчей</h2>
       <div className={cls.historyCon}>
-        {matches.map((match) => (
-          <div className={cls.matchBlock} key={match.id}>
-            <p className={cls.matchName}>{getTeamNameById(match.homeTeam)}</p>
-            <div className={cls.pointScore}>
-            <p className={cls.date}>
-                      {match.date.split("").reduce((acc, char, index) => {
-                        if (index === 2 || index === 4) {
-                          acc += ".";
-                        }
-                        acc += char;
-                        return acc;
-                      }, "")}
-                    </p>
-              <p>
-                {match.homeScore
-                  ? `${match.homeScore} - ${match.awayScore}`
-                  : "Не завершен"}
-              </p>
-            </div>
-            <p className={cls.matchName}>{getTeamNameById(match.awayTeam)}</p>
+        {rounds.map((round, roundIndex) => (
+          <div key={roundIndex} className={cls.round}>
+            <h3>Раунд {roundIndex + 1}</h3>
+            {round.map((match) => (
+              <div className={cls.matchBlock} key={match.id}>
+                <p className={cls.matchName}>{getTeamNameById(match.homeTeam)}</p>
+                <div className={cls.pointScore}>
+                  <p className={cls.date}>
+                    {match.date.split("").reduce((acc, char, index) => {
+                      if (index === 2 || index === 4) {
+                        acc += ".";
+                      }
+                      acc += char;
+                      return acc;
+                    }, "")}
+                  </p>
+                  <p>
+                    {match.homeScore
+                      ? `${match.homeScore} - ${match.awayScore}`
+                      : "Не завершен"}
+                  </p>
+                </div>
+                <p className={cls.matchName}>{getTeamNameById(match.awayTeam)}</p>
+              </div>
+            ))}
           </div>
         ))}
       </div>

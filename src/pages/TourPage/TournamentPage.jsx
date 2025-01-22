@@ -103,7 +103,6 @@ const TournamentPage = () => {
         <h2 className={cls.sectionTitle}>Чемпионаты Стран</h2>
         <Link to='/countryCup'  className={cls.cardCup}>
           <div className={cls.cardTitle}>Кубки</div>
-          <p>Англии Франции Италии Испании Германии Португалии</p>
         </Link>
       </div>
     </div>

@@ -99,9 +99,20 @@ const LeagueTable = () => {
     return team ? team.name : "Неизвестная команда";
   };
 
+  // Разделяем матчи на этапы, по 6 матчей в каждом
+  const groupMatchesByStages = (matches, gamesPerStage) => {
+    const stages = [];
+    for (let i = 0; i < matches.length; i += gamesPerStage) {
+      stages.push(matches.slice(i, i + gamesPerStage));
+    }
+    return stages;
+  };
+
   if (!currentLeague) {
     return <p>Загрузка данных лиги...</p>;
   }
+
+  const stages = groupMatchesByStages(matches, 6);
 
   return (
     <div className={cls.tableContainer}>
@@ -140,32 +151,37 @@ const LeagueTable = () => {
           ))}
         </div>
       </div>
-      <h2>История матчей</h2>
 
-      <div className={cls.historyCon}>
-        {matches.map((match) => (
-          <div className={cls.matchBlock} key={match.id}>
-            <p className={cls.matchName}>{getTeamNameById(match.homeTeam)}</p>
-            <div className={cls.pointScore}>
-            <p className={cls.date}>
-                      {match.date.split("").reduce((acc, char, index) => {
-                        if (index === 2 || index === 4) {
-                          acc += ".";
-                        }
-                        acc += char;
-                        return acc;
-                      }, "")}
-                    </p>
-              <p>
-                {match.homeScore
-                  ? `${match.homeScore} - ${match.awayScore}`
-                  : "Не завершен"}
-              </p>
-            </div>
-            <p className={cls.matchName}>{getTeamNameById(match.awayTeam)}</p>
+      <h2>История матчей</h2>
+      {stages.map((stage, stageIndex) => (
+        <div key={stageIndex} className={cls.stage}>
+          <h3>Этап {stageIndex + 1}</h3>
+          <div className={cls.historyCon}>
+            {stage.map((match) => (
+              <div className={cls.matchBlock} key={match.id}>
+                <p className={cls.matchName}>{getTeamNameById(match.homeTeam)}</p>
+                <div className={cls.pointScore}>
+                  <p className={cls.date}>
+                    {match.date.split("").reduce((acc, char, index) => {
+                      if (index === 2 || index === 4) {
+                        acc += ".";
+                      }
+                      acc += char;
+                      return acc;
+                    }, "")}
+                  </p>
+                  <p>
+                    {match.homeScore
+                      ? `${match.homeScore} - ${match.awayScore}`
+                      : "Не завершен"}
+                  </p>
+                </div>
+                <p className={cls.matchName}>{getTeamNameById(match.awayTeam)}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

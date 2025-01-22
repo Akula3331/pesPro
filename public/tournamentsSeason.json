@@ -39,8 +39,8 @@
               "id": 4,
               "homeTeam": 59,
               "awayTeam": 9,
-              "homeScore": "",
-              "awayScore": "",
+              "homeScore": 0,
+              "awayScore": 2,
               "matchType": "tournament",
               "penalty": null
             },
@@ -48,8 +48,8 @@
               "id": 5,
               "homeTeam": 45,
               "awayTeam": 26,
-              "homeScore": "",
-              "awayScore": "",
+              "homeScore": 3,
+              "awayScore": 4,
               "matchType": "tournament",
               "penalty": null
             },

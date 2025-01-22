@@ -780,7 +780,126 @@
           "awayScore": 2,
           "matchType": "tournament",
           "penalty": null
-        }
+        },
+        
+          {
+            "id": 76,
+            "date": "190125",
+            "homeTeam": 59,
+            "awayTeam": 60,
+            "homeScore": 2,
+            "awayScore": 3,
+            "matchType": "regular",
+            "penalty": null
+          },
+          {
+            "id": 77,
+            "date": "190125",
+            "homeTeam": 59,
+            "awayTeam": 9,
+            "homeScore": 0,
+            "awayScore": 2,
+            "matchType": "tournament",
+            "penalty": null
+          },
+          {
+            "id": 78,
+            "date": "190125",
+            "homeTeam": 24,
+            "awayTeam": 32,
+            "homeScore": 2,
+            "awayScore": 2,
+            "matchType": "league",
+            "penalty": null
+          },
+          {
+            "id": 79,
+            "date": "190125",
+            "homeTeam": 34,
+            "awayTeam": 48,
+            "homeScore": 3,
+            "awayScore": 3,
+            "matchType": "league",
+            "penalty": null
+          },
+          {
+            "id": 80,
+            "date": "190125",
+            "homeTeam": 44,
+            "awayTeam": 62,
+            "homeScore": 4,
+            "awayScore": 0,
+            "matchType": "franceCup",
+            "penalty": null
+          },
+          {
+            "id": 81,
+            "date": "190125",
+            "homeTeam": 26,
+            "awayTeam": 45,
+            "homeScore": 4,
+            "awayScore": 3,
+            "matchType": "tournament",
+            "penalty": null
+          },
+          
+            {
+              "id": 82,
+              "date": "210125",
+              "homeTeam": 56,
+              "awayTeam": 13,
+              "homeScore": 1,
+              "awayScore": 4,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 83,
+              "date": "210125",
+              "homeTeam": 57,
+              "awayTeam": 22,
+              "homeScore": 4,
+              "awayScore": 3,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 84,
+              "date": "210125",
+              "homeTeam": 48,
+              "awayTeam": 49,
+              "homeScore": 2,
+              "awayScore": 3,
+              "matchType": "regular",
+              "penalty": null
+            },
+            {
+              "id": 85,
+              "date": "210125",
+              "homeTeam": 48,
+              "awayTeam": 49,
+              "homeScore": 4,
+              "awayScore": 3,
+              "matchType": "regular",
+              "penalty": null
+            },
+            
+              {
+                "id": 86,
+                "date": "220125",
+                "homeTeam": 38,
+                "awayTeam": 25,
+                "homeScore": 4,
+                "awayScore": 1,
+                "matchType": "league",
+                "penalty": null
+              }
+            
+            
+          
+          
+        
+        
       
       
 ]

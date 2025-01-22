@@ -36,39 +36,45 @@
     }
   },
   { "id": 27, "name": "Spartak Moskva", "icon": "/logo/spartak.svg" },
-  { "id": 28, 
-  "name": "Atalanta BC", 
-  "icon": "/logo/atalanta.svg",
-"achievements": {
+  {
+    "id": 28,
+    "name": "Atalanta BC",
+    "icon": "/logo/atalanta.svg",
+    "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
       "cups": "",
       "tournamentWinner": 1
-    } },
+    }
+  },
   { "id": 29, "name": "AS Monaco", "icon": "/logo/monaco.svg" },
   { "id": 30, "name": "Olympique Marseille", "icon": "/logo/marsel.svg" },
   { "id": 31, "name": "AC Milan", "icon": "/logo/milan.svg" },
   { "id": 32, "name": "SS Lazio", "icon": "/logo/lazio.svg" },
   { "id": 33, "name": "Chelsea FC", "icon": "/logo/chealsea.svg" },
-  { "id": 34,
-   "name": "FC Barcelona",
+  {
+    "id": 34,
+    "name": "FC Barcelona",
     "icon": "/logo/barca.svg",
-  "achievements": {
+    "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
       "cups": "",
       "tournamentWinner": 1
-    } },
+    }
+  },
   { "id": 35, "name": "Bayern München", "icon": "/logo/bavar.svg" },
-  { "id": 36,
-   "name": "Juventus FC",
-   "icon": "/logo/juventus.svg",
-  "achievements": {
+  {
+    "id": 36,
+    "name": "Juventus FC",
+    "icon": "/logo/juventus.svg",
+    "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
       "cups": "",
       "tournamentWinner": 1
-    } },
+    }
+  },
   { "id": 37, "name": "Manchester United", "icon": "/logo/manUn.svg" },
   { "id": 38, "name": "SSC Napoli", "icon": "/logo/napoli.svg" },
   { "id": 39, "name": "Real Madrid CF", "icon": "/logo/realMadrid.svg" },
@@ -94,5 +100,7 @@
   { "id": 59, "name": "Barcelona SC", "icon": "/logo/barcafff.svg" },
   { "id": 60, "name": "OGC Nice", "icon": "/logo/nice.svg" },
   { "id": 61, "name": "US Lecce", "icon": "/logo/lecce.svg" },
-  { "id": 62, "name": "Paris FC", "icon": "/logo/paris.svg" }
+  { "id": 62, "name": "Paris FC", "icon": "/logo/paris.svg" },
+  { "id": 63, "name": "Fenerbahçe", "icon": "/logo/fenirbahce.svg" },
+  { "id": 64, "name": "Dynamo Mosckva", "icon": "/logo/dinMoskva.svg" }
 ]
