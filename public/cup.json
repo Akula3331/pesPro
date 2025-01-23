@@ -17,8 +17,17 @@
       "seasons": [
         {
           "season": 1,
-          "date": "09-01-25",
-          "matches": []
+          "date": "23-01-25",
+          "matches": [
+            {
+              "homeTeam": 21,
+              "awayTeam": 39,
+              "homeScore": 8,
+              "awayScore": 0,
+              "matchType": "spainCup",
+              "penalty": null
+            }
+          ]
         }
       ]
     },

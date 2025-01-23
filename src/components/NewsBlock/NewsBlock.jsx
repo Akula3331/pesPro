@@ -5,13 +5,14 @@ function NewsBlock({ title, description, backgroundImage, images }) {
   return (
     <div className={cls.newsBlock} style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className={cls.content}>
-      <img className={cls.icon} src='/image/s1.png' alt="" />
-
+      {/* <img className={cls.icon} src='/image/s1.png' alt="" /> */}
+<div className={cls.itemCon}>
         <h3 className={cls.title}>{title}</h3>
         <p className={cls.text}>{description}</p>
-        <div className={cls.images}>
+        </div>
+        <div className={cls.imagesCon}>
           {images.map((image, index) => (
-            <img key={index} src={image} alt={`news-image-${index}`} />
+            <img className={cls.images} key={index} src={image} alt={`news-image-${index}`} />
           ))}
         </div>
       </div>
