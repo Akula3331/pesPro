@@ -1,29 +1,279 @@
 [
-  { "id": 1, "name": "Ajax Amsterdam", "icon": "/logo/ajax.svg" },
-  { "id": 2, "name": "Manchester City", "icon": "/logo/mancity.svg" },
-  { "id": 3, "name": "Zenit St. Petersburg", "icon": "/logo/zenit.svg" },
-  { "id": 4, "name": "RB Leipzig", "icon": "/logo/leipzig.svg" },
-  { "id": 5, "name": "Tottenham Hotspur", "icon": "/logo/totenham.svg" },
-  { "id": 6, "name": "FC Utrecht", "icon": "/logo/utrech.svg" },
-  { "id": 7, "name": "RB Salzburg", "icon": "/logo/salzburg.svg" },
-  { "id": 8, "name": "Liverpool FC", "icon": "/logo/liverpool.svg" },
-  { "id": 9, "name": "Atlético Madrid", "icon": "/logo/atleMadrid.svg" },
-  { "id": 10, "name": "RCD Espanyol", "icon": "/logo/espanol.svg" },
-  { "id": 11, "name": "FC Porto", "icon": "/logo/porto.svg" },
-  { "id": 12, "name": "Leicester City", "icon": "/logo/leices.svg" },
-  { "id": 13, "name": "Borussia Dortmund", "icon": "/logo/borus.svg" },
-  { "id": 14, "name": "Sporting CP", "icon": "/logo/sporting.svg" },
-  { "id": 15, "name": "Beşiktaş JK", "icon": "/logo/besiktas.svg" },
-  { "id": 16, "name": "Valencia CF", "icon": "/logo/valencia.svg" },
-  { "id": 17, "name": "Internazionale", "icon": "/logo/intermilan.svg" },
-  { "id": 18, "name": "Bayer 04 Leverkusen", "icon": "/logo/bayern.svg" },
-  { "id": 19, "name": "Real Sociedad", "icon": "/logo/sociedad.svg" },
-  { "id": 20, "name": "Athletic Bilbao", "icon": "/logo/bilbao.svg" },
-  { "id": 21, "name": "Villarreal CF", "icon": "/logo/villereal.svg" },
-  { "id": 22, "name": "New York City", "icon": "/logo/newyork.svg" },
-  { "id": 23, "name": "Nottingham Forest", "icon": "/logo/notingam.svg" },
-  { "id": 24, "name": "AS Roma", "icon": "/logo/roma.svg" },
-  { "id": 25, "name": "SL Benfica", "icon": "/logo/benfica.svg" },
+  {
+    "id": 1,
+    "name": "Ajax Amsterdam",
+    "icon": "/logo/ajax.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 2,
+    "name": "Manchester City",
+    "icon": "/logo/mancity.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 3,
+    "name": "Zenit St. Petersburg",
+    "icon": "/logo/zenit.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 4,
+    "name": "RB Leipzig",
+    "icon": "/logo/leipzig.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups":"1",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 5,
+    "name": "Tottenham Hotspur",
+    "icon": "/logo/totenham.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 6,
+    "name": "FC Utrecht",
+    "icon": "/logo/utrech.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 7,
+    "name": "RB Salzburg",
+    "icon": "/logo/salzburg.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 8,
+    "name": "Liverpool FC",
+    "icon": "/logo/liverpool.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 9,
+    "name": "Atlético Madrid",
+    "icon": "/logo/atleMadrid.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 10,
+    "name": "RCD Espanyol",
+    "icon": "/logo/espanol.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 11,
+    "name": "FC Porto",
+    "icon": "/logo/porto.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 12,
+    "name": "Leicester City",
+    "icon": "/logo/leices.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 13,
+    "name": "Borussia Dortmund",
+    "icon": "/logo/borus.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 14,
+    "name": "Sporting CP",
+    "icon": "/logo/sporting.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 15,
+    "name": "Beşiktaş JK",
+    "icon": "/logo/besiktas.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 16,
+    "name": "Valencia CF",
+    "icon": "/logo/valencia.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 17,
+    "name": "Internazionale",
+    "icon": "/logo/intermilan.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "1",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 18,
+    "name": "Bayer 04 Leverkusen",
+    "icon": "/logo/bayern.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 19,
+    "name": "Real Sociedad",
+    "icon": "/logo/sociedad.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 20,
+    "name": "Athletic Bilbao",
+    "icon": "/logo/bilbao.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 21,
+    "name": "Villarreal CF",
+    "icon": "/logo/villereal.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "1",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 22,
+    "name": "New York City",
+    "icon": "/logo/newyork.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 23,
+    "name": "Nottingham Forest",
+    "icon": "/logo/notingam.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 24,
+    "name": "AS Roma",
+    "icon": "/logo/roma.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 25,
+    "name": "SL Benfica",
+    "icon": "/logo/benfica.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
   {
     "id": 26,
     "name": "Arsenal FC",
@@ -35,7 +285,17 @@
       "tournamentWinner": 1
     }
   },
-  { "id": 27, "name": "Spartak Moskva", "icon": "/logo/spartak.svg" },
+  {
+    "id": 27,
+    "name": "Spartak Moskva",
+    "icon": "/logo/spartak.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
   {
     "id": 28,
     "name": "Atalanta BC",
@@ -47,11 +307,61 @@
       "tournamentWinner": 1
     }
   },
-  { "id": 29, "name": "AS Monaco", "icon": "/logo/monaco.svg" },
-  { "id": 30, "name": "Olympique Marseille", "icon": "/logo/marsel.svg" },
-  { "id": 31, "name": "AC Milan", "icon": "/logo/milan.svg" },
-  { "id": 32, "name": "SS Lazio", "icon": "/logo/lazio.svg" },
-  { "id": 33, "name": "Chelsea FC", "icon": "/logo/chealsea.svg" },
+  {
+    "id": 29,
+    "name": "AS Monaco",
+    "icon": "/logo/monaco.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 30,
+    "name": "Olympique Marseille",
+    "icon": "/logo/marsel.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 31,
+    "name": "AC Milan",
+    "icon": "/logo/milan.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 32,
+    "name": "SS Lazio",
+    "icon": "/logo/lazio.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 33,
+    "name": "Chelsea FC",
+    "icon": "/logo/chealsea.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
   {
     "id": 34,
     "name": "FC Barcelona",
@@ -63,7 +373,17 @@
       "tournamentWinner": 1
     }
   },
-  { "id": 35, "name": "Bayern München", "icon": "/logo/bavar.svg" },
+  {
+    "id": 35,
+    "name": "Bayern München",
+    "icon": "/logo/bavar.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
   {
     "id": 36,
     "name": "Juventus FC",
@@ -75,32 +395,312 @@
       "tournamentWinner": 1
     }
   },
-  { "id": 37, "name": "Manchester United", "icon": "/logo/manUn.svg" },
-  { "id": 38, "name": "SSC Napoli", "icon": "/logo/napoli.svg" },
-  { "id": 39, "name": "Real Madrid CF", "icon": "/logo/realMadrid.svg" },
-  { "id": 40, "name": "Girona FC", "icon": "/logo/girona.svg" },
-  { "id": 41, "name": "Real Betis", "icon": "/logo/betis.svg" },
-  { "id": 42, "name": "Newcastle United", "icon": "/logo/newcastle.svg" },
-  { "id": 43, "name": "Leeds United", "icon": "/logo/ledds.svg" },
-  { "id": 44, "name": "Paris Saint-Germain", "icon": "/logo/psg.svg" },
-  { "id": 45, "name": "Galatasaray SK", "icon": "/logo/saray.svg" },
-  { "id": 46, "name": "Willem II Tilburg", "icon": "/logo/willem.svg" },
-  { "id": 47, "name": "Real Zaragoza", "icon": "/logo/zaragoza.svg" },
-  { "id": 48, "name": "Celtic FC", "icon": "/logo/celtic.svg" },
-  { "id": 49, "name": "Inter Miami CF", "icon": "/logo/miami.svg" },
-  { "id": 50, "name": "La Galaxy", "icon": "/logo/lagalaxy.svg" },
-  { "id": 51, "name": "Los Angeles FC", "icon": "/logo/losangeles.svg" },
-  { "id": 52, "name": "Ca Boca Juniors", "icon": "/logo/boca.svg" },
-  { "id": 53, "name": "CR Flamengo", "icon": "/logo/flamengo.svg" },
-  { "id": 54, "name": "Red Bull Bragantino", "icon": "/logo/bragantino.svg" },
-  { "id": 55, "name": "Santos FC", "icon": "/logo/santos.svg" },
-  { "id": 56, "name": "Club National", "icon": "/logo/national.svg" },
-  { "id": 57, "name": "Al Hilal Riyadh", "icon": "/logo/hilal.svg" },
-  { "id": 58, "name": "Al Nasr FC", "icon": "/logo/nasr.svg" },
-  { "id": 59, "name": "Barcelona SC", "icon": "/logo/barcafff.svg" },
-  { "id": 60, "name": "OGC Nice", "icon": "/logo/nice.svg" },
-  { "id": 61, "name": "US Lecce", "icon": "/logo/lecce.svg" },
-  { "id": 62, "name": "Paris FC", "icon": "/logo/paris.svg" },
-  { "id": 63, "name": "Fenerbahçe", "icon": "/logo/fenirbahce.svg" },
-  { "id": 64, "name": "Dynamo Mosckva", "icon": "/logo/dinMoskva.svg" }
+  {
+    "id": 37,
+    "name": "Manchester United",
+    "icon": "/logo/manUn.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 38,
+    "name": "SSC Napoli",
+    "icon": "/logo/napoli.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 39,
+    "name": "Real Madrid CF",
+    "icon": "/logo/realMadrid.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 40,
+    "name": "Girona FC",
+    "icon": "/logo/girona.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 41,
+    "name": "Real Betis",
+    "icon": "/logo/betis.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 42,
+    "name": "Newcastle United",
+    "icon": "/logo/newcastle.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 43,
+    "name": "Leeds United",
+    "icon": "/logo/ledds.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 44,
+    "name": "Paris Saint-Germain",
+    "icon": "/logo/psg.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "1",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 45,
+    "name": "Galatasaray SK",
+    "icon": "/logo/saray.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 46,
+    "name": "Willem II Tilburg",
+    "icon": "/logo/willem.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 47,
+    "name": "Real Zaragoza",
+    "icon": "/logo/zaragoza.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 48,
+    "name": "Celtic FC",
+    "icon": "/logo/celtic.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "1  ",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 49,
+    "name": "Inter Miami CF",
+    "icon": "/logo/miami.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 50,
+    "name": "La Galaxy",
+    "icon": "/logo/lagalaxy.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 51,
+    "name": "Los Angeles FC",
+    "icon": "/logo/losangeles.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 52,
+    "name": "Ca Boca Juniors",
+    "icon": "/logo/boca.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 53,
+    "name": "CR Flamengo",
+    "icon": "/logo/flamengo.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 54,
+    "name": "Red Bull Bragantino",
+    "icon": "/logo/bragantino.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 55,
+    "name": "Santos FC",
+    "icon": "/logo/santos.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 56,
+    "name": "Club National",
+    "icon": "/logo/national.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 57,
+    "name": "Al Hilal Riyadh",
+    "icon": "/logo/hilal.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 58,
+    "name": "Al Nasr FC",
+    "icon": "/logo/nasr.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 59,
+    "name": "Barcelona SC",
+    "icon": "/logo/barcafff.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 60,
+    "name": "OGC Nice",
+    "icon": "/logo/nice.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 61,
+    "name": "US Lecce",
+    "icon": "/logo/lecce.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 62,
+    "name": "Paris FC",
+    "icon": "/logo/paris.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 63,
+    "name": "Fenerbahçe",
+    "icon": "/logo/fenirbahce.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 64,
+    "name": "Dynamo Mosckva",
+    "icon": "/logo/dinMoskva.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  }
 ]

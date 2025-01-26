@@ -179,17 +179,18 @@
           "date": "210125",
           "homeTeam": 48,
           "awayTeam": 26,
-          "homeScore": "",
-          "awayScore": "",
+          "homeScore": 1,
+          "awayScore": 2,
           "matchType": "league",
           "penalty": null
-        }, {
+        }, 
+        {
           "id": 19,
           "date": "250125",
           "homeTeam": 25,
           "awayTeam": 40,
-          "homeScore": "",
-          "awayScore": "",
+          "homeScore": 0,
+          "awayScore": 2,
           "matchType": "league",
           "penalty": null
         },

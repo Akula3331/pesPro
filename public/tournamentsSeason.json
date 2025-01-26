@@ -66,8 +66,8 @@
               "id": 7,
               "homeTeam": 37,
               "awayTeam": 19,
-              "homeScore": "",
-              "awayScore": "",
+              "homeScore": 2,
+              "awayScore": 1,
               "matchType": "tournament",
               "penalty": null
             },
@@ -75,8 +75,8 @@
               "id": 8,
               "homeTeam": 33,
               "awayTeam": 14,
-              "homeScore": "",
-              "awayScore": "",
+              "homeScore": 0,
+              "awayScore": 1,
               "matchType": "tournament",
               "penalty": null
             },
@@ -84,8 +84,8 @@
               "id": 9,
               "homeTeam": 57,
               "awayTeam": 6,
-              "homeScore": "",
-              "awayScore": "",
+              "homeScore": 1,
+              "awayScore": 0,
               "matchType": "tournament",
               "penalty": null
             },
@@ -93,8 +93,8 @@
               "id": 10,
               "homeTeam": 35,
               "awayTeam": 2,
-              "homeScore": "",
-              "awayScore": "",
+              "homeScore": 4,
+              "awayScore": 2,
               "matchType": "tournament",
               "penalty": null
             }
@@ -104,12 +104,39 @@
           "stageName": "Четвертьфинал",
           "matches": [
             {
-              "id": 0,
-              "homeTeam": null,
-              "awayTeam": null,
+              "id": 1,
+              "homeTeam": 25,
+              "awayTeam": 55,
+              "homeScore": 2,
+              "awayScore": 1,
+              "matchType": "tournament",
+              "penalty": null
+            },
+            {
+              "id": 2,
+              "homeTeam": 37,
+              "awayTeam": 38,
+              "homeScore": 3,
+              "awayScore": 2,
+              "matchType": "tournament",
+              "penalty": null
+            },
+            {
+              "id": 3,
+              "homeTeam": 57,
+              "awayTeam": 9,
+              "homeScore": 0,
+              "awayScore": 3,
+              "matchType": "tournament",
+              "penalty": null
+            },
+            {
+              "id": 4,
+              "homeTeam": 35,
+              "awayTeam": 18,
               "homeScore": "",
               "awayScore": "",
-              "matchType": "",
+              "matchType": "tournament",
               "penalty": null
             }
           ]
@@ -118,12 +145,21 @@
           "stageName": "Полуфинал",
           "matches": [
             {
-              "id": 0,
-              "homeTeam": null,
-              "awayTeam": null,
+              "id": 1,
+              "homeTeam": 25,
+              "awayTeam": 9,
               "homeScore": "",
               "awayScore": "",
               "matchType": "",
+              "penalty": null
+            },
+            {
+              "id": 2,
+              "homeTeam": 37,
+              "awayTeam": null,
+              "homeScore": "",
+              "awayScore": "",
+              "matchType": "tournament",
               "penalty": null
             }
           ]

@@ -957,5 +957,144 @@
     "awayScore": 4,
     "matchType": "league",
     "penalty": null
-  }
+  },
+  {
+    "id": 93,
+    "date": "240125",
+    "homeTeam": 26,
+    "awayTeam": 48,
+    "homeScore": 2,
+    "awayScore": 1,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 94,
+    "date": "240125",
+    "homeTeam": 19,
+    "awayTeam": 37,
+    "homeScore": 1,
+    "awayScore": 2,
+    "matchType": "tournament",
+    "penalty": null
+  },
+  {
+    "id": 95,
+    "date": "240125",
+    "homeTeam": 4,
+    "awayTeam": 35,
+    "homeScore": 2,
+    "awayScore": 1,
+    "matchType": "germanyCup",
+    "penalty": null
+  },
+  {
+    "id": 96,
+    "date": "240125",
+    "homeTeam": 14,
+    "awayTeam": 33,
+    "homeScore": 1,
+    "awayScore": 0,
+    "matchType": "tournament",
+    "penalty": null
+  },
+  {
+    "id": 97,
+    "date": "240125",
+    "homeTeam": 63,
+    "awayTeam": 41,
+    "homeScore": 3,
+    "awayScore": 3,
+    "matchType": "regular",
+   "penalty": {
+      "homeTeamPenalties": 2,
+      "awayTeamPenalties": 3
+    }
+  },
+  
+    {
+      "id": 98,
+      "date": "260125",
+      "homeTeam": 40,
+      "awayTeam": 25,
+      "homeScore": 2,
+      "awayScore": 0,
+      "matchType": "league",
+      "penalty": null
+    },
+    {
+      "id": 99,
+      "date": "260125",
+      "homeTeam": 3,
+      "awayTeam": 48,
+      "homeScore": 2,
+      "awayScore": 3,
+      "matchType": "europeCup",
+      "penalty": null
+    },
+    {
+      "id": 100,
+      "date": "260125",
+      "homeTeam": 6,
+      "awayTeam": 57,
+      "homeScore": 0,
+      "awayScore": 1,
+      "matchType": "tournament",
+      "penalty": null
+    },
+    {
+      "id": 101,
+      "date": "260125",
+      "homeTeam": 2,
+      "awayTeam": 35,
+      "homeScore": 2,
+      "awayScore": 4,
+      "matchType": "tournament",
+      "penalty": null
+    },
+    {
+      "id": 102,
+      "date": "260125",
+      "homeTeam": 55,
+      "awayTeam": 25,
+      "homeScore": 1,
+      "awayScore": 2,
+      "matchType": "tournament",
+      "penalty": null
+    },
+    {
+      "id": 103,
+      "date": "260125",
+      "homeTeam": 38,
+      "awayTeam": 37,
+      "homeScore": 2,
+      "awayScore": 3,
+      "matchType": "tournament",
+      "penalty": null
+    },
+    {
+      "id": 104,
+      "date": "260125",
+      "homeTeam": 9,
+      "awayTeam": 57,
+      "homeScore": 3,
+      "awayScore": 0,
+      "matchType": "tournament",
+      "penalty": null
+    },
+    {
+      "id": 105,
+      "date": "260125",
+      "homeTeam": 17,
+      "awayTeam": 24,
+      "homeScore": 3,
+      "awayScore": 3,
+      "matchType": "italyCup",
+      "penalty": {
+      "homeTeamPenalties": 4,
+      "awayTeamPenalties": 2
+    }
+    }
+  
+  
 ]

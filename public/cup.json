@@ -69,7 +69,21 @@
         {
           "season": 1,
           "date": "09-01-25",
-          "matches": []
+          "matches": [
+            {
+              "id": 1,
+              "date": "260125",
+              "homeTeam": 17,
+              "awayTeam": 24,
+              "homeScore": 3,
+              "awayScore": 3,
+              "matchType": "italyCup",
+              "penalty": {
+              "homeTeamPenalties": 4,
+              "awayTeamPenalties": 2
+            }
+            }
+          ]
         }
       ]
     },
@@ -113,7 +127,18 @@
         {
           "season": 1,
           "date": "09-01-25",
-          "matches": []
+          "matches": [
+            {
+              "id": 1,
+              "date": "260125",
+              "homeTeam": 3,
+              "awayTeam": 48,
+              "homeScore": 2,
+              "awayScore": 3,
+              "matchType": "europeCup",
+              "penalty": null
+            }
+          ]
         }
       ]
     }

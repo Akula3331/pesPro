@@ -133,6 +133,11 @@ color: #E1F5FE;
   padding: 10px;
   text-align: center;
 }
+.stage{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 @media (max-width: 768px) {
   .matchName{

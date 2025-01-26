@@ -6,9 +6,16 @@ const LeagueList = () => {
   const [currentLeague, setCurrentLeague] = useState(null);
   const [matches, setMatches] = useState([]);
   const [teamStats, setTeamStats] = useState([]);
-  const [rounds, setRounds] = useState([]); // Для раундов
 
-  // Загружаем данные о командах
+  // Функция для разбивки матчей на этапы по 6 матчей
+  const groupMatchesIntoStages = (matches, matchesPerStage = 6) => {
+    const stages = [];
+    for (let i = 0; i < matches.length; i += matchesPerStage) {
+      stages.push(matches.slice(i, i + matchesPerStage));
+    }
+    return stages;
+  };
+
   useEffect(() => {
     fetch("/teams.json")
       .then((response) => response.json())
@@ -17,35 +24,34 @@ const LeagueList = () => {
       });
   }, []);
 
-  // Загружаем данные о лигах
   useEffect(() => {
     fetch("/league.json")
       .then((response) => response.json())
       .then((data) => {
-        const league = data.leagues[0]; // Выбираем первую лигу (можно сделать выбор)
+        const league = data.leagues[0]; // Выбираем первую лигу
         setCurrentLeague(league);
-        setMatches(league.matches);
+        setMatches(league.matches || []);
       });
   }, []);
 
-  // Подсчет статистики для выбранной лиги
   useEffect(() => {
     if (currentLeague && matches.length > 0) {
       const calculateStats = () => {
         const stats = currentLeague.teams.map((teamId) => {
           const teamMatches = matches.filter(
-            (match) =>
-              (match.homeTeam === teamId || match.awayTeam === teamId) &&
-              match.homeScore !== "" &&
-              match.awayScore !== ""
+            (match) => {
+              const homeScore = Number(match.homeScore);
+              const awayScore = Number(match.awayScore);
+
+              return (
+                (match.homeTeam === teamId || match.awayTeam === teamId) &&
+                !isNaN(homeScore) &&
+                !isNaN(awayScore)
+              );
+            }
           );
 
-          let wins = 0;
-          let losses = 0;
-          let draws = 0;
-          let goalsScored = 0;
-          let goalsConceded = 0;
-          let points = 0;
+          let wins = 0, losses = 0, draws = 0, goalsScored = 0, goalsConceded = 0, points = 0;
 
           teamMatches.forEach((match) => {
             const isHome = match.homeTeam === teamId;
@@ -97,28 +103,11 @@ const LeagueList = () => {
 
   const getTeamNameById = (id) => {
     const team = teams.find((team) => team.id === id);
-    return team ? team.name : "Неизвестная команда";
+    return team ? team.name : "Unknown Team";
   };
 
-  // Разделяем матчи на раунды (каждый раунд содержит 6 матчей)
-  useEffect(() => {
-    const rounds = [];
-    let roundMatches = [];
-    
-    matches.forEach((match, index) => {
-      roundMatches.push(match);
-      if (roundMatches.length === 6 || index === matches.length - 1) {
-        rounds.push(roundMatches);
-        roundMatches = [];
-      }
-    });
-
-    setRounds(rounds);
-  }, [matches]);
-
-  if (!currentLeague) {
-    return <p>Загрузка данных лиги...</p>;
-  }
+  // Разбиваем матчи на этапы по 6 матчей
+  const stages = groupMatchesIntoStages(matches);
 
   return (
     <div className={cls.tableContainer}>
@@ -139,7 +128,7 @@ const LeagueList = () => {
           {teamStats.map((team, index) => (
             <div className={cls.point} key={team.id}>
               <p className={cls.name}>
-                <p>{index + 1}</p> {getTeamNameById(team.id)}
+                <span>{index + 1}</span> {getTeamNameById(team.id)}
               </p>
               <p className={cls.pointText}>{team.played}</p>
               <p className={cls.pointText}>{team.wins}</p>
@@ -148,11 +137,7 @@ const LeagueList = () => {
               <p className={cls.pointText}>{team.points}</p>
               <p className={cls.pointText}>{team.goalsScored}</p>
               <p className={cls.pointText}>{team.goalsConceded}</p>
-              <p className={cls.pointText}>
-                {team.goalDifference > 0
-                  ? `${team.goalDifference}`
-                  : team.goalDifference}
-              </p>
+              <p className={cls.pointText}>{team.goalDifference}</p>
             </div>
           ))}
         </div>
@@ -160,10 +145,10 @@ const LeagueList = () => {
 
       <h2>История матчей</h2>
       <div className={cls.historyCon}>
-        {rounds.map((round, roundIndex) => (
-          <div key={roundIndex} className={cls.round}>
-            <h3>Раунд {roundIndex + 1}</h3>
-            {round.map((match) => (
+        {stages.map((stage, stageIndex) => (
+          <div key={stageIndex} className={cls.stage}>
+            <h3>Этап {stageIndex + 1}</h3>
+            {stage.map((match) => (
               <div className={cls.matchBlock} key={match.id}>
                 <p className={cls.matchName}>{getTeamNameById(match.homeTeam)}</p>
                 <div className={cls.pointScore}>
@@ -177,9 +162,7 @@ const LeagueList = () => {
                     }, "")}
                   </p>
                   <p>
-                    {match.homeScore
-                      ? `${match.homeScore} - ${match.awayScore}`
-                      : "Не завершен"}
+                    {match.homeScore} - {match.awayScore}
                   </p>
                 </div>
                 <p className={cls.matchName}>{getTeamNameById(match.awayTeam)}</p>
