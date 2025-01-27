@@ -6,6 +6,7 @@ const LeagueTable = () => {
   const [currentLeague, setCurrentLeague] = useState(null);
   const [matches, setMatches] = useState([]);
   const [teamStats, setTeamStats] = useState([]);
+  const [matchDetails, setMatchDetails] = useState([]); // Для хранения подробностей матчей
 
   // Функция для разбивки матчей на этапы по 6 матчей
   const groupMatchesIntoStages = (matches, matchesPerStage = 6) => {
@@ -34,11 +35,26 @@ const LeagueTable = () => {
       });
   }, []);
 
+  // Загрузка подробной информации о матчах из matches.json
   useEffect(() => {
-    if (currentLeague && matches.length > 0) {
+    if (matches.length > 0) {
+      fetch("/matches.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const matchDetails = matches.map((match) => {
+            const matchData = data.find((m) => m.id === match.matchId);
+            return matchData || match; // Если матч найден, используем его данные, иначе оставляем оригинал
+          });
+          setMatchDetails(matchDetails);
+        });
+    }
+  }, [matches]);
+
+  useEffect(() => {
+    if (currentLeague && matchDetails.length > 0) {
       const calculateStats = () => {
         const stats = currentLeague.teams.map((teamId) => {
-          const teamMatches = matches.filter(
+          const teamMatches = matchDetails.filter(
             (match) => {
               const homeScore = Number(match.homeScore);
               const awayScore = Number(match.awayScore);
@@ -99,7 +115,7 @@ const LeagueTable = () => {
 
       calculateStats();
     }
-  }, [currentLeague, matches]);
+  }, [currentLeague, matchDetails]);
 
   const getTeamNameById = (id) => {
     const team = teams.find((team) => team.id === id);
@@ -107,7 +123,7 @@ const LeagueTable = () => {
   };
 
   // Разбиваем матчи на этапы по 6 матчей
-  const stages = groupMatchesIntoStages(matches);
+  const stages = groupMatchesIntoStages(matchDetails);
 
   return (
     <div className={cls.tableContainer}>
@@ -161,9 +177,13 @@ const LeagueTable = () => {
                       return acc;
                     }, "")}
                   </p>
-                  <p>
-                    {match.homeScore} - {match.awayScore}
-                  </p>
+                  {match.homeScore !== undefined && match.awayScore !== undefined ? (
+                    <p>
+                      {match.homeScore} - {match.awayScore}
+                    </p>
+                  ) : (
+                    <p>Не сыгран</p>
+                  )}
                 </div>
                 <p className={cls.matchName}>{getTeamNameById(match.awayTeam)}</p>
               </div>

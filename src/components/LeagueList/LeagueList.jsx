@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import cls from "./LeagueList.module.scss";
 
 const LeagueList = () => {
+  const { leagueId } = useParams(); // Получаем ID лиги из URL
   const [teams, setTeams] = useState([]);
   const [currentLeague, setCurrentLeague] = useState(null);
   const [matches, setMatches] = useState([]);
   const [teamStats, setTeamStats] = useState([]);
+  const [matchDetails, setMatchDetails] = useState([]); // Для хранения подробностей матчей
 
   // Функция для разбивки матчей на этапы по 6 матчей
   const groupMatchesIntoStages = (matches, matchesPerStage = 6) => {
@@ -28,17 +31,34 @@ const LeagueList = () => {
     fetch("/league.json")
       .then((response) => response.json())
       .then((data) => {
-        const league = data.leagues[0]; // Выбираем первую лигу
-        setCurrentLeague(league);
-        setMatches(league.matches || []);
+        // Найдем лигу по ID
+        const league = data.leagues.find((league) => league.id === parseInt(leagueId)); // Используем parseInt для корректного сравнения
+        if (league) {
+          setCurrentLeague(league);
+          setMatches(league.matches || []);
+        }
       });
-  }, []);
+  }, [leagueId]); // Загружаем лигу при изменении ID
 
   useEffect(() => {
-    if (currentLeague && matches.length > 0) {
+    if (matches.length > 0) {
+      fetch("/matches.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const matchDetails = matches.map((match) => {
+            const matchData = data.find((m) => m.id === match.matchId);
+            return matchData || match; // Если матч найден, используем его данные, иначе оставляем оригинал
+          });
+          setMatchDetails(matchDetails);
+        });
+    }
+  }, [matches]);
+
+  useEffect(() => {
+    if (currentLeague && matchDetails.length > 0) {
       const calculateStats = () => {
         const stats = currentLeague.teams.map((teamId) => {
-          const teamMatches = matches.filter(
+          const teamMatches = matchDetails.filter(
             (match) => {
               const homeScore = Number(match.homeScore);
               const awayScore = Number(match.awayScore);
@@ -99,15 +119,14 @@ const LeagueList = () => {
 
       calculateStats();
     }
-  }, [currentLeague, matches]);
+  }, [currentLeague, matchDetails]);
 
   const getTeamNameById = (id) => {
     const team = teams.find((team) => team.id === id);
     return team ? team.name : "Unknown Team";
   };
 
-  // Разбиваем матчи на этапы по 6 матчей
-  const stages = groupMatchesIntoStages(matches);
+  const stages = groupMatchesIntoStages(matchDetails);
 
   return (
     <div className={cls.tableContainer}>
@@ -161,9 +180,13 @@ const LeagueList = () => {
                       return acc;
                     }, "")}
                   </p>
-                  <p>
-                    {match.homeScore} - {match.awayScore}
-                  </p>
+                  {match.homeScore !== undefined && match.awayScore !== undefined ? (
+                    <p>
+                      {match.homeScore} - {match.awayScore}
+                    </p>
+                  ) : (
+                    <p>Не сыгран</p>
+                  )}
                 </div>
                 <p className={cls.matchName}>{getTeamNameById(match.awayTeam)}</p>
               </div>

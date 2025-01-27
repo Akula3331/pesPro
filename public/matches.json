@@ -696,10 +696,10 @@
   {
     "id": 67,
     "date": "150125",
-    "homeTeam": 43,
-    "awayTeam": 38,
-    "homeScore": 1,
-    "awayScore": 4,
+    "homeTeam": 38,
+    "awayTeam": 43,
+    "homeScore": 4,
+    "awayScore": 1,
     "matchType": "tournament",
     "penalty": null
   },
@@ -798,10 +798,10 @@
   {
     "id": 77,
     "date": "190125",
-    "homeTeam": 59,
-    "awayTeam": 9,
-    "homeScore": 0,
-    "awayScore": 2,
+    "homeTeam": 9,
+    "awayTeam": 59,
+    "homeScore": 2,
+    "awayScore": 0,
     "matchType": "tournament",
     "penalty": null
   },
@@ -971,10 +971,10 @@
   {
     "id": 94,
     "date": "240125",
-    "homeTeam": 19,
-    "awayTeam": 37,
-    "homeScore": 1,
-    "awayScore": 2,
+    "homeTeam": 37,
+    "awayTeam": 19,
+    "homeScore": 2,
+    "awayScore": 1,
     "matchType": "tournament",
     "penalty": null
   },
@@ -1094,6 +1094,86 @@
       "homeTeamPenalties": 4,
       "awayTeamPenalties": 2
     }
+    },
+    {
+      "id": 106,
+      "date": "270125",
+      "homeTeam": 65,
+      "awayTeam": 66,
+      "homeScore": 3,
+      "awayScore": 2,
+      "matchType": "regular",
+      "penalty": null
+    },
+    {
+      "id": 107,
+      "date": "270125",
+      "homeTeam": 10,
+      "awayTeam": 39,
+      "homeScore": 2,
+      "awayScore": 2,
+      "matchType": "league",
+      "penalty": null
+    },
+    {
+      "id": 108,
+      "date": "270125",
+      "homeTeam": 32,
+      "awayTeam": 33,
+      "homeScore": 5,
+      "awayScore": 4,
+      "matchType": "league",
+      "penalty": null
+    },
+    {
+      "id": 109,
+      "date": "270125",
+      "homeTeam": 2,
+      "awayTeam": 37,
+      "homeScore": 4,
+      "awayScore": 3,
+      "matchType": "englandCup",
+      "penalty": null
+    },
+    {
+      "id": 110,
+      "date": "270125",
+      "homeTeam": 18,
+      "awayTeam": 35,
+      "homeScore": 3,
+      "awayScore": 5,
+      "matchType": "tournament",
+      "penalty": null
+    },
+    {
+      "id": 111,
+      "date": "270125",
+      "homeTeam": 34,
+      "awayTeam": 31,
+      "homeScore": 1,
+      "awayScore": 2,
+      "matchType": "league",
+      "penalty": null
+    },
+    {
+      "id": 112,
+      "date": "270125",
+      "homeTeam": 26,
+      "awayTeam": 25,
+      "homeScore": 1,
+      "awayScore": 5,
+      "matchType": "tournament",
+      "penalty": null
+    },
+    {
+      "id": 113,
+      "date": "270125",
+      "homeTeam": 26,
+      "awayTeam": 25,
+      "homeScore": 4,
+      "awayScore": 0,
+      "matchType": "regular",
+      "penalty": null
     }
   
   

@@ -4,10 +4,8 @@
       "name": "England",
       "flag": "/image/england.svg",
       "seasons": [
-        {
-          "season": 1,
-          "date": "09-01-25",
-          "matches": []
+        { 
+          "matchIds": [109]
         }
       ]
     },
@@ -16,18 +14,7 @@
       "flag": "/image/spain.svg",
       "seasons": [
         {
-          "season": 1,
-          "date": "23-01-25",
-          "matches": [
-            {
-              "homeTeam": 21,
-              "awayTeam": 39,
-              "homeScore": 8,
-              "awayScore": 0,
-              "matchType": "spainCup",
-              "penalty": null
-            }
-          ]
+          "matchIds": [90]
         }
       ]
     },
@@ -36,18 +23,7 @@
       "flag": "/image/france.svg",
       "seasons": [
         {
-          "season": 1,
-          "date": "19-01-25",
-          "matches": [
-            {
-              "homeTeam": 44,
-              "awayTeam": 62,
-              "homeScore": 4,
-              "awayScore": 0,
-              "matchType": "franceCup",
-              "penalty": null
-            }
-          ]
+          "matchIds": [80]
         }
       ]
     },
@@ -56,9 +32,7 @@
       "flag": "/image/germany.svg",
       "seasons": [
         {
-          "season": 1,
-          "date": "09-01-25",
-          "matches": []
+          "matchIds": [95]
         }
       ]
     },
@@ -67,23 +41,7 @@
       "flag": "/image/italy.svg",
       "seasons": [
         {
-          "season": 1,
-          "date": "09-01-25",
-          "matches": [
-            {
-              "id": 1,
-              "date": "260125",
-              "homeTeam": 17,
-              "awayTeam": 24,
-              "homeScore": 3,
-              "awayScore": 3,
-              "matchType": "italyCup",
-              "penalty": {
-              "homeTeamPenalties": 4,
-              "awayTeamPenalties": 2
-            }
-            }
-          ]
+          "matchIds": [105]
         }
       ]
     },
@@ -91,33 +49,18 @@
       "name": "Portugal",
       "flag": "/image/portugal.svg",
       "seasons": [
-        {
-          "season": 1,
-          "date": "09-01-25",
-          "matches": []
-        }
       ]
     },
     {
       "name": "Usa",
       "flag": "/image/usa.svg",
       "seasons": [
-        {
-          "season": 1,
-          "date": "09-01-25",
-          "matches": []
-        }
       ]
     },
     {
       "name": "Brazil",
       "flag": "/image/brazil.svg",
       "seasons": [
-        {
-          "season": 1,
-          "date": "09-01-25",
-          "matches": []
-        }
       ]
     },
     {
@@ -125,20 +68,7 @@
       "flag": "/image/euro.svg",
       "seasons": [
         {
-          "season": 1,
-          "date": "09-01-25",
-          "matches": [
-            {
-              "id": 1,
-              "date": "260125",
-              "homeTeam": 3,
-              "awayTeam": 48,
-              "homeScore": 2,
-              "awayScore": 3,
-              "matchType": "europeCup",
-              "penalty": null
-            }
-          ]
+          "matchIds": [99]
         }
       ]
     }

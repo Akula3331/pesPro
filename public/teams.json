@@ -17,7 +17,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },
@@ -696,6 +696,39 @@
     "id": 64,
     "name": "Dynamo Mosckva",
     "icon": "/logo/dinMoskva.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 65,
+    "name": "CSKA Mosckva",
+    "icon": "/logo/cska.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 66,
+    "name": "Sociedad B",
+    "icon": "/logo/sociedad.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 67,
+    "name": "Losc Lille",
+    "icon": "/logo/lille.svg",
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",

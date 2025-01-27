@@ -1,0 +1,55 @@
+{
+  "leagues": [
+    {
+      "id": 1,
+      "name": "Лига 1",
+      "teams": [25, 39, 33, 31, 24, 48, 34, 26, 38, 40, 10, 32],
+      "matches": [
+        { "id": 1, "matchId": 60 },
+        { "id": 2, "matchId": 61 },
+        { "id": 3, "matchId": 62 },
+        { "id": 4, "matchId": 64 },
+        { "id": 5, "matchId": 65 },
+        { "id": 6, "matchId": 66 },
+        { "id": 7, "matchId": 67 },
+        { "id": 8, "matchId": 68 },
+        { "id": 9, "matchId": 69 },
+        { "id": 10, "matchId": 70 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Лига 2",
+      "teams": [41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+      "matches": [
+        { "id": 1, "matchId": 71 },
+        { "id": 2, "matchId": 72 },
+        { "id": 3, "matchId": 73 },
+        { "id": 4, "matchId": 74 },
+        { "id": 5, "matchId": 75 },
+        { "id": 6, "matchId": 76 },
+        { "id": 7, "matchId": 77 },
+        { "id": 8, "matchId": 78 },
+        { "id": 9, "matchId": 79 },
+        { "id": 10, "matchId": 80 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Лига 3",
+      "teams": [51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
+      "matches": [
+        { "id": 1, "matchId": 81 },
+        { "id": 2, "matchId": 82 },
+        { "id": 3, "matchId": 83 },
+        { "id": 4, "matchId": 84 },
+        { "id": 5, "matchId": 85 },
+        { "id": 6, "matchId": 86 },
+        { "id": 7, "matchId": 87 },
+        { "id": 8, "matchId": 88 },
+        { "id": 9, "matchId": 89 },
+        { "id": 10, "matchId": 70 }
+      ]
+    }
+  ]
+}

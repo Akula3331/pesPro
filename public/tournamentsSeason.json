@@ -7,175 +7,26 @@
       "stages": [
         {
           "stageName": "Групповой этап",
-          "matches": [
-            {
-              "id": 1,
-              "homeTeam": 52,
-              "awayTeam": 55,
-              "homeScore": 3,
-              "awayScore": 5,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 2,
-              "homeTeam": 43,
-              "awayTeam": 38,
-              "homeScore": 1,
-              "awayScore": 4,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 3,
-              "homeTeam": 46,
-              "awayTeam": 18,
-              "homeScore": 2,
-              "awayScore": 3,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 4,
-              "homeTeam": 59,
-              "awayTeam": 9,
-              "homeScore": 0,
-              "awayScore": 2,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 5,
-              "homeTeam": 45,
-              "awayTeam": 26,
-              "homeScore": 3,
-              "awayScore": 4,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 6,
-              "homeTeam": 25,
-              "awayTeam": 21,
-              "homeScore": 7,
-              "awayScore": 2,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 7,
-              "homeTeam": 37,
-              "awayTeam": 19,
-              "homeScore": 2,
-              "awayScore": 1,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 8,
-              "homeTeam": 33,
-              "awayTeam": 14,
-              "homeScore": 0,
-              "awayScore": 1,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 9,
-              "homeTeam": 57,
-              "awayTeam": 6,
-              "homeScore": 1,
-              "awayScore": 0,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 10,
-              "homeTeam": 35,
-              "awayTeam": 2,
-              "homeScore": 4,
-              "awayScore": 2,
-              "matchType": "tournament",
-              "penalty": null
-            }
+          "matchIds": [
+            63, 67, 75, 77, 81, 89, 94, 96,  100,101
           ]
         },
         {
           "stageName": "Четвертьфинал",
-          "matches": [
-            {
-              "id": 1,
-              "homeTeam": 25,
-              "awayTeam": 55,
-              "homeScore": 2,
-              "awayScore": 1,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 2,
-              "homeTeam": 37,
-              "awayTeam": 38,
-              "homeScore": 3,
-              "awayScore": 2,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 3,
-              "homeTeam": 57,
-              "awayTeam": 9,
-              "homeScore": 0,
-              "awayScore": 3,
-              "matchType": "tournament",
-              "penalty": null
-            },
-            {
-              "id": 4,
-              "homeTeam": 35,
-              "awayTeam": 18,
-              "homeScore": "",
-              "awayScore": "",
-              "matchType": "tournament",
-              "penalty": null
-            }
+          "matchIds": [
+            102,  103, 104,110,112
           ]
         },
         {
           "stageName": "Полуфинал",
-          "matches": [
-            {
-              "id": 1,
-              "homeTeam": 25,
-              "awayTeam": 9,
-              "homeScore": "",
-              "awayScore": "",
-              "matchType": "",
-              "penalty": null
-            },
-            {
-              "id": 2,
-              "homeTeam": 37,
-              "awayTeam": null,
-              "homeScore": "",
-              "awayScore": "",
-              "matchType": "tournament",
-              "penalty": null
-            }
+          "matchIds": [
+            
           ]
         },
         {
           "stageName": "Финал",
-          "matches": [
-            {
-              "id": 0,
-              "homeTeam": null,
-              "awayTeam": null,
-              "homeScore": "",
-              "awayScore": "",
-              "matchType": "",
-              "penalty": null
-            }
+          "matchIds": [
+            
           ]
         }
       ]

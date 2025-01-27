@@ -5,22 +5,63 @@ import cls from './TournamentList.module.scss';
 const TournamentList = () => {
   const { tournamentId } = useParams(); // Получаем ID турнира из URL
   const [tournament, setTournament] = useState(null); // Данные о турнире
+  const [matches, setMatches] = useState([]); // Данные о матчах
   const [teams, setTeams] = useState([]); // Данные о командах
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Загружаем данные о турнире
         const tournamentResponse = await fetch('/tournaments.json');
         const tournamentData = await tournamentResponse.json();
-        const selectedTournament = tournamentData.tournaments.find(
-          (tournament) => tournament.id === parseInt(tournamentId)
-        );
-        setTournament(selectedTournament);
+        
+        console.log('Tournament Data:', tournamentData); // Для проверки структуры данных
+        
+        // Проверка на наличие данных о турнире
+        if (tournamentData && Array.isArray(tournamentData.tournaments)) {
+          const selectedTournament = tournamentData.tournaments.find(
+            (tournament) => tournament.id === parseInt(tournamentId)
+          );
+          
+          if (selectedTournament) {
+            setTournament(selectedTournament);
+          } else {
+            console.error('Турнир не найден');
+            setTournament(null);
+          }
+        } else {
+          console.error('Данные о турнире не найдены');
+          setTournament(null);
+        }
 
+        // Загружаем данные о матчах
+        const matchResponse = await fetch('/matches.json');
+        const matchData = await matchResponse.json();
+        
+        console.log('Match Data:', matchData); // Для проверки структуры данных
+        
+        // Проверка на наличие данных о матчах
+        if (Array.isArray(matchData)) {
+          setMatches(matchData);
+        } else {
+          console.error('Данные о матчах не найдены');
+          setMatches([]);
+        }
+
+        // Загружаем данные о командах
         const teamResponse = await fetch('/teams.json');
         const teamData = await teamResponse.json();
-        setTeams(teamData);
+        
+        console.log('Team Data:', teamData); // Для проверки структуры данных
+        
+        // Проверка на наличие данных о командах
+        if (Array.isArray(teamData)) {
+          setTeams(teamData);
+        } else {
+          console.error('Данные о командах не найдены');
+          setTeams([]);
+        }
 
         setLoading(false);
       } catch (error) {
@@ -33,15 +74,29 @@ const TournamentList = () => {
   }, [tournamentId]); // Перезагружаем данные при изменении tournamentId
 
   if (loading) {
-    return <p>Загрузка турнира...</p>;
+    return (
+      <>
+        <p>Загрузка турнира...</p>
+      </>
+    );
   }
 
   if (!tournament) {
-    return <p>Турнир не найден.</p>;
+    return (
+      <>
+        <p>Турнир не найден.</p>
+      </>
+    );
   }
 
+  // Функция для получения команды по ID
   const getTeamById = (id) => {
     return teams.find((team) => team.id === id) || { name: 'Неизвестная команда', icon: '' };
+  };
+
+  // Функция для получения матча по ID
+  const getMatchById = (id) => {
+    return matches.find((match) => match.id === id);
   };
 
   const getStageBackground = (stageName) => {
@@ -71,7 +126,12 @@ const TournamentList = () => {
         <div key={index}>
           <h3 className={cls.stageName}>{stage.stageName}</h3>
           <div className={cls.matchesList}>
-            {stage.matches.map((match) => {
+            {stage.matchIds.map((matchId) => {
+              const match = getMatchById(matchId); // Получаем матч по ID
+              if (!match) {
+                return <p key={matchId}>Матч не найден!</p>;
+              }
+
               const homeTeam = getTeamById(match.homeTeam);
               const awayTeam = getTeamById(match.awayTeam);
 
