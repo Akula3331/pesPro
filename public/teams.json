@@ -270,7 +270,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },
@@ -400,7 +400,7 @@
     "name": "Manchester United",
     "icon": "/logo/manUn.svg",
     "achievements": {
-      "tournamentChampion": "",
+      "tournamentChampion": "1",
       "leagueWinner": "",
       "cups": "",
       "tournamentWinner": ""
@@ -600,7 +600,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },

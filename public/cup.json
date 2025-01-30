@@ -49,6 +49,9 @@
       "name": "Portugal",
       "flag": "/image/portugal.svg",
       "seasons": [
+        {
+          "matchIds": [119]
+        }
       ]
     },
     {
@@ -61,6 +64,9 @@
       "name": "Brazil",
       "flag": "/image/brazil.svg",
       "seasons": [
+        {
+          "matchIds": [120]
+        }
       ]
     },
     {

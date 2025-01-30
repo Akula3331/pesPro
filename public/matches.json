@@ -686,8 +686,8 @@
   {
     "id": 66,
     "date": "150125",
-    "homeTeam": 48,
-    "awayTeam": 32,
+    "homeTeam": 32,
+    "awayTeam": 48,
     "homeScore": 3,
     "awayScore": 3,
     "matchType": "league",
@@ -706,10 +706,10 @@
   {
     "id": 68,
     "date": "150125",
-    "homeTeam": 25,
-    "awayTeam": 26,
-    "homeScore": 1,
-    "awayScore": 2,
+    "homeTeam": 26,
+    "awayTeam": 25,
+    "homeScore": 2,
+    "awayScore": 1,
     "matchType": "league",
     "penalty": null
   },
@@ -757,20 +757,20 @@
   {
     "id": 73,
     "date": "170125",
-    "homeTeam": 33,
-    "awayTeam": 40,
-    "homeScore": 1,
-    "awayScore": 2,
+    "homeTeam": 40,
+    "awayTeam": 33,
+    "homeScore": 2,
+    "awayScore": 1,
     "matchType": "league",
     "penalty": null
   },
   {
     "id": 74,
     "date": "170125",
-    "homeTeam": 31,
-    "awayTeam": 10,
-    "homeScore": 7,
-    "awayScore": 2,
+    "homeTeam": 10,
+    "awayTeam": 31,
+    "homeScore": 2,
+    "awayScore": 7,
     "matchType": "league",
     "penalty": null
   },
@@ -808,8 +808,8 @@
   {
     "id": 78,
     "date": "190125",
-    "homeTeam": 24,
-    "awayTeam": 32,
+    "homeTeam": 32,
+    "awayTeam": 24,
     "homeScore": 2,
     "awayScore": 2,
     "matchType": "league",
@@ -849,40 +849,40 @@
   {
     "id": 82,
     "date": "210125",
-    "homeTeam": 56,
-    "awayTeam": 13,
-    "homeScore": 1,
-    "awayScore": 4,
+    "homeTeam": 13,
+    "awayTeam": 56,
+    "homeScore": 4,
+    "awayScore": 1,
     "matchType": "regular",
     "penalty": null
   },
   {
     "id": 83,
     "date": "210125",
-    "homeTeam": 57,
-    "awayTeam": 22,
-    "homeScore": 4,
-    "awayScore": 3,
+    "homeTeam": 22,
+    "awayTeam": 57,
+    "homeScore": 3,
+    "awayScore": 4,
     "matchType": "regular",
     "penalty": null
   },
   {
     "id": 84,
     "date": "210125",
-    "homeTeam": 48,
-    "awayTeam": 49,
-    "homeScore": 2,
-    "awayScore": 3,
+    "homeTeam": 49,
+    "awayTeam": 48,
+    "homeScore": 3,
+    "awayScore": 2,
     "matchType": "regular",
     "penalty": null
   },
   {
     "id": 85,
     "date": "210125",
-    "homeTeam": 48,
-    "awayTeam": 49,
-    "homeScore": 4,
-    "awayScore": 3,
+    "homeTeam": 49,
+    "awayTeam": 48,
+    "homeScore": 3,
+    "awayScore": 4,
     "matchType": "regular",
     "penalty": null
   },
@@ -971,10 +971,10 @@
   {
     "id": 94,
     "date": "240125",
-    "homeTeam": 37,
-    "awayTeam": 19,
-    "homeScore": 2,
-    "awayScore": 1,
+    "homeTeam": 19,
+    "awayTeam": 37,
+    "homeScore": 1,
+    "awayScore": 2,
     "matchType": "tournament",
     "penalty": null
   },
@@ -1224,7 +1224,79 @@
       "awayScore": 1,
       "matchType": "league",
       "penalty": null
-  }
+  },
   
-  
+    {
+        "id": 119,
+        "date": "290125",
+        "homeTeam": 14,
+        "awayTeam": 25,
+        "homeScore": 2,
+        "awayScore": 2,
+        "matchType": "portugalCup",
+        "penalty": {
+            "homeTeamPenalties": 2,
+            "awayTeamPenalties": 3
+        }
+    },
+    {
+        "id": 120,
+        "date": "290125",
+        "homeTeam": 55,
+        "awayTeam": 53,
+        "homeScore": 1,
+        "awayScore": 1,
+        "matchType": "brazilCup",
+        "penalty": {
+            "homeTeamPenalties": 4,
+            "awayTeamPenalties": 3
+        }
+    },
+    {
+        "id": 121,
+        "date": "290125",
+        "homeTeam": 14,
+        "awayTeam": 25,
+        "homeScore": 3,
+        "awayScore": 3,
+        "matchType": "tournament",
+        "penalty": {
+            "homeTeamPenalties": 2,
+            "awayTeamPenalties": 3
+        }
+    },
+    {
+        "id": 122,
+        "date": "290125",
+        "homeTeam": 9,
+        "awayTeam": 35,
+        "homeScore": 3,
+        "awayScore": 0,
+        "matchType": "tournament",
+        "penalty": null
+    },
+    {
+        "id": 123,
+        "date": "290125",
+        "homeTeam": 9,
+        "awayTeam": 25,
+        "homeScore": 4,
+        "awayScore": 2,
+        "matchType": "tournament",
+        "penalty": null
+    },
+    {
+        "id": 124,
+        "date": "290125",
+        "homeTeam": 9,
+        "awayTeam": 37,
+        "homeScore": 2,
+        "awayScore": 4,
+        "matchType": "cup",
+        "penalty": null
+    }
 ]
+
+  
+  
+

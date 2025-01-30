@@ -1,8 +1,8 @@
 {
   "tournaments": [
     {
-      "id": 1,
-      "name": "Сезон 2",
+      "id": 2,
+      "name": "Турнир 2",
       "date": "15-01-2025",
       "stages": [
         {
@@ -20,13 +20,13 @@
         {
           "stageName": "Полуфинал",
           "matchIds": [
-            
+            121,122,123
           ]
         },
         {
           "stageName": "Финал",
           "matchIds": [
-            
+            124
           ]
         }
       ]
