@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import cls from './ProfileHistoryMatch.module.scss';
-import CustomSelect from '../CustomSelect/CustomSelect';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import cls from "./ProfileHistoryMatch.module.scss";
+import CustomSelect from "../CustomSelect/CustomSelect";
 
 const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
-  const [sortOrder, setSortOrder] = useState('desc');
-  const [selectedTournament, setSelectedTournament] = useState('all');
+  const [sortOrder, setSortOrder] = useState("desc");
+  const [selectedTournament, setSelectedTournament] = useState("all");
 
   const convertDate = (dateStr) => {
     const day = dateStr.substring(0, 2);
@@ -15,17 +15,53 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
     return new Date(formattedDate);
   };
 
+  const getCupImage = (matchType) => {
+    switch (matchType) {
+      case "englandCup":
+        return "/image/england.svg";
+      case "spainCup":
+        return "/image/spain.svg";
+      case "franceCup":
+        return "/image/france.svg";
+      case "italyCup":
+        return "/image/italy.svg";
+      case "germanyCup":
+        return "/image/germany.svg";
+      case "portugalCup":
+        return "/image/portugal.svg";
+      case "asiaCup":
+        return "/image/kyrgyzstan.svg";
+      case "europeCup":
+        return "/image/europe.svg";
+      case "brazilCup":
+        return "/image/brazil.svg";
+      case "netherlandCup":
+        return "/image/netherland.svg";
+      case "usaCup":
+        return "/image/usa.svg";
+      case "turkeyCup":
+        return "/image/turkey.svg";
+      case "russiaCup":
+        return "/image/russia.svg";
+      default:
+        return null;
+    }
+  };
+
   const filteredMatches = matches.filter((match) => {
     // Фильтрация по турнирам
-    const tournamentFilter = 
+    const tournamentFilter =
       selectedTournament === "all" ||
-      (Array.isArray(selectedTournament) 
-        ? selectedTournament.includes(match.matchType)  // Для Кубков проверяем принадлежность к массиву
+      (Array.isArray(selectedTournament)
+        ? selectedTournament.includes(match.matchType) // Для Кубков проверяем принадлежность к массиву
         : match.matchType === selectedTournament); // Для других типов сравнение по значению
 
     // Фильтрация по выбранной команде
-    return tournamentFilter && 
-      (match.homeTeam === parseInt(teamId) || match.awayTeam === parseInt(teamId));
+    return (
+      tournamentFilter &&
+      (match.homeTeam === parseInt(teamId) ||
+        match.awayTeam === parseInt(teamId))
+    );
   });
 
   const sortedMatches = filteredMatches.sort((a, b) => {
@@ -36,7 +72,7 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
 
   const getTeamNameById = (id) => {
     const team = teams.find((team) => team.id === id);
-    return team ? team.name : 'Unknown Team';
+    return team ? team.name : "Unknown Team";
   };
 
   const tournamentOptions = [
@@ -44,7 +80,18 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
     { value: "tournament", label: "Турнирные" },
     { value: "regular", label: "Дружеские" },
     { value: "league", label: "Лига" },
-    { value: ["cup", "englandCup", "spainCup", "franceCup", "italyCup", "germanyCup", "portugalCup"], label: "Кубки" }, 
+    {
+      value: [
+        "cup",
+        "englandCup",
+        "spainCup",
+        "franceCup",
+        "italyCup",
+        "germanyCup",
+        "portugalCup",
+      ],
+      label: "Кубки",
+    },
   ];
 
   const sortOptions = [
@@ -56,8 +103,13 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
     // Если выбран "Кубки", то назначаем массив значений
     if (value === "cup") {
       setSelectedTournament([
-        "cup", "englandCup", "spainCup", "franceCup", 
-        "italyCup", "germanyCup", "portugalCup"
+        "cup",
+        "englandCup",
+        "spainCup",
+        "franceCup",
+        "italyCup",
+        "germanyCup",
+        "portugalCup",
       ]);
     } else {
       setSelectedTournament(value);
@@ -88,19 +140,26 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
           sortedMatches.map((match) => {
             const homeTeam = getTeamNameById(match.homeTeam);
             const awayTeam = getTeamNameById(match.awayTeam);
+            const cupImage = getCupImage(match.matchType); // Получаем изображение кубка
 
             return (
               <div
                 key={match.id}
                 className={`${cls.block} ${cls[match.matchType]}`}
               >
-                
                 <div className={cls.matchDetails}>
+                  {cupImage && (
+                    <img
+                      className={cls.cupImage}
+                      src={cupImage}
+                      alt="Cup Logo"
+                    />
+                  )}
                   <Link to={`/team/${match.homeTeam}`} className={cls.teamName}>
                     {homeTeam}
                   </Link>
                   <span className={cls.score}>
-                  <p className={cls.date}>
+                    <p className={cls.date}>
                       {match.date.split("").reduce((acc, char, index) => {
                         if (index === 2 || index === 4) {
                           acc += ".";
@@ -112,7 +171,7 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
                     {match.homeScore} - {match.awayScore}
                     {match.penalty && (
                       <div className={cls.penalty}>
-                        {match.penalty.homeTeamPenalties} -{' '}
+                        {match.penalty.homeTeamPenalties} -{" "}
                         {match.penalty.awayTeamPenalties}
                       </div>
                     )}

@@ -85,6 +85,42 @@ const MatchHistory = ({ teamId }) => {
     { value: "asc", label: "Возрастание" },
   ];
 
+  // Функция для получения пути изображения кубка
+  const getCupImage = (matchType) => {
+    switch (matchType) {
+      case "englandCup":
+        return "/image/england.svg";
+      case "spainCup":
+        return "/image/spain.svg";
+      case "franceCup":
+        return "/image/france.svg";
+      case "italyCup":
+        return "/image/italy.svg";
+      case "germanyCup":
+        return "/image/germany.svg";
+      case "portugalCup":
+        return "/image/portugal.svg";
+      case "asiaCup":
+        return "/image/kyrgyzstan.svg";
+      case "europeCup":
+        return "/image/europe.svg";
+      case "brazilCup":
+        return "/image/brazil.svg";
+      case "netherlandCup":
+        return "/image/netherland.svg";
+      case "usaCup":
+        return "/image/usa.svg";
+      case "turkeyCup":
+        return "/image/turkey.svg";
+      case "russiaCup":
+        return "/image/russia.svg";
+    
+      default:
+        return null;
+    }
+  };
+  
+
   return (
     <div className={cls.container}>
       <h1>История матчей</h1>
@@ -130,6 +166,7 @@ const MatchHistory = ({ teamId }) => {
           limitedMatches.map((match) => {
             const homeTeam = getTeamNameById(match.homeTeam);
             const awayTeam = getTeamNameById(match.awayTeam);
+            const cupImage = getCupImage(match.matchType);
 
             return (
               <div
@@ -137,11 +174,12 @@ const MatchHistory = ({ teamId }) => {
                 className={`${cls.block} ${cls[match.matchType]}`}
               >
                 <div className={cls.matchDetails}>
+                  {cupImage && <img src={cupImage} alt={match.matchType} className={cls.cupImage} />}
                   <Link to={`/team/${match.homeTeam}`} className={cls.teamName}>
                     {homeTeam}
                   </Link>
                   <span className={cls.score}>
-                  <p className={cls.date}>
+                    <p className={cls.date}>
                       {match.date.split("").reduce((acc, char, index) => {
                         if (index === 2 || index === 4) {
                           acc += ".";

@@ -6,7 +6,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },
@@ -28,7 +28,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },
@@ -403,7 +403,7 @@
       "tournamentChampion": "1",
       "leagueWinner": "",
       "cups": "",
-      "tournamentWinner": ""
+      "tournamentWinner": "1"
     }
   },
   {
@@ -490,7 +490,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },
@@ -556,7 +556,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },
@@ -622,7 +622,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },
@@ -717,7 +717,7 @@
   {
     "id": 66,
     "name": "Sociedad B",
-    "icon": "/logo/sociedad.svg",
+    "icon": "/logo/sociedadb.svg",
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",

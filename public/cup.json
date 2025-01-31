@@ -58,6 +58,9 @@
       "name": "Usa",
       "flag": "/image/usa.svg",
       "seasons": [
+        {
+          "matchIds": [129]
+        }
       ]
     },
     {
@@ -71,10 +74,46 @@
     },
     {
       "name": "Europe",
-      "flag": "/image/euro.svg",
+      "flag": "/image/europe.svg",
       "seasons": [
         {
           "matchIds": [99]
+        }
+      ]
+    },
+    {
+      "name": "Asia",
+      "flag": "/image/kyrgyzstan.svg",
+      "seasons": [
+        {
+          "matchIds":[134]
+        }
+      ]
+    },
+    {
+      "name": "Netherlands",
+      "flag": "/image/netherland.svg",
+      "seasons": [
+        {
+          "matchIds":[132]
+        }
+      ]
+    },
+    {
+      "name": "Russia",
+      "flag": "/image/russia.svg",
+      "seasons": [
+        {
+          "matchIds":[133]
+        }
+      ]
+    },
+    {
+      "name": "Turkey",
+      "flag": "/image/turkey.svg",
+      "seasons": [
+        {
+          "matchIds":[131]
         }
       ]
     }

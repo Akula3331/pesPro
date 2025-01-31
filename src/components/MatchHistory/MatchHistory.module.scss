@@ -216,9 +216,10 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 /* Кубок Европы */
+/* Кубок Европы */
 .europeCup {
-  background: linear-gradient(135deg, #3A1C71, #D76D77, #FFAF7B); /* Фиолетовый, розовый и персиковый */
-  color: #FFFFFF; /* Белый текст */
+  background: linear-gradient(135deg, #0033A0, #FCD116); /* Синий и желтый (флаг ЕС) */
+  color: #FFFFFF;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
@@ -226,6 +227,53 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Кубок Турции */
+.turkeyCup {
+  background: linear-gradient(135deg, #F1C40F,#E30A17, #E30A17 ); /* Красный и желтый (цвета флага Турции) */
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Кубок России */
+.russiaCup {
+  background: linear-gradient(135deg, #D52B1E, #0033A0, #807e7e); /* Красный, синий и белый (цвета флага России) */
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Кубок Нидерландов */
+.netherlandCup {
+  background: linear-gradient(135deg, #21409A, #FF4F00, #b4b2b2); /* Синий, оранжевый и белый (цвета флага Нидерландов) */
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Кубок Азии */
+.asiaCup {
+  background: linear-gradient(135deg, #1E2A47, #FFC72C); /* Темно-синий и желтый (цвета флага Азии) */
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cupImage{
+  width: 50px;
+}
 
 @keyframes championGlow {
   0% {
@@ -301,5 +349,7 @@ p{
   .score{
     font-size: 14px;
   }
-
+.cupImage{
+  width: 30px;
+}
 }

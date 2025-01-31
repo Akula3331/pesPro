@@ -97,7 +97,7 @@ const TeamProfile = () => {
       <div className={cls.container}>
         <div className={cls.blockIcon}>
           <img className={cls.icon} src={team.icon} alt="" />
-          <h1>{team.name}</h1>
+          <h1 className={cls.title}>{team.name}</h1>
         </div>
         <div className={cls.block}>
           <div className={cls.stats}>
