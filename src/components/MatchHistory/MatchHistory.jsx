@@ -10,7 +10,7 @@ const MatchHistory = ({ teamId }) => {
   const [selectedTournament, setSelectedTournament] = useState("all");
   const [teamNameFilter, setTeamNameFilter] = useState(""); // Фильтр по названию команды
   const [goalDifferenceFilter, setGoalDifferenceFilter] = useState(""); // Фильтр по разнице голов
-  const [matchLimit, setMatchLimit] = useState(10); // Лимит количества матчей
+  const [matchLimit, setMatchLimit] = useState(25); // Лимит количества матчей
 
   useEffect(() => {
     const fetchData = async () => {

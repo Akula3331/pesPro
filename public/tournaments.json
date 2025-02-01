@@ -2,7 +2,6 @@
   "tournaments": [
     {
       "id": 1,
-      "name": "Турнир 1",
       "startDate": "29-12-2025",
       "endDate": "07-01-2025",
       "stages": [
@@ -43,7 +42,6 @@
     },
     {
       "id": 2,
-      "name": "Турнир 2",
       "startDate": "15-01-2025",
       "endDate": "30-01-2025",
       "stages": [

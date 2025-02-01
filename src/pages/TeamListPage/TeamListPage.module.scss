@@ -1,109 +1,109 @@
 .container {
   margin: 0 auto;
   padding-bottom: 100px;
-    font-family: "PT Mono", serif;
-    background: #239B56;
-  }
-  .block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-    background-size: cover;
-  }
+  font-family: "PT Mono", serif;
+  background: #c8e6c9;
+}
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  background-size: cover;
+}
+.title {
+  text-align: center;
+  color: #117a65;
+  font-size: 60px;
+  padding: 20px 0 60px 0;
+  margin: 0;
+}
+.linkCon {
+  // background: linear-gradient(0deg, #37474f, #263238 60%);
+  background: linear-gradient(0deg, #66bb6a, #263238 60%);
+  // background: linear-gradient(0deg, #263238, #66bb6a 60%);
+  border-radius: 25px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 120px;
+  text-decoration: none;
+  padding: 0px 50px;
+  gap: 20px;
+}
+.link {
+  color: #faed26;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.teamIcon {
+  width: 80px; /* Ширина эмблемы */
+  height: 80px; /* Высота эмблемы */
+  object-fit: contain; /* Масштабирование без обрезки */
+}
+.matchCount {
+  font-size: 32px;
+  color: #faed26;
+}
+@media screen and (max-width: 990px) {
   .title {
-    text-align: center;
-    color: #faed26;
-    font-size: 60px;
-    padding: 20px 0 60px 0;
-    margin: 0;
+    font-size: 50px;
+    padding-bottom: 40px;
   }
   .linkCon {
-    background: linear-gradient(0deg, #37474f, #263238 60%);
-    border-radius: 25px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 120px;
-    text-decoration: none;
-    padding: 0px 50px;
-    gap: 20px;
+    padding: 0 30px;
+    height: 80px;
+  }
+  .teamIcon {
+    width: 50px;
+    height: 50px;
   }
   .link {
-    color: #faed26;
-    font-size: 24px;
-    text-transform: uppercase;
-  }
-  
-  .teamIcon {
-    width: 80px; /* Ширина эмблемы */
-    height: 80px; /* Высота эмблемы */
-    object-fit: contain; /* Масштабирование без обрезки */
+    font-size: 18px;
   }
   .matchCount {
-    font-size: 32px;
-    color: #faed26;
+    font-size: 26px;
   }
-  @media screen and (max-width: 990px) {
-    .title{
-      font-size: 50px;
-      padding-bottom: 40px;
-    }
-    .linkCon{
-      padding: 0 30px;
-      height: 80px;
-    }
-    .teamIcon{
-      width: 50px;
-      height: 50px;
-    }
-    .link{
-      font-size: 18px;
-    }
-    .matchCount{
-      font-size: 26px;
-    }
-  }  
-  @media screen and (max-width: 780px) {
-    .title{
-      font-size: 35px;
-    }
-    .teamIcon{
-      width: 40px;
-      height: 40px;
-    }
-    .linkCon{
-      padding: 0 15px;
-      gap: 10px;
-    }
-    .block{
-      gap: 30px;
-      padding: 0 40px;
-    }
-    .link{
-      display: none;
-    }
+}
+@media screen and (max-width: 780px) {
+  .title {
+    font-size: 35px;
   }
-  @media screen and (max-width: 520px) {
-   .title{
+  .teamIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .linkCon {
+    padding: 0 15px;
+    gap: 10px;
+  }
+  .block {
+    gap: 30px;
+    padding: 0 40px;
+  }
+  .link {
+    display: none;
+  }
+}
+@media screen and (max-width: 520px) {
+  .title {
     font-size: 30px;
     padding-bottom: 20px;
-   }
-    .teamIcon{
-      width: 50px;
-      height: 50px;
-    }
-    .linkCon{
-      flex-direction: column;
-      height: auto;
-      padding: 15px;
-    }
-    .block{
-      gap: 10px;
-      padding: 0 10px;
-    }
   }
-  
-  
+  .teamIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .linkCon {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+  .block {
+    gap: 10px;
+    padding: 0 10px;
+  }
+}

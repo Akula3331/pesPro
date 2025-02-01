@@ -1,6 +1,10 @@
 import React from 'react'
 import Leaderboard from './../../components/Leaderboard/Leaderboard';
 import NewsBlock from '../../components/NewsBlock/NewsBlock';
+import cls from './MainPages.module.scss'
+import Quiz from '../../components/MiniGames/Quiz/Quiz';
+import PenaltyShoot from '../../components/MiniGames/PenaltyShoot/PenaltyShoot';
+import FootballQuiz from '../../components/MiniGames/FootballQuiz/FootballQuiz';
 
 function MainPages() {
   const newsData = [
@@ -21,9 +25,10 @@ function MainPages() {
   ];
   
   return (
-    <div>
+    <div className={cls.con}>
         <div>
-          <h2>Новости</h2>
+          <Quiz/>
+          {/* <h2>Новости</h2>
           {newsData.map((news, index) => (
             <NewsBlock
               key={index}
@@ -32,7 +37,7 @@ function MainPages() {
               backgroundImage={news.backgroundImage}
               images={news.images}
             />
-          ))}
+          ))} */}
         </div>
         <Leaderboard/>
 

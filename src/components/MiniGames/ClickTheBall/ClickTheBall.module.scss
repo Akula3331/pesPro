@@ -1,0 +1,41 @@
+.gameContainer {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .gameField {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .ball {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #66bb6a;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .gameOver {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .retryButton {
+    padding: 10px 20px;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .retryButton:hover {
+    background-color: #388e3c;
+  }
+  

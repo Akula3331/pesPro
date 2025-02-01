@@ -130,7 +130,7 @@ const LeagueList = () => {
 
   return (
     <div className={cls.tableContainer}>
-      <h1>Таблица Лиги</h1>
+      <h1 className={cls.conTitle}>Таблица Лиги</h1>
       <div className={cls.tableWrapper}>
         <div className={cls.scrollContainer}>
           <div className={cls.title}>
@@ -147,7 +147,7 @@ const LeagueList = () => {
           {teamStats.map((team, index) => (
             <div className={cls.point} key={team.id}>
               <p className={cls.name}>
-                <span>{index + 1}</span> {getTeamNameById(team.id)}
+                <span className={cls.place}>{index + 1}</span><span className={cls.placeName}>{getTeamNameById(team.id)}</span> 
               </p>
               <p className={cls.pointText}>{team.played}</p>
               <p className={cls.pointText}>{team.wins}</p>
@@ -162,7 +162,7 @@ const LeagueList = () => {
         </div>
       </div>
 
-      <h2>История матчей</h2>
+      <h2 className={cls.subtitleCon}>История матчей</h2>
       <div className={cls.historyCon}>
         {stages.map((stage, stageIndex) => (
           <div key={stageIndex} className={cls.stage}>

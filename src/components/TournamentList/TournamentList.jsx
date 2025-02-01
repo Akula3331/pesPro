@@ -116,7 +116,7 @@ const TournamentList = () => {
 
   return (
     <div className={cls.tournamentTable}>
-      <h1 className={cls.title}>{tournament.name}</h1>
+      <h1 className={cls.title}>Season {tournament.id}</h1>
       <div className={cls.date}>
         <span>{tournament.startDate}</span>
         <span>{tournament.endDate}</span>
@@ -173,7 +173,7 @@ const TournamentList = () => {
 
       {tournament.champion && (
         <div className={cls.championBlock}>
-          <h3>Чемпион турнира</h3>
+          <h3 className={cls.champTitle}>Чемпион турнира</h3>
           <div className={cls.champion}>
             <img
               src={getTeamById(tournament.champion.teamId).icon}
@@ -187,7 +187,7 @@ const TournamentList = () => {
 
       {tournament.winners && tournament.winners.length > 0 && (
         <div className={cls.winnersBlock}>
-          <h3>Победители турнира</h3>
+          <h3 className={cls.champTitle}>Победители турнира</h3>
           {tournament.winners.map((winner, index) => (
             <div key={index} className={cls.winner}>
               <img

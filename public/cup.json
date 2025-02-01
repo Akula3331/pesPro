@@ -28,15 +28,6 @@
       ]
     },
     {
-      "name": "Germany",
-      "flag": "/image/germany.svg",
-      "seasons": [
-        {
-          "matchIds": [95]
-        }
-      ]
-    },
-    {
       "name": "Italy",
       "flag": "/image/italy.svg",
       "seasons": [
@@ -87,6 +78,15 @@
       "seasons": [
         {
           "matchIds":[134]
+        }
+      ]
+    },
+    {
+      "name": "Germany",
+      "flag": "/image/germany.svg",
+      "seasons": [
+        {
+          "matchIds": [95]
         }
       ]
     },

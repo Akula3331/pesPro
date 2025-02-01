@@ -3,50 +3,56 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  padding-bottom: 50px;
+  background-color: #c8e6c9;
+  height: 100%;
+  gap: 40px;
 }
 
-.title {
+.glavTitle {
   font-size: 32px;
-  margin-bottom: 20px;
-  color: #4caf50;
+  margin-top: 20px;
+  color: #117a65;
 }
 
 .sectionTitle {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #239B56;
+  color: #117a65;
+}
+.sectionCon {
+  display: flex;
+  // justify-content: space-between;
+  gap: 100px;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 15px;
 }
-.cardCup{
+.cardCup {
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-display: grid;
-gap: 20px;
-color: #333; /* Светлый серый для мягкого контраста */
-outline: none;
-text-decoration: none;
-// background: linear-gradient(45deg, #333333, #FF8C00,  #0056A1, #7CBFF3, #239B56,  #D72638,  #00416A, #A0C8E6);
-background: 
-  linear-gradient(45deg, #333333, #B0B0B0, #FF8C00, #FFD699),
-  linear-gradient(135deg, #0056A1, #7CBFF3, #239B56, #A3D9A3),
-  linear-gradient(225deg, #D72638, #FFB6C1, #00416A, #A0C8E6);
-background-size: 100% 100%, 100% 100%, 100% 100%;
-background-blend-mode: overlay;
-
-
+  display: grid;
+  gap: 20px;
+  color: #333; /* Светлый серый для мягкого контраста */
+  outline: none;
+  text-decoration: none;
+  // background: linear-gradient(45deg, #333333, #FF8C00,  #0056A1, #7CBFF3, #239B56,  #D72638,  #00416A, #A0C8E6);
+  background: linear-gradient(45deg, #333333, #b0b0b0, #ff8c00, #ffd699),
+    linear-gradient(135deg, #0056a1, #7cbff3, #239b56, #a3d9a3),
+    linear-gradient(225deg, #d72638, #ffb6c1, #00416a, #a0c8e6);
+  background-size: 100% 100%, 100% 100%, 100% 100%;
+  background-blend-mode: overlay;
 }
 .card {
   text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8), 0 0 10px #ffe700,
-  0 0 20px #ffdf00;
-box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
-color: #ffffff;
-background: linear-gradient(135deg, #ffdf00, #ffd700, #ffae00, #ffdf00);
+    0 0 20px #ffdf00;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffdf00, #ffd700, #ffae00, #ffdf00);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -60,11 +66,134 @@ background: linear-gradient(135deg, #ffdf00, #ffd700, #ffae00, #ffdf00);
 }
 
 .cardTitle {
-  color: #fff;
+  color: #e8f5e9;
   font-size: 28px;
   font-weight: bold;
+  margin: 0;
 }
 
-.cardDate, .cardSubtitle {
+.cardDate,
+.cardSubtitle {
   font-size: 14px;
+}
+.cupCon {
+  background: linear-gradient(130deg, #ffd700, #e19300);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+.flagContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  // margin: 20px 0;
+  flex-wrap: wrap;
+}
+.flagIcon {
+  width: 100px;
+}
+.blockTitle {
+  color: #e8f5e9;
+  margin: 0;
+}
+.title {
+  color: #117a65;
+  margin: 0;
+}
+.data {
+  font-weight: bold;
+  color: #e8f5e9;
+}
+.matchDetails {
+  gap: 50px;
+  align-items: center;
+  display: flex;
+}
+.match {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #ffeb3b;
+  background-color: #66bb6a;
+  padding: 10px 20px;
+  animation: fadeIn 0.5s ease-in-out;
+  border-radius: 10px;
+  // &:nth-child(even){
+  //   border-top-left-radius: 55px;
+  //   border-bottom-right-radius: 55px;
+  // }
+  // &:nth-child(odd){
+  //   border-top-right-radius: 55px;
+  //   border-bottom-left-radius: 55px;
+  // }
+}
+.teamIcon {
+  width: 100px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.name {
+  font-weight: 600;
+}
+.score {
+  font-weight: bolder;
+  font-size: 24px;
+}
+.seasonBlock {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.countryName {
+  color: #117a65;
+  font-size: 32px;
+}
+.countryDetails {
+}
+.penalty {
+  color: #d9534f;
+  font-weight: bolder;
+}
+@media screen and (max-width: 770px) {
+  .flagIcon {
+    width: 50px;
+  }
+  .teamIcon {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .container {
+    padding: 20px;
+  }
+  .flagContainer {
+    flex-wrap: wrap;
+  }
+  .score {
+    font-size: 14px;
+  }
+  .matchDetails {
+    gap: 10px;
+    width: 300px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .data {
+    margin-bottom: 10px;
+  }
+  .card {
+    padding: 20px 10px;
+  }
 }

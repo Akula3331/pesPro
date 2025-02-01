@@ -1,115 +1,106 @@
 /* Контейнер для фильтров */
 
 .filters {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 50px auto; 
-    gap: 20px; /* Отступы между селекторами */
-  }
-.container{
-   padding: 50px ;
-   margin: 0 auto;
-  h1{
-    color: #4CAF50;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 50px auto;
+  gap: 20px; /* Отступы между селекторами */
+}
+.container {
+  padding: 50px;
+  margin: 0 auto;
+  h1 {
+    color: #117a65;
   }
 }
-  /* Стиль для селектора */
-  select {
-    padding: 8px 12px;
-    font-size: 14px;
-    border: 1px solid #4CAF50;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  
-    /* Добавим эффекты при наведении */
-    &:hover {
-      border-color: #4CAF50;
-    }
-  
-    /* Стиль для фокуса */
-    &:focus {
-      outline: none;
-      border-color: #4CAF50;
-    }
+/* Стиль для селектора */
+select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #117a65;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* Добавим эффекты при наведении */
+  &:hover {
+    border-color: #239b56;
   }
-  
-  /* Блок с матчами */
-  .con {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .teamSearch, .goalDifference, .matchLimit{
-    padding: 10px;
+
+  /* Стиль для фокуса */
+  &:focus {
     outline: none;
-    color: #4CAF50;
-    border-radius: 5px;
-    border: 1px solid #239B56;
-    font-family: "PT Mono", serif;
-    
+    border-color: #117a65;
   }
-  /* Стиль для каждого блока с матчем */
-  .block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-    transition: all 0.3s ease;
-    padding: 20px 80px;
-  }
-  /* Стиль для блока с деталями матча */
-  .matchDetails {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Стиль для названия команды */
-  .teamName {
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    width: 300px;
-    text-align: center;
-    /* Эффект наведения */
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  .date{
-    color: #fff;
-  }
-  /* Стиль для счета */
-  .score {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    // color: #333;
-  }
-  
-  /* Стиль для пенальти */
-  .penalty {
-    margin-top: 10px;
-    color: #d9534f;
-  }
-  
-// Дополнительные пастельные оттенки для типов матчей
-// Вдохновленные небом и природой для типов матчей
-.tournament {
-
-  background-color: #A2D0A9; /* Светлый розово-лавандовый для Дружеских матчей */
-  color: #3C7D3E; /* Насыщенный зеленый для текста */
-
 }
-.league {
-  background-color: #D7A9D5; /* Нежный сиреневый для Лиги */
-  color: #5F4B8B; /* Темный фиолетовый для текста */
+
+/* Блок с матчами */
+.con {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.teamSearch,
+.goalDifference,
+.matchLimit {
+  padding: 10px;
+  outline: none;
+  color: #117a65;
+  border-radius: 5px;
+  border: 1px solid #117a65;
+  font-family: "PT Mono", serif;
+  background-color: #d1e5d1;
+  &::placeholder {
+    color: #117a65;
+  }
+}
+/* Стиль для каждого блока с матчем */
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 20px 80px;
+}
+/* Стиль для блока с деталями матча */
+.matchDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Стиль для названия команды */
+.teamName {
+  font-weight: bold;
+  color: #e8f5e9;
+  text-decoration: none;
+  width: 300px;
+  text-align: center;
+  /* Эффект наведения */
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.date {
+  color: #e8f5e9;
+}
+/* Стиль для счета */
+.score {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #FFEB3B;
+}
+
+/* Стиль для пенальти */
+.penalty {
+  margin-top: 10px;
+  color: #d9534f;
 }
 
 .cup {
@@ -120,150 +111,203 @@
   padding: 20px;
   color: #ffffff;
   font-weight: bold;
-  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8), 0 0 10px #ffe700, 0 0 20px #ffdf00;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8), 0 0 10px #ffe700,
+    0 0 20px #ffdf00;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
   border-radius: 8px;
 }
-.regular{
-  background-color: #A4C8F0; /* Мягкий голубой с оттенком лаванды для Турнирных матчей */
-  color: #2A3D7A; /* Темно-синий для текста */
+.league {
+  background: linear-gradient(
+    135deg,
+    #e2c1f0,
+    #a39ed8
+  ); /* Пастельный сиреневый и светлый синий */
+  color: #4a3d76; /* Темный фиолетовый для текста */
 }
-/* Кубок Англии */
+.regular {
+  background: linear-gradient(
+    135deg,
+    #a1c6ff,
+    #7a9ec4
+  ); /* Мягкий голубой и приглушенный синий */
+  color: #2a3d7a; /* Темно-синий для текста */
+}
+.tournament {
+  background: linear-gradient(
+    135deg,
+    #a1d6a3,
+    #8bcf75
+  ); /* Светлый мятный и свежий травяной зеленый */
+  color: #3b5e3b; /* Темный зелёный для текста */
+}
 .englandCup {
-  background: linear-gradient(135deg, #1E3C72, #2A5298); /* Темно-синий и мягкий голубой */
-  color: #FFFFFF; /* Белый текст */
+  background: linear-gradient(
+    135deg,
+    #0d47a1,
+    #64b5f6
+  ); /* Темно-синий и светлый голубой */
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Кубок Испании */
 .spainCup {
-  background: linear-gradient(135deg, #FF4E50, #F9D423); /* Яркий красно-оранжевый и золотистый */
-  color: #FFFFFF; /* Белый текст */
+  background: linear-gradient(
+    135deg,
+    #d9534f,
+    #f1c232
+  ); /* Светлый желтый и мягкий красный (сходство с флагом Испании) */
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Кубок Италии */
-.italyCup {
-  background: linear-gradient(135deg, #11998E, #38EF7D); /* Глубокий зелёный и лаймово-зелёный */
-  color: #FFFFFF; /* Белый текст */
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Кубок Франции */
-.franceCup {
-  background: linear-gradient(135deg, #667EEA, #764BA2); /* Насыщенный синий и фиолетовый */
-  color: #FFFFFF; /* Белый текст */
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Кубок Португалии */
 .portugalCup {
-  background: linear-gradient(135deg, #FF8008, #FFC837); /* Яркий оранжевый и золотистый */
-  color: #FFFFFF; /* Белый текст */
+  background: linear-gradient(
+    135deg,
+    #f5d300,
+    #a1c73e
+  ); /* Немного приглушенный желтый и зелёный (сдержанный флаг Португалии) */
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Кубок Германии */
+.italyCup {
+  background: linear-gradient(
+    135deg,
+    #11998e,
+    #38ef7d
+  ); /* Глубокий зелёный и лаймово-зелёный */
+  color: #ffffff; /* Белый текст */
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .germanyCup {
-  background: linear-gradient(135deg, #232526, #414345); /* Темный угольный и серый */
-  color: #FFFFFF; /* Белый текст */
+  background: linear-gradient(
+    135deg,
+    #212121,
+    #ffeb3b
+  ); /* Темный угольный и желтый */
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Кубок Бразилии */
 .brazilCup {
-  background: linear-gradient(135deg, #56AB2F, #A8E063); /* Яркий зеленый и светло-зеленый */
-  color: #FFFFFF; /* Белый текст */
+  background: linear-gradient(
+    135deg,
+    #56ab2f,
+    #a8e063
+  ); /* Яркий зеленый и светло-зеленый */
+  color: #ffffff; /* Белый текст */
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Кубок Америки */
-.usaCup {
-  background: linear-gradient(135deg, #FF512F, #DD2476); /* Яркий оранжевый и розовый */
-  color: #FFFFFF; /* Белый текст */
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-/* Кубок Европы */
-/* Кубок Европы */
 .europeCup {
-  background: linear-gradient(135deg, #0033A0, #FCD116); /* Синий и желтый (флаг ЕС) */
-  color: #FFFFFF;
+  background: linear-gradient(
+    135deg,
+    #0033a0,
+    #fcd116
+  ); /* Синий и желтый (флаг ЕС) */
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Кубок Турции */
 .turkeyCup {
-  background: linear-gradient(135deg, #F1C40F,#E30A17, #E30A17 ); /* Красный и желтый (цвета флага Турции) */
-  color: #FFFFFF;
+  background: linear-gradient(
+    135deg,
+    #8b0000,
+    #6b1e3b,
+    #ff6347
+  ); /* Темный красный, бордовый и томатный */
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Кубок России */
 .russiaCup {
-  background: linear-gradient(135deg, #D52B1E, #0033A0, #807e7e); /* Красный, синий и белый (цвета флага России) */
-  color: #FFFFFF;
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #1e40af,
+    #d0e7f9
+  ); /* Насыщенный синий, глубокий синий и светлый голубой */
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Кубок Нидерландов */
+.usaCup {
+  background: linear-gradient(
+    135deg,
+    #ff4b2b,
+    #9c1d52,
+    #0d47a1
+  ); /* Яркий красный, пурпурный и насыщенный синий */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .netherlandCup {
-  background: linear-gradient(135deg, #21409A, #FF4F00, #b4b2b2); /* Синий, оранжевый и белый (цвета флага Нидерландов) */
-  color: #FFFFFF;
+  background: linear-gradient(
+    135deg,
+    #4db6ac,
+    #81c784
+  ); /* Приглушенный бирюзовый и светло-зеленый */
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Кубок Азии */
 .asiaCup {
-  background: linear-gradient(135deg, #1E2A47, #FFC72C); /* Темно-синий и желтый (цвета флага Азии) */
-  color: #FFFFFF;
+  background: linear-gradient(
+    135deg,
+    #6c71c4,
+    #a3b8ff,
+    #4682b4
+  ); /* Лазурно-фиолетовый, светлый голубой и синий */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.franceCup {
+  background: linear-gradient(
+    135deg,
+    #7a4e9f,
+    #c88ce5,
+    #5a2d8c
+  ); /* Пурпурный, фиолетовый и темно-розовый */
+  color: #ffffff;
   padding: 10px 20px;
   border-radius: 16px;
   text-align: center;
@@ -271,7 +315,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.cupImage{
+.cupImage {
   width: 50px;
 }
 
@@ -303,53 +347,53 @@
 //   }
 // }
 
-p{
+p {
   margin: 0;
 }
-@media screen and (max-width:1100px) {
-  .filters{
+@media screen and (max-width: 1100px) {
+  .filters {
     flex-wrap: wrap;
   }
- .teamName{
-  width: 200px;
- }
+  .teamName {
+    width: 200px;
+  }
 }
-@media screen and (max-width:700px) {
-  .teamName{
+@media screen and (max-width: 700px) {
+  .teamName {
     width: auto;
   }
-  .block{
+  .block {
     padding: 20px 30px;
   }
-  .matchDetails{
+  .matchDetails {
     gap: 20px;
   }
-  .score{
+  .score {
     display: flex;
     flex-direction: column;
     gap: 5px;
   }
-  .penalty{
+  .penalty {
     margin: 0;
   }
-  .filters{
+  .filters {
     margin: 30px 0;
   }
 }
-@media screen and (max-width:520px) {
-  .container{
+@media screen and (max-width: 520px) {
+  .container {
     padding: 20px;
-    h1{
+    h1 {
       font-size: 30px;
     }
   }
-  .teamName{
+  .teamName {
     font-size: 14px;
   }
-  .score{
+  .score {
     font-size: 14px;
   }
-.cupImage{
-  width: 30px;
-}
+  .cupImage {
+    width: 30px;
+  }
 }

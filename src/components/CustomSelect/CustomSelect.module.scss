@@ -5,15 +5,15 @@
   
   .selectedOption {
     padding: 10px;
-    border: 1px solid #4CAF50;
+    border: 1px solid #117a65;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #d1e5d1;
     cursor: pointer;
     font-weight: bold;
-    color: #239B56;
+    color: #117a65;
   
     &:hover {
-      background-color: #f0f0f0;
+      background-color: #d1e5d1;
     }
   }
   
@@ -24,14 +24,14 @@
     width: 100%;
     border: 1px solid #c7ccd1;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #d1e5d1;
     z-index: 1000;
   
     .option {
       padding: 10px;
       cursor: pointer;
       &:hover {
-        background-color: #f0f0f0;
+        background-color: #66bb6a;
       }
     }
   }
