@@ -85,7 +85,7 @@ const Quiz = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [score, setScore] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30); // Таймер на 5 секунд
+  const [timeLeft, setTimeLeft] = useState(5); // Таймер на 5 секунд
   const [timerRunning, setTimerRunning] = useState(false); // Таймер не стартует сразу
   const [quizStarted, setQuizStarted] = useState(false); // Проверка на старт викторины
 
@@ -110,7 +110,7 @@ const Quiz = () => {
       if (currentQuestion + 1 < questions.length) {
         setCurrentQuestion(currentQuestion + 1);
         setSelectedAnswer(null);
-        setTimeLeft(3); // Сбрасываем таймер
+        setTimeLeft(5); // Сбрасываем таймер
         setTimerRunning(true); // Включаем таймер для следующего вопроса
       } else {
         setQuizFinished(true);

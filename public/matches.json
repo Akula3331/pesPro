@@ -788,10 +788,10 @@
   {
     "id": 76,
     "date": "190125",
-    "homeTeam": 59,
-    "awayTeam": 60,
-    "homeScore": 2,
-    "awayScore": 3,
+    "homeTeam": 60,
+    "awayTeam": 59,
+    "homeScore": 3,
+    "awayScore": 2,
     "matchType": "regular",
     "penalty": null
   },
