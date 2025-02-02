@@ -28,6 +28,7 @@ function MainPages() {
     <div className={cls.con}>
         <div>
           <Quiz/>
+          {/* <FootballQuiz/> */}
           {/* <h2>Новости</h2>
           {newsData.map((news, index) => (
             <NewsBlock

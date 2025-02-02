@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // height: 500px;
   padding: 50px;
   background: linear-gradient(0deg, #66bb6a, #263238 60%);
 }
@@ -24,9 +23,10 @@
 
 .options {
   display: flex;
-  flex-direction: column; /* Варианты в столбик */
+  flex-direction: column;
   gap: 10px;
 }
+
 .startScreen {
   text-align: center;
 }
@@ -40,6 +40,7 @@
   cursor: pointer;
   border-radius: 8px;
 }
+
 .nickname {
   font-size: 20px;
   margin-top: 15px;
@@ -54,29 +55,38 @@
 .option {
   padding: 12px;
   border: none;
-  background: #e0e0e0;
+  background: #66bb6a;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 8px;
+  position: relative; /* Для применения эффекта нажатия */
 }
 
 .option:hover {
-  background: #bdbdbd;
+  background: #66bb6a;
 }
 
 .option:disabled {
   cursor: default;
 }
 
-.correct {
-  background: #66bb6a !important;
-  color: white;
+/* Эффект нажатия */
+.option:active {
+  background: #388e3c; /* Изменение фона при нажатии */
+  transform: scale(0.95); /* Немного уменьшаем кнопку при нажатии */
 }
 
-.wrong {
-  background: #d9534f !important;
-  color: white;
+/* Добавляем анимацию при нажатии */
+.option:active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); /* Легкая тень при нажатии */
+  border-radius: 8px;
 }
 
 .progress {
@@ -96,16 +106,13 @@
   margin-top: 20px;
 }
 
-.retry:hover {
-  background: #388e3c;
-}
-.title{
+.title {
   color: #FFEB3B;
+}
 
-}
-@media screen and (max-width:520px) {
+@media screen and (max-width: 520px) {
   .quizBox,
-.resultBox {
-  width: 200px;
-}
+  .resultBox {
+    width: 200px;
+  }
 }
