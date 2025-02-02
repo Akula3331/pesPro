@@ -187,7 +187,7 @@ const TournamentList = () => {
 
       {tournament.winners && tournament.winners.length > 0 && (
         <div className={cls.winnersBlock}>
-          <h3 className={cls.champTitle}>Победители турнира</h3>
+          <h3 className={cls.champTitle}>Финалисты турнира</h3>
           {tournament.winners.map((winner, index) => (
             <div key={index} className={cls.winner}>
               <img

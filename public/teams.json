@@ -6,7 +6,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -28,7 +28,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -39,7 +39,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups":"1",
+      "cups":[1],
       "tournamentWinner": ""
     }
   },
@@ -182,7 +182,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -226,7 +226,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -270,7 +270,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -279,10 +279,10 @@
     "name": "Arsenal FC",
     "icon": "/logo/arsenal.svg",
     "achievements": {
-      "tournamentChampion": 1,
+      "tournamentChampion": [1],
       "leagueWinner": "",
       "cups": "",
-      "tournamentWinner": 1
+      "tournamentWinner": [1]
     }
   },
   {
@@ -304,7 +304,7 @@
       "tournamentChampion": "",
       "leagueWinner": "",
       "cups": "",
-      "tournamentWinner": 1
+      "tournamentWinner": [1]
     }
   },
   {
@@ -335,7 +335,7 @@
     "icon": "/logo/milan.svg",
     "achievements": {
       "tournamentChampion": "",
-      "leagueWinner": "",
+      "leagueWinner": [1],
       "cups": "",
       "tournamentWinner": ""
     }
@@ -370,7 +370,7 @@
       "tournamentChampion": "",
       "leagueWinner": "",
       "cups": "",
-      "tournamentWinner": 1
+      "tournamentWinner": [1]
     }
   },
   {
@@ -392,7 +392,7 @@
       "tournamentChampion": "",
       "leagueWinner": "",
       "cups": "",
-      "tournamentWinner": 1
+      "tournamentWinner": [1]
     }
   },
   {
@@ -400,10 +400,10 @@
     "name": "Manchester United",
     "icon": "/logo/manUn.svg",
     "achievements": {
-      "tournamentChampion": "1",
+      "tournamentChampion": [2],
       "leagueWinner": "",
       "cups": "",
-      "tournamentWinner": "1"
+      "tournamentWinner": [2]
     }
   },
   {
@@ -479,7 +479,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -490,7 +490,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -523,7 +523,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1  ",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -556,7 +556,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -600,7 +600,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -622,7 +622,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "1",
+      "cups": [1],
       "tournamentWinner": ""
     }
   },
@@ -683,7 +683,7 @@
   },
   {
     "id": 63,
-    "name": "Fenerbahçe",
+    "name": "Fenerbahçe SK",
     "icon": "/logo/fenirbahce.svg",
     "achievements": {
       "tournamentChampion": "",
@@ -729,6 +729,61 @@
     "id": 67,
     "name": "Losc Lille",
     "icon": "/logo/lille.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 68,
+    "name": "Aston Villa FC",
+    "icon": "/logo/aston.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 69,
+    "name": "Rangers FC",
+    "icon": "/logo/rangers.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 70,
+    "name": "Barca Classics",
+    "icon": "/logo/tbarca.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 71,
+    "name": "Al Duhail SC",
+    "icon": "/logo/duhail.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 72,
+    "name": "T Nasr",
+    "icon": "/logo/tnasr.svg",
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",

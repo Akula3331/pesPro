@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import cls from './TeamProfile.module.scss';
-import ProfileHistoryMatch from '../ProfileHistoryMatch/ProfileHistoryMatch';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import cls from "./TeamProfile.module.scss";
+import ProfileHistoryMatch from "../ProfileHistoryMatch/ProfileHistoryMatch";
+import { useParams } from "react-router-dom";
 
 const TeamProfile = () => {
   const { teamId } = useParams();
@@ -18,7 +18,7 @@ const TeamProfile = () => {
 
   useEffect(() => {
     // Загружаем список всех команд
-    fetch('/teams.json')
+    fetch("/teams.json")
       .then((response) => response.json())
       .then((data) => {
         setTeams(data); // Сохраняем список команд
@@ -27,7 +27,7 @@ const TeamProfile = () => {
       });
 
     // Загружаем список матчей
-    fetch('/matches.json')
+    fetch("/matches.json")
       .then((response) => response.json())
       .then((data) => {
         setMatches(data);
@@ -91,7 +91,16 @@ const TeamProfile = () => {
   }
 
   const achievements = team.achievements;
-
+  const renderSeasons = (value) => {
+    if (!value) return null; // Если пусто, ничего не выводим
+  
+    const seasons = Array.isArray(value)
+      ? value.map((v) => `S${v}`) // Для чисел добавляем "S" перед числом
+      : String(value).split(",").map((v) => `S${v.trim()}`); // Если строка, преобразуем её в массив
+  
+    return seasons.join(", ");
+  };
+  
   return (
     <div className={cls.profileContainer}>
       <div className={cls.container}>
@@ -116,25 +125,25 @@ const TeamProfile = () => {
               {achievements.tournamentChampion && (
                 <p>
                   <strong>Чемпион турнира: </strong>
-                  {achievements.tournamentChampion} раз
+                  {renderSeasons(achievements.tournamentChampion)}
                 </p>
               )}
               {achievements.leagueWinner && (
                 <p>
                   <strong>Победитель лиги: </strong>
-                  {achievements.leagueWinner} раз
+                  {renderSeasons(achievements.leagueWinner)}
                 </p>
               )}
               {achievements.cups && (
                 <p>
                   <strong>Кубки: </strong>
-                  {achievements.cups} раз
+                  {renderSeasons(achievements.cups)}
                 </p>
               )}
               {achievements.tournamentWinner && (
                 <p>
-                  <strong>Победитель турнира: </strong>
-                  {achievements.tournamentWinner} раз
+                  <strong>Финалист турнира: </strong>
+                  {renderSeasons(achievements.tournamentWinner)}
                 </p>
               )}
             </div>
