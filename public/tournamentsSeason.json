@@ -2,31 +2,40 @@
   "tournaments": [
     {
       "id": 2,
-      "name": "Турнир 2",
-      "date": "15-01-2025",
+      "name": "Season 3",
+      "date": "06-02-2025",
       "stages": [
         {
           "stageName": "Групповой этап",
-          "matchIds": [
-            63, 67, 75, 77, 81, 89, 94, 96,  100,101
+          "matchIds":[
+            
+          ],
+          "matches": [
+            { "homeTeam": 8, "awayTeam": 39 },
+            { "homeTeam": 7, "awayTeam": 59 },
+            { "homeTeam": 58, "awayTeam": 35 },
+            { "homeTeam": 22, "awayTeam": 53 },
+            { "homeTeam": 49, "awayTeam": 72},
+            { "homeTeam": 61, "awayTeam": 52 },
+            { "homeTeam": 19, "awayTeam": 68 },
+            { "homeTeam": 9, "awayTeam": 47 },
+            { "homeTeam": 36, "awayTeam": 24 },
+            { "homeTeam": 44, "awayTeam": 62 }
           ]
         },
         {
           "stageName": "Четвертьфинал",
           "matchIds": [
-            102,  103, 104,110,112
           ]
         },
         {
           "stageName": "Полуфинал",
           "matchIds": [
-            121,122,123
           ]
         },
         {
           "stageName": "Финал",
           "matchIds": [
-            124
           ]
         }
       ]

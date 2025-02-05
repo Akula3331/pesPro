@@ -131,6 +131,12 @@ const LeagueList = () => {
   return (
     <div className={cls.tableContainer}>
       <h1 className={cls.conTitle}>Таблица Лиги</h1>
+      {currentLeague && (
+        <>
+          <h3 className={cls.dateTxt}>Дата начала: {currentLeague.startDate}</h3>
+          <h3 className={cls.dateTxt}>Дата окончания: {currentLeague.endDate}</h3>
+        </>
+      )}
       <div className={cls.tableWrapper}>
         <div className={cls.scrollContainer}>
           <div className={cls.title}>
@@ -147,7 +153,7 @@ const LeagueList = () => {
           {teamStats.map((team, index) => (
             <div className={cls.point} key={team.id}>
               <p className={cls.name}>
-                <span className={cls.place}>{index + 1}</span><span className={cls.placeName}>{getTeamNameById(team.id)}</span> 
+                <span className={cls.place}>{index + 1}</span><span className={cls.placeName}>{getTeamNameById(team.id)}</span>
               </p>
               <p className={cls.pointText}>{team.played}</p>
               <p className={cls.pointText}>{team.wins}</p>
@@ -166,7 +172,7 @@ const LeagueList = () => {
       <div className={cls.historyCon}>
         {stages.map((stage, stageIndex) => (
           <div key={stageIndex} className={cls.stage}>
-            <h3>Этап {stageIndex + 1}</h3>
+            <h3 className={cls.stageName}>Этап {stageIndex + 1}</h3>
             {stage.map((match) => (
               <div className={cls.matchBlock} key={match.id}>
                 <p className={cls.matchName}>{getTeamNameById(match.homeTeam)}</p>

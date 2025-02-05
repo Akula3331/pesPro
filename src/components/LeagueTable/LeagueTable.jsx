@@ -168,15 +168,17 @@ const LeagueTable = () => {
               <div className={cls.matchBlock} key={match.id}>
                 <p className={cls.matchName}>{getTeamNameById(match.homeTeam)}</p>
                 <div className={cls.pointScore}>
-                  <p className={cls.date}>
-                    {match.date.split("").reduce((acc, char, index) => {
-                      if (index === 2 || index === 4) {
-                        acc += ".";
-                      }
-                      acc += char;
-                      return acc;
-                    }, "")}
-                  </p>
+                  {match.date && (
+                    <p className={cls.date}>
+                      {match.date.split("").reduce((acc, char, index) => {
+                        if (index === 2 || index === 4) {
+                          acc += ".";
+                        }
+                        acc += char;
+                        return acc;
+                      }, "")}
+                    </p>
+                  )}
                   {match.homeScore !== undefined && match.awayScore !== undefined ? (
                     <p>
                       {match.homeScore} - {match.awayScore}
