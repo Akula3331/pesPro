@@ -1467,6 +1467,26 @@
     "awayScore": 2,
     "matchType": "league",
     "penalty": null
+},
+{
+  "id": 142,
+  "date": "070225",
+  "homeTeam": 70,
+  "awayTeam": 39,
+  "homeScore": 1,
+  "awayScore": 2,
+  "matchType": "regular",
+  "penalty": null
+},
+{
+  "id": 143,
+  "date": "070225",
+  "homeTeam": 38,
+  "awayTeam": 31,
+  "homeScore": 0,
+  "awayScore": 1,
+  "matchType": "regular",
+  "penalty": null
 }
 ]
 
