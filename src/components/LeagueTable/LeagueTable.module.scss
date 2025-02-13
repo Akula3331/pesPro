@@ -58,10 +58,12 @@
 .name {
   width: 200px;
   display: flex;
+  align-items: center;
   gap: 30px;
   font-weight: bold;
   color: #e8f5e9;
 }
+
 
 .place {
   font-size: 18px;
@@ -70,6 +72,10 @@
 }
 .placeName {
   color: #117a65;
+  word-break: break-word; // Разбивает длинные слова
+  white-space: normal; // Позволяет перенос строк
+  max-width: 100px; // Ограничь ширину, чтобы избежать слишком длинных строк
+  text-align: left;
 }
 .pointText {
   width: 60px;
@@ -130,6 +136,9 @@
   font-weight: bold;
   width: 200px;
   color: #e8f5e9;
+  word-break: break-word; // Разбивает длинные слова
+  white-space: normal; // Позволяет перенос строк
+  max-width: 100px; // Ограничь ширину, чтобы избежать слишком длинных строк
 }
 .tableWrapper {
   width: 100%;

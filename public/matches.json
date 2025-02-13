@@ -1487,6 +1487,36 @@
   "awayScore": 1,
   "matchType": "regular",
   "penalty": null
+},
+{
+  "id": 144,
+  "date": "130725",
+  "homeTeam": 71,
+  "awayTeam": 72,
+  "homeScore": 0,
+  "awayScore": 1,
+  "matchType": "regular",
+  "penalty": null
+},
+{
+  "id": 145,
+  "date": "130725",
+  "homeTeam": 70,
+  "awayTeam": 39,
+  "homeScore": 2,
+  "awayScore": 4,
+  "matchType": "league",
+  "penalty": null
+},
+{
+  "id": 146,
+  "date": "130725",
+  "homeTeam": 8,
+  "awayTeam": 39,
+  "homeScore": 4,
+  "awayScore": 0,
+  "matchType": "tournament",
+  "penalty": null
 }
 ]
 
