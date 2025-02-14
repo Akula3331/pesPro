@@ -479,7 +479,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": [1],
+      "cups": [1,2],
       "tournamentWinner": ""
     }
   },

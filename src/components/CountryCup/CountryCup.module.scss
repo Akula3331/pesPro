@@ -1,83 +1,157 @@
-.container{
-    background-color: #239B56;
-    padding: 50px 20px;
-    height: 100vh;
-    color: #faed26;
-}
-.flagContainer{
+/* Стили для CountryCup */
+.cupCon {
+    background: linear-gradient(130deg, #ffd700, #e19300);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .flagContainer {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin: 20px 0;
     flex-wrap: wrap;
-    background-color: #faed26;
-    padding: 10px;
-    border-radius: 10px;
-}
-.flagIcon{
+  }
+  
+  .flagIcon {
     width: 100px;
-}
-.blockTitle{
-    color: #faed26;
-}
-.title{
-    color: #faed26;
-    margin: 0;
-}
-.data{
-    font-weight: bold;
-}
-.matchDetails{
- gap: 50px;
- align-items: center;
-    display: flex;
-}
-.match{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .flagIcon:hover {
+    transform: scale(1.3);
+  }
+  
+  .matchCon {
     display: flex;
     justify-content: center;
-}
-.teamIcon{
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .countryDetails {
+    width: 100%;
+  }
+  
+  .countryName {
+    color: #117a65;
+    font-size: 32px;
+    margin: 20px 0;
+  }
+  
+  .seasonBlock {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .blockTitle {
+    color: #e8f5e9;
+    margin: 0;
+  }
+  
+  .match {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #ffeb3b;
+    background-color: #66bb6a;
+    padding: 10px 20px;
+    animation: fadeIn 0.5s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .teamIcon {
     width: 100px;
-}
-.name{
+  }
+  
+  .name {
     font-weight: 600;
-}
-.score{
+  }
+  
+  .score {
     font-weight: bolder;
     font-size: 24px;
-}
-.seasonBlock{
-    margin-bottom: 20px;
-}
-@media screen and (max-width:770px) {
-    .flagIcon{
-        width: 50px;
+  }
+  
+  .data {
+    font-weight: bold;
+    color: #e8f5e9;
+  }
+  
+  .matchDetails {
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .penalty {
+    color: #d9534f;
+    font-weight: bolder;
+  }
+  
+  /* Анимация появления матчей */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
     }
-    .teamIcon{
-        width: 50px;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-@media screen and (max-width:520px) {
-    .container{
-        padding: 20px;
+  }
+  
+  /* Адаптивность для мобильных устройств */
+  @media screen and (max-width: 770px) {
+    .flagIcon {
+      width: 50px;
     }
-    .flagContainer{
-        flex-wrap: wrap;
+    .teamIcon {
+      width: 50px;
     }
-    .score{
-        font-size: 14px;
+  }
+  
+  @media screen and (max-width: 520px) {
+    .container {
+      padding: 20px;
     }
-    .matchDetails{
-        gap: 10px;
+  
+    .flagContainer {
+      flex-wrap: wrap;
     }
-    .name{
-        font-size: 16px;
+  
+    .score {
+      font-size: 14px;
+    }
+  
+    .matchDetails {
+      gap: 10px;
+      width: 300px;
+    }
+  
+    .name {
+      font-size: 16px;
+      word-break: break-word; // Разбивает длинные слова
+      white-space: normal; // Позволяет перенос строк
+      max-width: 100px; // Ограничь ширину, чтобы избежать слишком длинных строк
+      text-align: center;
+    }
+  
+    .data {
+      margin-bottom: 10px;
+    }
+  
+    .card {
+      padding: 20px 10px;
     }
     .team{
         width: 100px;
+        height: auto;
     }
-    .data{
-        margin-bottom: 10px;
-    }
-    
-}
+  }
+  

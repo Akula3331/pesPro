@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import cls from "./TournamentPage.module.scss";
+import CountryCup from "../../components/CountryCup/CountryCup"; // Импортируем CountryCup
 
 const TournamentPage = () => {
   const [tournaments, setTournaments] = useState([]);
@@ -157,96 +158,16 @@ const TournamentPage = () => {
           )}
         </section>
       </div>
+
+      {/* Кубки стран и чемпионаты */}
       <h2 className={cls.sectionTitle}>Чемпионаты Стран</h2>
-
-      {/* Кубки стран */}
-      <div className={cls.cupCon}>
-        <div className={cls.flagContainer}>
-          {countries.map((country) => (
-            <img
-              key={country.name}
-              src={country.flag}
-              alt={country.name}
-              className={cls.flagIcon}
-              onClick={() => setSelectedCountry(country)}
-            />
-          ))}
-        </div>
-        <div className={cls.matchCon}>
-          {selectedCountry && (
-            <div className={cls.countryDetails}>
-              <h2 className={cls.countryName}>{selectedCountry.name}</h2>
-              {selectedCountry.seasons.map((season, index) => {
-                const seasonNumber = season.matchIds.length; // Номер сезона зависит от количества матчей
-
-                return (
-                  <div key={seasonNumber} className={cls.seasonBlock}>
-                    {season.matchIds.length === 0 ? (
-                      <p className={cls.noMatches}>Нет матчей в этом сезоне.</p>
-                    ) : (
-                      season.matchIds.map((matchId, matchIndex) => {
-                        const match = getMatchById(matchId);
-
-                        if (!match) {
-                          return <p key={matchId}>Матч не найден!</p>;
-                        }
-
-                        const homeTeam = getTeamById(match.homeTeam);
-                        const awayTeam = getTeamById(match.awayTeam);
-
-                        return (
-                          <div key={match.id} className={cls.match}>
-                            <h3 className={cls.blockTitle}>
-                              S{matchIndex + 1}
-                            </h3>
-                            {/* Оставил на месте */}
-                            <div className={cls.matchDetails}>
-                              <div className={cls.team}>
-                                <img
-                                  src={homeTeam.icon}
-                                  alt={homeTeam.name}
-                                  className={cls.teamIcon}
-                                />
-                                <p className={cls.name}>{homeTeam.name}</p>
-                              </div>
-                              <div className={cls.matchScore}>
-                                <p className={cls.data}>
-                                  {getMatchDate(season.matchIds[0])}
-                                </p>
-                                <span className={cls.score}>
-                                  {match.homeScore} - {match.awayScore}
-                                </span>
-                                {match.penalty && (
-                                  <div className={cls.penalty}>
-                                    <p>
-                                      {match.penalty.homeTeamPenalties} -{" "}
-                                      {match.penalty.awayTeamPenalties}
-                                    </p>
-                                  </div>
-                                )}
-                              </div>
-                              <div className={cls.team}>
-                                <img
-                                  src={awayTeam.icon}
-                                  alt={awayTeam.name}
-                                  className={cls.teamIcon}
-                                />
-                                <p className={cls.name}>{awayTeam.name}</p>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      })
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </div>
-
-        {/* Отображение сезонов и матчей для выбранной страны */}
-      </div>
+      <CountryCup
+        countries={countries}
+        setSelectedCountry={setSelectedCountry}
+        selectedCountry={selectedCountry}
+        matches={matches}
+        teams={teams}
+      />
     </div>
   );
 };
