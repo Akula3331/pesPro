@@ -8,12 +8,9 @@
         {
           "stageName": "Групповой этап",
           "matchIds":[
-            146,148
+            146,148,157,159,161
           ],
           "matches": [
-            { "homeTeam": 58, "awayTeam": 35 },
-            { "homeTeam": 22, "awayTeam": 53 },
-            { "homeTeam": 49, "awayTeam": 72},
             { "homeTeam": 61, "awayTeam": 52 },
             { "homeTeam": 19, "awayTeam": 68 },
             { "homeTeam": 9, "awayTeam": 47 },

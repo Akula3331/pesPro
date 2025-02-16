@@ -380,7 +380,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },
@@ -765,7 +765,7 @@
     "achievements": {
       "tournamentChampion": "",
       "leagueWinner": "",
-      "cups": "",
+      "cups": "1",
       "tournamentWinner": ""
     }
   },
