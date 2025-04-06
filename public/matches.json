@@ -1750,7 +1750,140 @@
   "awayScore": 0,
   "matchType": "regular",
   "penalty": null
-}
+},
+
+  {
+    "id": 170,
+    "date": "030425",
+    "homeTeam": 70,
+    "awayTeam": 39,
+    "homeScore": 3,
+    "awayScore": 0,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 171,
+    "date": "030425",
+    "homeTeam": 70,
+    "awayTeam": 39,
+    "homeScore": 4,
+    "awayScore": 3,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 172,
+    "date": "030425",
+    "homeTeam": 70,
+    "awayTeam": 66,
+    "homeScore": 0,
+    "awayScore": 9,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 173,
+    "date": "030425",
+    "homeTeam": 36,
+    "awayTeam": 24,
+    "homeScore": 2,
+    "awayScore": 3,
+    "matchType": "tournament",
+    "penalty": null
+  },
+  {
+    "id": 174,
+    "date": "050425",
+    "homeTeam": 21,
+    "awayTeam": 31,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 175,
+    "date": "050425",
+    "homeTeam": 44,
+    "awayTeam": 62,
+    "homeScore": 3,
+    "awayScore": 1,
+    "matchType": "tournament",
+    "penalty": null
+  },
+  {
+    "id": 176,
+    "date": "050425",
+    "homeTeam": 5,
+    "awayTeam": 29,
+    "homeScore": 3,
+    "awayScore": 4,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 177,
+    "date": "050425",
+    "homeTeam": 21,
+    "awayTeam": 37,
+    "homeScore": 6,
+    "awayScore": 3,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 178,
+    "date": "060425",
+    "homeTeam": 20,
+    "awayTeam": 41,
+    "homeScore": 9,
+    "awayScore": 3,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 179,
+    "date": "060425",
+    "homeTeam": 8,
+    "awayTeam": 59,
+    "homeScore": 6,
+    "awayScore": 3,
+    "matchType": "tournament",
+    "penalty": null
+  },
+  {
+    "id": 180,
+    "date": "060425",
+    "homeTeam": 17,
+    "awayTeam": 69,
+    "homeScore": 0,
+    "awayScore": 2,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 181,
+    "date": "060425",
+    "homeTeam": 63,
+    "awayTeam": 45,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "turkeyCup",
+    "penalty": null
+  },
+  {
+    "id": 182,
+    "date": "060425",
+    "homeTeam": 13,
+    "awayTeam": 35,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "regular",
+    "penalty": null
+  }
+
+
 ]
 
   

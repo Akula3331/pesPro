@@ -69,7 +69,7 @@
       "flag": "/image/europe.svg",
       "seasons": [
         {
-          "matchIds": [99]
+          "matchIds": [99,160]
         }
       ]
     },
@@ -87,7 +87,7 @@
       "flag": "/image/germany.svg",
       "seasons": [
         {
-          "matchIds": [95]
+          "matchIds": [95,156]
         }
       ]
     },
@@ -114,7 +114,7 @@
       "flag": "/image/turkey.svg",
       "seasons": [
         {
-          "matchIds":[131]
+          "matchIds":[131,181]
         }
       ]
     }

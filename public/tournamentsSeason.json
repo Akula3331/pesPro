@@ -8,16 +8,19 @@
         {
           "stageName": "Групповой этап",
           "matchIds":[
-            146,148,157,159,161,163,165,167
-          ],
-          "matches": [
-            { "homeTeam": 36, "awayTeam": 24 },
-            { "homeTeam": 44, "awayTeam": 62 }
+            146,148,157,159,161,163,165,167,173,175
           ]
         },
         {
           "stageName": "Четвертьфинал",
           "matchIds": [
+            179
+          ],
+          "matches": [
+            { "homeTeam": 22, "awayTeam": 35 },
+            { "homeTeam": 19, "awayTeam": 72 },
+            { "homeTeam": 9, "awayTeam": 52 },
+            { "homeTeam": 44, "awayTeam": 24 }
           ]
         },
         {
