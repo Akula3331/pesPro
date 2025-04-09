@@ -14,7 +14,7 @@
       "flag": "/image/spain.svg",
       "seasons": [
         {
-          "matchIds": [90]
+          "matchIds": [90,191]
         }
 
       ]
@@ -78,7 +78,7 @@
       "flag": "/image/kyrgyzstan.svg",
       "seasons": [
         {
-          "matchIds":[134]
+          "matchIds":[134,187]
         }
       ]
     },
