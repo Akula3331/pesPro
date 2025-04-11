@@ -790,5 +790,27 @@
       "cups": "",
       "tournamentWinner": ""
     }
+  },
+  {
+    "id": 73,
+    "name": "Ca River Plate",
+    "icon": "/logo/river.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
+  },
+  {
+    "id": 74,
+    "name": "VFL Wolfsburg",
+    "icon": "/logo/wolfsburg.svg",
+    "achievements": {
+      "tournamentChampion": "",
+      "leagueWinner": "",
+      "cups": "",
+      "tournamentWinner": ""
+    }
   }
 ]

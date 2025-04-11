@@ -1971,6 +1971,36 @@
     "awayScore": 1,
     "matchType": "spainCup",
     "penalty": null
+  },
+  {
+    "id": 192,
+    "date": "110425",
+    "homeTeam": 2,
+    "awayTeam": 68,
+    "homeScore": 2,
+    "awayScore": 3,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 193,
+    "date": "110425",
+    "homeTeam": 10,
+    "awayTeam": 43,
+    "homeScore": 4,
+    "awayScore": 3,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 194,
+    "date": "110425",
+    "homeTeam": 60,
+    "awayTeam": 62,
+    "homeScore": 4,
+    "awayScore": 3,
+    "matchType": "regular",
+    "penalty": null
   }
 
 
