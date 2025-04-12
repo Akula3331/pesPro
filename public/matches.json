@@ -2001,6 +2001,129 @@
     "awayScore": 3,
     "matchType": "regular",
     "penalty": null
+  },
+  {
+    "id": 195,
+    "date": "120425",
+    "homeTeam": 74,
+    "awayTeam": 68,
+    "homeScore": 3,
+    "awayScore": 3,
+    "matchType": "regular",
+    "penalty": {
+      "homeTeamPenalties": 3,
+      "awayTeamPenalties": 1
+    }
+  },
+  {
+    "id": 196,
+    "date": "120425",
+    "homeTeam": 17,
+    "awayTeam": 39,
+    "homeScore": 3,
+    "awayScore": 3,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 197,
+    "date": "120425",
+    "homeTeam": 55,
+    "awayTeam": 53,
+    "homeScore": 4,
+    "awayScore": 3,
+    "matchType": "brazilCup",
+    "penalty": null
+  },
+  {
+    "id": 198,
+    "date": "120425",
+    "homeTeam": 19,
+    "awayTeam": 72,
+    "homeScore": 1,
+    "awayScore": 2,
+    "matchType": "tournament",
+    "penalty": null
+  },
+  {
+    "id": 199,
+    "date": "120425",
+    "homeTeam": 13,
+    "awayTeam": 41,
+    "homeScore": 2,
+    "awayScore": 1,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 200,
+    "date": "120425",
+    "homeTeam": 34,
+    "awayTeam": 19,
+    "homeScore": 0,
+    "awayScore": 2,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 201,
+    "date": "120425",
+    "homeTeam": 9,
+    "awayTeam": 52,
+    "homeScore": 5,
+    "awayScore": 2,
+    "matchType": "tournament",
+    "penalty": null
+  },
+  {
+    "id": 202,
+    "date": "120425",
+    "homeTeam": 44,
+    "awayTeam": 24,
+    "homeScore": 2,
+    "awayScore": 4,
+    "matchType": "tournament",
+    "penalty": null
+  },
+  {
+    "id": 203,
+    "date": "120425",
+    "homeTeam": 11,
+    "awayTeam": 25,
+    "homeScore": 1,
+    "awayScore": 2,
+    "matchType": "portugalCup",
+    "penalty": null
+  },
+  {
+    "id": 204,
+    "date": "120425",
+    "homeTeam": 70,
+    "awayTeam": 37,
+    "homeScore": 7,
+    "awayScore": 4,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 205,
+    "date": "120425",
+    "homeTeam": 1,
+    "awayTeam": 46,
+    "homeScore": 2,
+    "awayScore": 3,
+    "matchType": "netherlandCup",
+    "penalty": null
+  },
+  {
+    "id": 206,
+    "date": "120425",
+    "homeTeam": 8,
+    "awayTeam": 72,
+    "homeScore": 5,
+    "awayScore": 2,
+    "matchType": "tournament",
+    "penalty": null
   }
 
 
