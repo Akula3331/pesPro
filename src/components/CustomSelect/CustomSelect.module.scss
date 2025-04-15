@@ -22,6 +22,8 @@
     top: 100%;
     left: 0;
     width: 100%;
+    max-height: 200px; // 👈 ограничение по высоте
+    overflow-y: auto;  // 👈 добавляем вертикальный скролл
     border: 1px solid #c7ccd1;
     border-radius: 5px;
     background-color: #d1e5d1;
@@ -34,7 +36,22 @@
         background-color: #66bb6a;
       }
     }
+  
+    // (необязательно) стили для скроллбара
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #66bb6a;
+      border-radius: 3px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: #b2d8b2;
+    }
   }
+  
   
   .filters {
     display: flex;

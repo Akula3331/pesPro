@@ -1,8 +1,12 @@
 .container {
   margin: 0 auto;
-  padding-bottom: 100px;
+  padding: 50px 100px;
   font-family: "PT Mono", serif;
   background: #c8e6c9;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  
 }
 .block {
   display: flex;
@@ -11,11 +15,28 @@
   justify-content: center;
   background-size: cover;
 }
+.search{
+  padding: 10px;
+  outline: none;
+  color: #117a65;
+  border-radius: 5px;
+  border: 1px solid #117a65;
+  font-family: "PT Mono", serif;
+  background-color: #d1e5d1;
+  &::placeholder {
+    color: #117a65;
+  }
+}
+.sortCon{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
 .title {
   text-align: center;
   color: #117a65;
   font-size: 60px;
-  padding: 20px 0 60px 0;
+  padding: 0;
   margin: 0;
 }
 .linkCon {
@@ -48,10 +69,27 @@
   font-size: 32px;
   color: #faed26;
 }
+.blockInfo{
+  color: #117a65;
+  
+    font-weight: bolder;
+  
+}
+.optionsList {
+  max-height: 200px; // можно подправить под себя
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+}
+
 @media screen and (max-width: 990px) {
   .title {
     font-size: 50px;
-    padding-bottom: 40px;
   }
   .linkCon {
     padding: 0 30px;
@@ -66,6 +104,9 @@
   }
   .matchCount {
     font-size: 26px;
+  }
+  .container{
+    padding: 50px;
   }
 }
 @media screen and (max-width: 780px) {
@@ -83,15 +124,23 @@
   .block {
     gap: 30px;
     padding: 0 40px;
+    justify-content: space-between;
   }
   .link {
     display: none;
+  }
+  .sortCon{
+    gap: 20px;
+    // padding: 0 40px;
+  }
+  .container{
+    gap: 20px;
+    padding: 20px;
   }
 }
 @media screen and (max-width: 520px) {
   .title {
     font-size: 30px;
-    padding-bottom: 20px;
   }
   .teamIcon {
     width: 50px;
@@ -104,6 +153,6 @@
   }
   .block {
     gap: 10px;
-    padding: 0 10px;
+    padding: 0;
   }
 }

@@ -39,7 +39,20 @@ select {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 100px 0;
+}
+.teamSearch,
+.goalDifference,
+.matchLimit {
+  padding: 10px;
+  outline: none;
+  color: #117a65;
+  border-radius: 5px;
+  border: 1px solid #117a65;
+  font-family: "PT Mono", serif;
+  background-color: #d1e5d1;
+  &::placeholder {
+    color: #117a65;
+  }
 }
 /* Стиль для каждого блока с матчем */
 .block {
@@ -62,7 +75,7 @@ select {
 /* Стиль для названия команды */
 .teamName {
   font-weight: bold;
-  color: #e8f5e9;
+  color: inherit;
   text-decoration: none;
   width: 300px;
   text-align: center;
@@ -100,123 +113,83 @@ select {
   background: linear-gradient(135deg, #A1D6A3, #8BCF75); /* Светлый мятный и свежий травяной зеленый */
   color: #3B5E3B; /* Темный зелёный для текста */
 }
+.cupBlock {
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 .englandCup {
-  background: linear-gradient(135deg, #0D47A1, #64B5F6); /* Темно-синий и светлый голубой */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #e0e0e0, #ef5350);
+  color: #1b1b1b; /* Тёмно-серый — контрастный */
 }
+
 .spainCup {
-  background: linear-gradient(135deg, #D9534F, #F1C232); /* Светлый желтый и мягкий красный (сходство с флагом Испании) */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #d9534f, #f1c232);
+  color: #1b1b1b; /* Лучше оставить чёрный или почти чёрный */
 }
+
 .portugalCup {
-  background: linear-gradient(135deg, #F5D300, #A1C73E); /* Немного приглушенный желтый и зелёный (сдержанный флаг Португалии) */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #f5d300, #a1c73e);
+  color: #2a2a2a; /* Серо-тёмный, хорошо читается на ярком */
 }
+
 .italyCup {
-  background: linear-gradient(135deg, #11998E, #38EF7D); /* Глубокий зелёный и лаймово-зелёный */
-  color: #FFFFFF; /* Белый текст */
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: #ffffff; /* Белый отлично смотрится */
 }
+
 .germanyCup {
-  background: linear-gradient(135deg, #212121, #FFEB3B); /* Темный угольный и желтый */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #000000, #ffd700);
+  color: #f0f0f0; /* Светло-серый, читаемый на чёрном и золотом */
 }
+
 .brazilCup {
-  background: linear-gradient(135deg, #56AB2F, #A8E063); /* Яркий зеленый и светло-зеленый */
-  color: #FFFFFF; /* Белый текст */
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  color: #f9f9f9; /* Мягкий белый */
 }
+
 .europeCup {
-  background: linear-gradient(135deg, #0033A0, #FCD116); /* Синий и желтый (флаг ЕС) */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #0033a0, #fcd116);
+  color: #f7f7f7; /* Почти белый */
 }
+
 .turkeyCup {
-  background: linear-gradient(135deg, #8B0000, #6B1E3B, #FF6347); /* Темный красный, бордовый и томатный */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #8b0000, #6b1e3b, #ff6347);
+  color: #ffffff; /* Белый — норм */
 }
+
 .russiaCup {
-  background: linear-gradient(135deg, #3B82F6, #1E40AF, #D0E7F9); /* Насыщенный синий, глубокий синий и светлый голубой */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #3b82f6, #1e40af, #d0e7f9);
+  color: #f9f9f9; /* Почти белый */
 }
+
 .usaCup {
-  background: linear-gradient(135deg, #FF4B2B, #9C1D52, #0D47A1); /* Яркий красный, пурпурный и насыщенный синий */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #000000, #9c27b0);
+  color: #f1f1f1; /* Светло-серый, читаемый на тёмно-фиолетовом */
 }
+
 .netherlandCup {
-  background: linear-gradient(135deg, #4DB6AC, #81C784); /* Приглушенный бирюзовый и светло-зеленый */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #4db6ac, #81c784);
+  color: #1e1e1e; /* Тёмный, так как фон светлый */
 }
+
 .asiaCup {
-  background: linear-gradient(135deg, #6C71C4, #A3B8FF, #4682B4); /* Лазурно-фиолетовый, светлый голубой и синий */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #0f3d2e, #66bb6a, #a5d6a7);
+  color: #ffffff; /* Белый хорошо подходит */
 }
+
 .franceCup {
-  background: linear-gradient(135deg, #7A4E9F, #C88CE5, #5A2D8C); /* Пурпурный, фиолетовый и темно-розовый */
-  color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: bold;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #7a4e9f, #c88ce5, #5a2d8c);
+  color: #fdfdfd; /* Очень светлый, почти белый */
 }
+
+.argentinaCup {
+  background: linear-gradient(135deg, #cfe9f1, #a3b8c2, #e3dede);
+  color: #2a2a2a; /* Серо-тёмный, так как фон светлый */
+}
+
 .cup {
   background: linear-gradient(135deg, #ffdf00, #ffd700, #ffae00, #ffdf00);
   background-size: 300% 300%;

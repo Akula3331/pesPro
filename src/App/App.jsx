@@ -3,7 +3,7 @@ import cls from './App.module.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MatchHistory from './../components/MatchHistory/MatchHistory';
 import TeamProfile from '../components/TeamProfile/TeamProfile';
-import TeamList from '../components/TeamList/TeamList';
+// import TeamList from '../components/TeamList/TeamList';
 import Leaderboard from '../components/Leaderboard/Leaderboard';
 import MainPages from '../pages/MainPages/MainPages';
 import TeamListPage from '../pages/TeamListPage/TeamListPage';

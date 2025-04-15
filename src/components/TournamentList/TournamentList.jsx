@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; // Для получения ID турнира из URL
-import cls from './TournamentList.module.scss';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom"; // Для получения ID турнира из URL
+import cls from "./TournamentList.module.scss";
 
 const TournamentList = () => {
   const { tournamentId } = useParams(); // Получаем ID турнира из URL
@@ -13,59 +13,59 @@ const TournamentList = () => {
     const fetchData = async () => {
       try {
         // Загружаем данные о турнире
-        const tournamentResponse = await fetch('/tournaments.json');
+        const tournamentResponse = await fetch("/tournaments.json");
         const tournamentData = await tournamentResponse.json();
-        
-        console.log('Tournament Data:', tournamentData); // Для проверки структуры данных
-        
+
+        console.log("Tournament Data:", tournamentData); // Для проверки структуры данных
+
         // Проверка на наличие данных о турнире
         if (tournamentData && Array.isArray(tournamentData.tournaments)) {
           const selectedTournament = tournamentData.tournaments.find(
             (tournament) => tournament.id === parseInt(tournamentId)
           );
-          
+
           if (selectedTournament) {
             setTournament(selectedTournament);
           } else {
-            console.error('Турнир не найден');
+            console.error("Турнир не найден");
             setTournament(null);
           }
         } else {
-          console.error('Данные о турнире не найдены');
+          console.error("Данные о турнире не найдены");
           setTournament(null);
         }
 
         // Загружаем данные о матчах
-        const matchResponse = await fetch('/matches.json');
+        const matchResponse = await fetch("/matches.json");
         const matchData = await matchResponse.json();
-        
-        console.log('Match Data:', matchData); // Для проверки структуры данных
-        
+
+        console.log("Match Data:", matchData); // Для проверки структуры данных
+
         // Проверка на наличие данных о матчах
         if (Array.isArray(matchData)) {
           setMatches(matchData);
         } else {
-          console.error('Данные о матчах не найдены');
+          console.error("Данные о матчах не найдены");
           setMatches([]);
         }
 
         // Загружаем данные о командах
-        const teamResponse = await fetch('/teams.json');
+        const teamResponse = await fetch("/teams.json");
         const teamData = await teamResponse.json();
-        
-        console.log('Team Data:', teamData); // Для проверки структуры данных
-        
+
+        console.log("Team Data:", teamData); // Для проверки структуры данных
+
         // Проверка на наличие данных о командах
         if (Array.isArray(teamData)) {
           setTeams(teamData);
         } else {
-          console.error('Данные о командах не найдены');
+          console.error("Данные о командах не найдены");
           setTeams([]);
         }
 
         setLoading(false);
       } catch (error) {
-        console.error('Ошибка загрузки данных:', error);
+        console.error("Ошибка загрузки данных:", error);
         setLoading(false);
       }
     };
@@ -91,7 +91,12 @@ const TournamentList = () => {
 
   // Функция для получения команды по ID
   const getTeamById = (id) => {
-    return teams.find((team) => team.id === id) || { name: 'Неизвестная команда', icon: '' };
+    return (
+      teams.find((team) => team.id === id) || {
+        name: "Неизвестная команда",
+        icon: "",
+      }
+    );
   };
 
   // Функция для получения матча по ID
@@ -101,16 +106,16 @@ const TournamentList = () => {
 
   const getStageBackground = (stageName) => {
     switch (stageName) {
-      case 'Групповой этап':
+      case "Групповой этап":
         return cls.groupStage;
-      case 'Четвертьфинал':
+      case "Четвертьфинал":
         return cls.quarterFinal;
-      case 'Полуфинал':
+      case "Полуфинал":
         return cls.semiFinal;
-      case 'Финал':
+      case "Финал":
         return cls.final;
       default:
-        return ''; // Без фона для остальных стадий
+        return ""; // Без фона для остальных стадий
     }
   };
 
@@ -136,10 +141,19 @@ const TournamentList = () => {
               const awayTeam = getTeamById(match.awayTeam);
 
               return (
-                <div key={match.id} className={`${cls.match} ${getStageBackground(stage.stageName)}`}>
+                <div
+                  key={match.id}
+                  className={`${cls.match} ${getStageBackground(
+                    stage.stageName
+                  )}`}
+                >
                   <div className={cls.column}>
                     <div className={cls.team}>
-                      <img src={homeTeam.icon} alt={homeTeam.name} className={cls.teamIcon} />
+                      <img
+                        src={homeTeam.icon}
+                        alt={homeTeam.name}
+                        className={cls.teamIcon}
+                      />
                       <span className={cls.teamName}>{homeTeam.name}</span>
                     </div>
                   </div>
@@ -151,7 +165,8 @@ const TournamentList = () => {
                       {match.penalty && (
                         <div className={cls.penalty}>
                           <span>
-                            {match.penalty.homeTeamPenalties} - {match.penalty.awayTeamPenalties}
+                            {match.penalty.homeTeamPenalties} -{" "}
+                            {match.penalty.awayTeamPenalties}
                           </span>
                         </div>
                       )}
@@ -160,7 +175,11 @@ const TournamentList = () => {
 
                   <div className={cls.column}>
                     <div className={cls.team}>
-                      <img src={awayTeam.icon} alt={awayTeam.name} className={cls.teamIcon} />
+                      <img
+                        src={awayTeam.icon}
+                        alt={awayTeam.name}
+                        className={cls.teamIcon}
+                      />
                       <span className={cls.teamName}>{awayTeam.name}</span>
                     </div>
                   </div>
@@ -188,14 +207,14 @@ const TournamentList = () => {
       {tournament.winners && tournament.winners.length > 0 && (
         <div className={cls.winnersBlock}>
           <h3 className={cls.champTitle}>Финалисты турнира</h3>
-          {tournament.winners.map((winner, index) => (
+          {tournament.winners.map((teamId, index) => (
             <div key={index} className={cls.winner}>
               <img
-                src={getTeamById(winner.teamId).icon}
-                alt={getTeamById(winner.teamId).name}
+                src={getTeamById(teamId).icon}
+                alt={getTeamById(teamId).name}
                 className={cls.teamIcon}
               />
-              <span>{getTeamById(winner.teamId).name}</span>
+              <span>{getTeamById(teamId).name}</span>
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 {
   "tournaments": [
     {
-      "id": 2,
+      "id": 3,
       "name": "Season 3",
       "date": "06-02-2025",
       "stages": [
@@ -16,12 +16,11 @@
         },
         {
           "stageName": "Полуфинал",
-          "matchIds": [206],
-          "matches": [{ "homeTeam": 22, "awayTeam": 24 }]
+          "matchIds": [206,209]
         },
         {
           "stageName": "Финал",
-          "matchIds": []
+          "matchIds": [210]
         }
       ]
     }

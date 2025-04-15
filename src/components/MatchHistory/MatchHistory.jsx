@@ -14,41 +14,50 @@ const MatchHistory = ({ teamId }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const matchResponse = await fetch("/matches.json");
-      const matchData = await matchResponse.json();
-      setMatches(matchData);
+      try {
+        const matchResponse = await fetch("/matches.json");
+        const matchData = await matchResponse.json();
+        setMatches(matchData);
 
-      const teamResponse = await fetch("/teams.json");
-      const teamData = await teamResponse.json();
-      setTeams(teamData);
+        const teamResponse = await fetch("/teams.json");
+        const teamData = await teamResponse.json();
+        setTeams(teamData);
+      } catch (error) {
+        console.error("Ошибка при загрузке данных", error);
+      }
     };
 
     fetchData();
   }, []);
 
-  const filteredMatches = matches.filter((match) => {
-    const tournamentFilter =
-      selectedTournament === "all" ||
-      (Array.isArray(selectedTournament)
-        ? selectedTournament.includes(match.matchType)
-        : match.matchType === selectedTournament);
+  const filterMatches = () => {
+    return matches.filter((match) => {
+      const tournamentFilter =
+        selectedTournament === "all" ||
+        (Array.isArray(selectedTournament)
+          ? selectedTournament.includes(match.matchType)
+          : match.matchType === selectedTournament);
 
-    const teamFilter =
-      teamNameFilter === "" ||
-      teams
-        .filter((team) =>
-          team.name.toLowerCase().includes(teamNameFilter.toLowerCase())
-        )
-        .some((team) => team.id === match.homeTeam || team.id === match.awayTeam);
+      const teamFilter =
+        teamNameFilter === "" ||
+        teams
+          .filter((team) =>
+            team.name.toLowerCase().includes(teamNameFilter.toLowerCase())
+          )
+          .some(
+            (team) => team.id === match.homeTeam || team.id === match.awayTeam
+          );
 
-    const goalDifferenceFilterValid =
-      goalDifferenceFilter === "" ||
-      Math.abs(match.homeScore - match.awayScore) === parseInt(goalDifferenceFilter);
+      const goalDifferenceFilterValid =
+        goalDifferenceFilter === "" ||
+        Math.abs(match.homeScore - match.awayScore) ===
+          parseInt(goalDifferenceFilter);
 
-    return tournamentFilter && teamFilter && goalDifferenceFilterValid;
-  });
+      return tournamentFilter && teamFilter && goalDifferenceFilterValid;
+    });
+  };
 
-  const sortedMatches = filteredMatches.sort((a, b) => {
+  const sortedMatches = filterMatches().sort((a, b) => {
     const idA = a.id;
     const idB = b.id;
     return sortOrder === "asc" ? idA - idB : idB - idA;
@@ -58,9 +67,39 @@ const MatchHistory = ({ teamId }) => {
 
   const getTeamNameById = (id) => {
     const team = teams.find((team) => team.id === id);
-    return team ? team.name : "Unknown Team";
+    return team ? team.name : "Неизвестная команда";
   };
 
+  const cupImages = {
+    englandCup: "/image/england.svg",
+    spainCup: "/image/spain.svg",
+    franceCup: "/image/france.svg",
+    italyCup: "/image/italy.svg",
+    germanyCup: "/image/germany.svg",
+    portugalCup: "/image/portugal.svg",
+    asiaCup: "/image/saudi.svg",
+    europeCup: "/image/europe.svg",
+    brazilCup: "/image/brazil.svg",
+    netherlandCup: "/image/netherland.svg",
+    usaCup: "/image/usa.svg",
+    turkeyCup: "/image/turkey.svg",
+    russiaCup: "/image/russia.svg",
+    argentinaCup: "/image/argentina.svg",
+  };
+
+  const getCupImage = (matchType) => cupImages[matchType] || null;
+
+  const formatDate = (dateString) => {
+    if (!dateString || dateString.length !== 6) return "Неизвестная дата";
+  
+    const year = "20" + dateString.slice(0, 2);
+    const month = dateString.slice(2, 4);
+    const day = dateString.slice(4, 6);
+  
+    const date = new Date(`${year}-${month}-${day}`);
+    return isNaN(date.getTime()) ? "Неверная дата" : date.toLocaleDateString("ru-RU");
+  };
+  
   const tournamentOptions = [
     { value: "all", label: "Все матчи" },
     { value: "tournament", label: "Турнирные" },
@@ -75,6 +114,14 @@ const MatchHistory = ({ teamId }) => {
         "italyCup",
         "germanyCup",
         "portugalCup",
+        "argentinaCup",
+        "russiaCup",
+        "turkeyCup",
+        "usaCup",
+        "netherlandCup",
+        "brazilCup",
+        "europeCup",
+        "asiaCup",
       ],
       label: "Кубки",
     },
@@ -84,42 +131,6 @@ const MatchHistory = ({ teamId }) => {
     { value: "desc", label: "Убывание" },
     { value: "asc", label: "Возрастание" },
   ];
-
-  // Функция для получения пути изображения кубка
-  const getCupImage = (matchType) => {
-    switch (matchType) {
-      case "englandCup":
-        return "/image/england.svg";
-      case "spainCup":
-        return "/image/spain.svg";
-      case "franceCup":
-        return "/image/france.svg";
-      case "italyCup":
-        return "/image/italy.svg";
-      case "germanyCup":
-        return "/image/germany.svg";
-      case "portugalCup":
-        return "/image/portugal.svg";
-      case "asiaCup":
-        return "/image/kyrgyzstan.svg";
-      case "europeCup":
-        return "/image/europe.svg";
-      case "brazilCup":
-        return "/image/brazil.svg";
-      case "netherlandCup":
-        return "/image/netherland.svg";
-      case "usaCup":
-        return "/image/usa.svg";
-      case "turkeyCup":
-        return "/image/turkey.svg";
-      case "russiaCup":
-        return "/image/russia.svg";
-    
-      default:
-        return null;
-    }
-  };
-  
 
   return (
     <div className={cls.container}>
@@ -171,23 +182,22 @@ const MatchHistory = ({ teamId }) => {
             return (
               <div
                 key={match.id}
-                className={`${cls.block} ${cls[match.matchType]}`}
+                className={`${cls.block} ${cls.cupBlock} ${cls[match.matchType]}`}
               >
+                
                 <div className={cls.matchDetails}>
-                  {cupImage && <img src={cupImage} alt={match.matchType} className={cls.cupImage} />}
+                  {cupImage && (
+                    <img
+                      src={cupImage}
+                      alt={match.matchType}
+                      className={cls.cupImage}
+                    />
+                  )}
                   <Link to={`/team/${match.homeTeam}`} className={cls.teamName}>
                     {homeTeam}
                   </Link>
                   <span className={cls.score}>
-                    <p className={cls.date}>
-                      {match.date.split("").reduce((acc, char, index) => {
-                        if (index === 2 || index === 4) {
-                          acc += ".";
-                        }
-                        acc += char;
-                        return acc;
-                      }, "")}
-                    </p>
+                    <p className={cls.date}>{formatDate(match.date)}</p>
                     {match.homeScore} - {match.awayScore}
                     {match.penalty && (
                       <div className={cls.penalty}>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import cls from "./TeamProfile.module.scss";
 import ProfileHistoryMatch from "../ProfileHistoryMatch/ProfileHistoryMatch";
 import { useParams } from "react-router-dom";
@@ -15,6 +15,7 @@ const TeamProfile = () => {
     played: 0,
     rating: 0,
   });
+  const [league, setLeague] = useState(null);
 
   useEffect(() => {
     // Загружаем список всех команд
@@ -32,7 +33,15 @@ const TeamProfile = () => {
       .then((data) => {
         setMatches(data);
       });
-  }, [teamId]);
+
+    // Загружаем лиги
+    fetch("/leagueId.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const leagueData = data.find((league) => league.id === team?.leagueId);
+        setLeague(leagueData); // Устанавливаем информацию о лиге
+      });
+  }, [teamId, team?.leagueId]);
 
   useEffect(() => {
     if (!team || !matches.length) return;
@@ -74,7 +83,6 @@ const TeamProfile = () => {
       }
     });
 
-    // const rating = (wins / played) * 100;
     const rating = ((wins + draws * 0.5) / played) * 100;
 
     setStats({
@@ -91,6 +99,18 @@ const TeamProfile = () => {
   }
 
   const achievements = team.achievements;
+
+  // Функция для подсчета всех достижений
+  const calculateTotalAchievements = (achievements) => {
+    let total = 0;
+    if (achievements.tournamentChampion) total += achievements.tournamentChampion.length;
+    if (achievements.leagueWinner) total += achievements.leagueWinner.length;
+    if (achievements.cups) total += achievements.cups.length;
+    if (achievements.tournamentWinner) total += achievements.tournamentWinner.length;
+    return total;
+  };
+
+  // Функция для отображения сезонов
   const renderSeasons = (value) => {
     if (!value) return null; // Если пусто, ничего не выводим
   
@@ -100,14 +120,29 @@ const TeamProfile = () => {
   
     return seasons.join(", ");
   };
-  
+
   return (
     <div className={cls.profileContainer}>
       <div className={cls.container}>
         <div className={cls.blockIcon}>
           <img className={cls.icon} src={team.icon} alt="" />
+          <div className={cls.leagueCon}>
           <h1 className={cls.title}>{team.name}</h1>
+            
+          {/* Отображаем лигу */}
+          {league && (
+            <p className={cls.league}>
+              Лига: <strong>{league.name}</strong>
+            </p>
+          )}
+
+          {/* Владельцы команды */}
+          {team.owners && team.owners.length > 0 && (
+            <p><strong>Владельцы: </strong>{team.owners.join(", ")}</p>
+          )}
+          </div>
         </div>
+
         <div className={cls.block}>
           <div className={cls.stats}>
             <h2>Статистика</h2>
@@ -122,6 +157,7 @@ const TeamProfile = () => {
           {achievements && (
             <div className={cls.titul}>
               <h2>Достижения</h2>
+              <p><strong>Всего достижений: </strong>{calculateTotalAchievements(achievements)}</p>
               {achievements.tournamentChampion && (
                 <p>
                   <strong>Чемпион турнира: </strong>
@@ -148,6 +184,7 @@ const TeamProfile = () => {
               )}
             </div>
           )}
+
         </div>
       </div>
 

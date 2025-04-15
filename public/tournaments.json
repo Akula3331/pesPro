@@ -25,20 +25,7 @@
       "champion": {
         "teamId": 26
       },
-      "winners": [
-        {
-          "teamId": 26
-        },
-        {
-          "teamId": 28
-        },
-        {
-          "teamId": 36
-        },
-        {
-          "teamId": 34
-        }
-      ]
+      "winners": [26, 28, 36, 34, 25]
     },
     {
       "id": 2,
@@ -65,12 +52,36 @@
       "champion": {
         "teamId": 37
       },
-      "winners": [
+      "winners": [37, 9]
+    },
+    {
+      "id": 3,
+      "name": "Season 3",
+      "date": "06-02-2025",
+      "endDate": "14-04-2025",
+      "stages": [
         {
-          "teamId": 37
-
+          "stageName": "Групповой этап",
+          "matchIds": [146, 148, 157, 159, 161, 163, 165, 167, 173, 175]
+        },
+        {
+          "stageName": "Четвертьфинал",
+          "matchIds": [179, 185, 198, 201, 202],
+          "matches": []
+        },
+        {
+          "stageName": "Полуфинал",
+          "matchIds": [206, 209]
+        },
+        {
+          "stageName": "Финал",
+          "matchIds": [210]
         }
-      ]
+      ],
+      "champion": {
+        "teamId": 22
+      },
+      "winners": [22, 8, 24]
     }
   ]
 }
