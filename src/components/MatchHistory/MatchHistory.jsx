@@ -128,6 +128,23 @@ const MatchHistory = ({ teamId }) => {
     },
   ];
 
+  const cupTypes = [
+    "englandCup",
+    "spainCup",
+    "franceCup",
+    "italyCup",
+    "germanyCup",
+    "portugalCup",
+    "argentinaCup",
+    "russiaCup",
+    "turkeyCup",
+    "usaCup",
+    "netherlandCup",
+    "brazilCup",
+    "europeCup",
+    "asiaCup",
+  ];
+  
   const sortOptions = [
     { value: "desc", label: "Убывание" },
     { value: "asc", label: "Возрастание" },
@@ -183,7 +200,7 @@ const MatchHistory = ({ teamId }) => {
             return (
               <div
                 key={match.id}
-                className={`${cls.block} ${cls.cupBlock} ${cls[match.matchType]}`}
+                className={`${cls.block}  ${cls[match.matchType]} ${cupTypes.includes(match.matchType) ? cls.cupBlock : ""}`}
               >
                 
                 <div className={cls.matchDetails}>

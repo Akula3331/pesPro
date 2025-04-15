@@ -130,6 +130,7 @@ select {
     #8bcf75
   ); /* Светлый мятный и свежий травяной зеленый */
   color: #3b5e3b; /* Темный зелёный для текста */
+  
 }
 .block {
   display: flex;
@@ -147,6 +148,14 @@ select {
   text-align: center;
   font-weight: bold;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  .cupImage{
+  border: 8px solid #ffe700;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8), 0 0 10px #ffe700,
+  0 0 20px #ffdf00;
+box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+border-radius: 8px;
+padding: 10px;
+  }
 }
 .englandCup {
   background: linear-gradient(135deg, #e0e0e0, #ef5350);
