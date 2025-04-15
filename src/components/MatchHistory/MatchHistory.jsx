@@ -89,12 +89,13 @@ const MatchHistory = ({ teamId }) => {
 
   const getCupImage = (matchType) => cupImages[matchType] || null;
 
-  const formatDate = (dateString) => {
-    if (!dateString || dateString.length !== 6) return "Неизвестная дата";
+  const formatDate = (dateInput) => {
+    const dateString = String(dateInput).padStart(6, "0");
+    if (dateString.length !== 6) return "Неизвестная дата";
   
-    const year = "20" + dateString.slice(0, 2);
+    const day = dateString.slice(0, 2);
     const month = dateString.slice(2, 4);
-    const day = dateString.slice(4, 6);
+    const year = "20" + dateString.slice(4, 6); // <- тут важный момент
   
     const date = new Date(`${year}-${month}-${day}`);
     return isNaN(date.getTime()) ? "Неверная дата" : date.toLocaleDateString("ru-RU");
