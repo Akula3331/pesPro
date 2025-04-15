@@ -35,7 +35,7 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
     italyCup: "/image/italy.svg",
     germanyCup: "/image/germany.svg",
     portugalCup: "/image/portugal.svg",
-    asiaCup: "/image/kyrgyzstan.svg",
+    asiaCup: "/image/saudi.svg",
     europeCup: "/image/europe.svg",
     brazilCup: "/image/brazil.svg",
     netherlandCup: "/image/netherland.svg",
