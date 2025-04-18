@@ -1,0 +1,46 @@
+.teamSelector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .selector {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .buttonRow {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  .resetButton {
+    background-color: #e74c3c;
+  
+    &:hover {
+      background-color: #c0392b;
+    }
+  }
+  

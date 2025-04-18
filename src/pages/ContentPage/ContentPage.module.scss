@@ -1,0 +1,80 @@
+.contentPage {
+  height: 100%;
+  background-color: #c8e6c9;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 50px ;
+  padding-bottom: 100px;
+}
+.buttonGroup {
+  display: grid;
+  gap: 20px;
+}
+.title {
+  color: #117a65;
+}
+.subtitle {
+  color: #117a65;
+  margin-bottom: 10px;
+}
+.stepContainer {
+  padding: 0 20px;
+}
+.selectsWrapper {
+  display: flex;
+  justify-content: center;
+ 
+  gap: 10px;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+}
+.teamsBlock{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.compareButton{
+  padding: 10px 20px;
+  border: 1px solid #4caf50;
+  background-color: #66bb6a;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #ffeb3b;
+  font-family: "Rubik Mono One", serif;
+
+}
+.button{
+  padding: 10px 20px;
+  border: 1px solid #4caf50;
+  background-color: #66bb6a;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #ffeb3b;
+  font-family: "Rubik Mono One", serif;
+
+}
+@media (max-width: 600px) {
+  .selectsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .select {
+    width: 100%;
+  }
+  .contentPage {
+    padding: 20px 0;
+  }
+}

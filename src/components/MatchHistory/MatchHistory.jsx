@@ -71,6 +71,7 @@ const MatchHistory = ({ teamId }) => {
   };
 
   const cupImages = {
+    cup:"/image/tourCup.svg",
     englandCup: "/image/england.svg",
     spainCup: "/image/spain.svg",
     franceCup: "/image/france.svg",
@@ -129,6 +130,7 @@ const MatchHistory = ({ teamId }) => {
   ];
 
   const cupTypes = [
+    "cup",
     "englandCup",
     "spainCup",
     "franceCup",
@@ -203,14 +205,15 @@ const MatchHistory = ({ teamId }) => {
                 className={`${cls.block}  ${cls[match.matchType]} ${cupTypes.includes(match.matchType) ? cls.cupBlock : ""}`}
               >
                 
-                <div className={cls.matchDetails}>
-                  {cupImage && (
+                <div className={cls.matchLogoCon}>
+                {cupImage && (
                     <img
                       src={cupImage}
                       alt={match.matchType}
                       className={cls.cupImage}
                     />
                   )}
+                  <div className={cls.matchDetails}>
                   <Link to={`/team/${match.homeTeam}`} className={cls.teamName}>
                     {homeTeam}
                   </Link>
@@ -227,6 +230,9 @@ const MatchHistory = ({ teamId }) => {
                   <Link to={`/team/${match.awayTeam}`} className={cls.teamName}>
                     {awayTeam}
                   </Link>
+                  </div>
+                
+                 
                 </div>
               </div>
             );

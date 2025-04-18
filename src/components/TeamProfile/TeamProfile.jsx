@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import cls from "./TeamProfile.module.scss";
 import ProfileHistoryMatch from "../ProfileHistoryMatch/ProfileHistoryMatch";
 import { useParams } from "react-router-dom";
+import TeamStatsGraph from '../UI/TeamStatsGraph/TeamStatsGraph';
 
 const TeamProfile = () => {
   const { teamId } = useParams();
@@ -186,6 +187,8 @@ const TeamProfile = () => {
           )}
 
         </div>
+        <TeamStatsGraph matches={matches} teamId={team.id} />
+
       </div>
 
       {/* Передаем все данные о матчах и командах в компонент истории матчей */}

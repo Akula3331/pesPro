@@ -6,7 +6,7 @@
 .container {
   padding: 50px 50px;
 }
-button {
+.button {
   padding: 10px 20px;
   border: 1px solid #4caf50;
   background-color: #66bb6a;
@@ -19,6 +19,7 @@ button {
     background-color: #e0e0e0;
   }
 }
+
 .title {
   color: #117a65;
   margin: 40px 0;
@@ -26,6 +27,30 @@ button {
 .gridContainer {
   display: grid;
   gap: 10px;
+}
+.comparisonControls {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.comparisonResult {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+.filterContainer{
+  margin: 20px 0;
+}
+.compareRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .gridHeader {
@@ -70,7 +95,5 @@ button {
   .container {
     padding: 30px 20px;
   }
-  .sortContainer {
-    justify-content: center;
-  }
+
 }

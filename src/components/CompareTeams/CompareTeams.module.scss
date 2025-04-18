@@ -1,0 +1,71 @@
+
+
+.modalWrapper.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); // тёмный фон
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  resize: both;
+  overflow: auto;
+  width: 300px;
+  height: 500px;
+  transition: all 0.3s ease;
+}
+
+
+/* Кастомный скролл */
+.container::-webkit-scrollbar {
+  display: none;
+}
+/* Стиль для победителя */
+.winner {
+  font-weight: bold;
+  color: #4CAF50; /* Зеленый цвет для победителя */
+  background-color: rgba(76, 175, 80, 0.2); /* Легкий зеленый фон */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.subtitle{
+  color: #117a65;
+}
+/* Стиль для проигравшего */
+.loser {
+  font-weight: bold;
+  color: #F44336; /* Красный цвет для проигравшего */
+  background-color: rgba(211, 47, 47, 0.2);
+  /* Легкий красный фон */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.teamBlock{
+ display: flex;
+ justify-content: space-between;
+ 
+}
+.teamNamesRow{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 15px 0;
+}

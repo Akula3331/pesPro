@@ -22,6 +22,10 @@ function Header() {
             <img className={cls.icons} src="/image/history.svg" alt="" />
             <p className={cls.text}>История</p>
         </Link>
+        <Link className={cls.block} to="/stats">
+            <img className={cls.icons} src="/image/stats.svg" alt="" />
+            <p className={cls.text}>Статистика</p>
+        </Link>
         </div>
        
         <div className={cls.tourBlock}>

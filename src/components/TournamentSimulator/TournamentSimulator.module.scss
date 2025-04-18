@@ -1,0 +1,226 @@
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 223, 0, 1.2);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
+  }
+}
+@keyframes pulseTxt {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 223, 0, 1.2);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes matchAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tournamentContainer {
+  padding: 20px;
+  background-color: #d6f5d6;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.round {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.stageTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #66bb6a;
+  margin-bottom: 1rem;
+}
+
+.match {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  opacity: 1;
+  animation: matchAppear 0.8s forwards, scaleUp 1s forwards; /* Добавлена анимация появления */
+}
+
+.match span {
+  font-weight: 500;
+}
+
+.match strong {
+  font-weight: bold;
+  color: #e8f5e9;
+  animation: scaleUp 0.8s ease-in-out;
+  background-color: #004d40;
+  padding: 10px;
+  border-radius: 20px; /* Анимация увеличения счета */
+}
+
+.match.winner {
+  animation: pulse 1.5s ease-in-out infinite; /* Пульсация для победителя */
+}
+
+.winner {
+  margin-top: 20px;
+  padding: 1rem;
+  background-color: #66bb6a;
+  border: 1px solid #004d40;
+  border-radius: 10px;
+  color: #e8f5e9;
+  font-weight: bold;
+  font-size: 1.2rem;
+  animation: fadeIn 1s ease-in-out; /* Плавное появление победителя */
+}
+.winnerTxt {
+  animation: pulseTxt 1.5s ease-in-out infinite;
+}
+button {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.button {
+  background-color: #66bb6a;
+  color: #ffeb3b;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #155724;
+  font-family: "Rubik Mono One", serif;
+
+}
+.title {
+  color: #117a65;
+}
+.teamBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamScore {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.teamNamesRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.teamName{
+  text-align: center;
+}
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 500px;
+}
+
+.resetButton {
+  background-color: #f44336;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-family: "Rubik Mono One", serif;
+
+  &:hover {
+    background-color: #d32f2f;
+  }
+}
+
+.show {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@media screen and (max-width: 520px) {
+  .winner {
+    font-size: 16px;
+    padding: 10px;
+    width: 280px;
+  }
+  .matchScore {
+    width: 60px;
+    justify-content: center;
+    font-size: 14px;
+    display: flex;
+  }
+  .match {
+   justify-content: space-between;
+   gap: 0px;
+   font-size: 16px;
+  }
+  .tournamentContainer{
+    padding:10px 0;
+  }
+}

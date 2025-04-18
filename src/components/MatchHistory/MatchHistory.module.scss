@@ -61,10 +61,16 @@ select {
 /* Стиль для блока с деталями матча */
 .matchDetails {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-self:center;
 }
-
+.matchLogoCon{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  
+}
 /* Стиль для названия команды */
 .teamName {
   font-weight: bold;
@@ -72,6 +78,7 @@ select {
   text-decoration: none;
   width: 300px;
   text-align: center;
+  
   /* Эффект наведения */
   &:hover {
     text-decoration: underline;
@@ -278,7 +285,7 @@ p {
     padding: 20px 30px;
   }
   .matchDetails {
-    gap: 20px;
+    gap: 10px;
   }
   .score {
     display: flex;

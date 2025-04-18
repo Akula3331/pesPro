@@ -2164,6 +2164,86 @@
     "awayScore": 1,
     "matchType": "cup",
     "penalty": null
+  },
+  {
+    "id": 211,
+    "date": "180425",
+    "homeTeam": 17,
+    "awayTeam": 41,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 212,
+    "date": "180425",
+    "homeTeam": 73,
+    "awayTeam": 52,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "argentinaCup",
+    "penalty": null
+  },
+  {
+    "id": 213,
+    "date": "180425",
+    "homeTeam": 13,
+    "awayTeam": 66,
+    "homeScore": 2,
+    "awayScore": 2,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 214,
+    "date": "180425",
+    "homeTeam": 38,
+    "awayTeam": 31,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "italyCup",
+    "penalty": null
+  },
+  {
+    "id": 215,
+    "date": "180425",
+    "homeTeam": 34,
+    "awayTeam": 29,
+    "homeScore": 3,
+    "awayScore": 3,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 216,
+    "date": "180425",
+    "homeTeam": 5,
+    "awayTeam": 39,
+    "homeScore": 7,
+    "awayScore": 4,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 217,
+    "date": "180425",
+    "homeTeam": 17,
+    "awayTeam": 19,
+    "homeScore": 2,
+    "awayScore": 4,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 218,
+    "date": "180425",
+    "homeTeam": 13,
+    "awayTeam": 29,
+    "homeScore": 5,
+    "awayScore": 0,
+    "matchType": "league",
+    "penalty": null
   }
 
 
