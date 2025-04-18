@@ -22,13 +22,14 @@ function Header() {
             <img className={cls.icons} src="/image/history.svg" alt="" />
             <p className={cls.text}>История</p>
         </Link>
+       
+        </div>
+       
+        <div className={cls.tourBlock}>
         <Link className={cls.block} to="/stats">
             <img className={cls.icons} src="/image/stats.svg" alt="" />
             <p className={cls.text}>Статистика</p>
         </Link>
-        </div>
-       
-        <div className={cls.tourBlock}>
         <Link className={cls.block} to='/tourNow'>
             <img className={cls.icon} src="/image/league.svg" alt="" />
             <p className={cls.text}>Tournament</p>
@@ -37,6 +38,7 @@ function Header() {
             <img className={cls.icon} src="/image/kyrgyz.svg" alt="" />
             <p className={cls.text}>League</p>
         </Link>
+        
         </div>
        
     </div>

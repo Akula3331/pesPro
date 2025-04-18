@@ -7,7 +7,6 @@
 }
 .con{
   display: flex;
-  // justify-content: center;
   gap: 50px;
 }
 .tourBlock{
@@ -46,6 +45,7 @@
   }
   .tourBlock{
     gap: 20px;
+    align-items: end;
   }
   .block{
     font-size: 14px;

@@ -65,7 +65,9 @@ const ContentPage = () => {
     }, 300);
   };
 
-  const teamOptions = teams.map((team) => ({
+  const teamOptions = [...teams]
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .map((team) => ({
     value: team.id,
     label: team.name,
   }));
