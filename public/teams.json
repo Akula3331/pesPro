@@ -260,7 +260,7 @@
     "achievements": {
       "tournamentChampion": [3],
       "leagueWinner": [],
-      "cups": [],
+      "cups": [2],
       "tournamentWinner": [3]
     }
   },
@@ -320,7 +320,7 @@
     "achievements": {
       "tournamentChampion": [],
       "leagueWinner": [],
-      "cups": [],
+      "cups": [2],
       "tournamentWinner": []
     }
   },
@@ -452,7 +452,7 @@
     "achievements": {
       "tournamentChampion": [],
       "leagueWinner": [],
-      "cups": [],
+      "cups": [2],
       "tournamentWinner": []
     }
   },
@@ -823,7 +823,7 @@
     "leagueId": 14,
     "achievements": {
       "tournamentChampion": [],
-      "leagueWinner": [],
+      "leagueWinner": [2],
       "cups": [],
       "tournamentWinner": []
     }
@@ -872,7 +872,7 @@
     "achievements": {
       "tournamentChampion": [],
       "leagueWinner": [],
-      "cups": [],
+      "cups": [2],
       "tournamentWinner": []
     }
   },

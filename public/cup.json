@@ -50,7 +50,7 @@
       "flag": "/image/usa.svg",
       "seasons": [
         {
-          "matchIds": [129]
+          "matchIds": [129,223]
         }
       ]
     },
@@ -104,7 +104,7 @@
       "flag": "/image/russia.svg",
       "seasons": [
         {
-          "matchIds": [133]
+          "matchIds": [133,222]
         }
       ]
     },

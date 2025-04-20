@@ -2244,6 +2244,56 @@
     "awayScore": 0,
     "matchType": "league",
     "penalty": null
+  },
+  {
+    "id": 219,
+    "date": "180425",
+    "homeTeam": 34,
+    "awayTeam": 37,
+    "homeScore": 1,
+    "awayScore": 1,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 220,
+    "date": "180425",
+    "homeTeam": 70,
+    "awayTeam": 69,
+    "homeScore": 2,
+    "awayScore": 3,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 221,
+    "date": "180425",
+    "homeTeam": 21,
+    "awayTeam": 41,
+    "homeScore": 6,
+    "awayScore": 2,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 222,
+    "date": "180425",
+    "homeTeam": 3,
+    "awayTeam": 27,
+    "homeScore": 1,
+    "awayScore": 3,
+    "matchType": "russiaCup",
+    "penalty": null
+  },
+  {
+    "id": 223,
+    "date": "180425",
+    "homeTeam": 22,
+    "awayTeam": 50,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "usaCup",
+    "penalty": null
   }
 
 
