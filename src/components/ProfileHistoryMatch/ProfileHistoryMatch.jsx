@@ -29,6 +29,7 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
   };
 
   const cupImages = {
+    cup:"/image/tourCup.svg",
     englandCup: "/image/england.svg",
     spainCup: "/image/spain.svg",
     franceCup: "/image/france.svg",
@@ -42,6 +43,7 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
     usaCup: "/image/usa.svg",
     turkeyCup: "/image/turkey.svg",
     russiaCup: "/image/russia.svg",
+    argentinaCup: "/image/argentina.svg",
   };
 
   const getCupImage = (matchType) => cupImages[matchType] || null;
@@ -104,11 +106,28 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
         "brazilCup",
         "europeCup",
         "asiaCup",
+        "argentina",
       ],
       label: "Кубки",
     },
   ];
-
+  const cupTypes = [
+    "cup",
+    "englandCup",
+    "spainCup",
+    "franceCup",
+    "italyCup",
+    "germanyCup",
+    "portugalCup",
+    "argentinaCup",
+    "russiaCup",
+    "turkeyCup",
+    "usaCup",
+    "netherlandCup",
+    "brazilCup",
+    "europeCup",
+    "asiaCup",
+  ];
   const sortOptions = [
     { value: "desc", label: "По убыванию" },
     { value: "asc", label: "По возрастанию" },
@@ -163,40 +182,45 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
 
             return (
               <div
-                key={match.id}
-                className={`${cls.block} ${cls[match.matchType]}`}
-              >
+              key={match.id}
+              className={`${cls.block}  ${cls[match.matchType]} ${cupTypes.includes(match.matchType) ? cls.cupBlock : ""}`}
+            >
+              
+              <div className={cls.matchLogoCon}>
+              {cupImage && (
+                  <img
+                    src={cupImage}
+                    alt={match.matchType}
+                    className={cls.cupImage}
+                  />
+                )}
                 <div className={cls.matchDetails}>
-                  {cupImage && (
-                    <img
-                      className={cls.cupImage}
-                      src={cupImage}
-                      alt="Cup Logo"
-                    />
+                <Link to={`/team/${match.homeTeam}`} className={cls.teamName}>
+                  {homeTeam}
+                </Link>
+                <span className={cls.score}>
+                  <p className={cls.date}>{formatDate(match.date)}</p>
+                  {match.homeScore} - {match.awayScore}
+                  {match.penalty && (
+                    <div className={cls.penalty}>
+                      {match.penalty.homeTeamPenalties} -{" "}
+                      {match.penalty.awayTeamPenalties}
+                    </div>
                   )}
-                  <Link to={`/team/${match.homeTeam}`} className={cls.teamName}>
-                    {homeTeam}
-                  </Link>
-                  <span className={cls.score}>
-                    <p className={cls.date}>{formatDate(match.date)}</p>
-                    {match.homeScore} - {match.awayScore}
-                    {match.penalty && (
-                      <div className={cls.penalty}>
-                        {match.penalty.homeTeamPenalties} -{" "}
-                        {match.penalty.awayTeamPenalties}
-                      </div>
-                    )}
-                  </span>
-                  <Link to={`/team/${match.awayTeam}`} className={cls.teamName}>
-                    {awayTeam}
-                  </Link>
+                </span>
+                <Link to={`/team/${match.awayTeam}`} className={cls.teamName}>
+                  {awayTeam}
+                </Link>
                 </div>
+              
+               
               </div>
-            );
-          })
-        )}
-      </div>
+            </div>
+          );
+        })
+      )}
     </div>
+  </div>
   );
 };
 
