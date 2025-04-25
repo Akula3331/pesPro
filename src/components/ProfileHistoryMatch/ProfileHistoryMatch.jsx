@@ -199,7 +199,6 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
                   {homeTeam}
                 </Link>
                 <span className={cls.score}>
-                  <p className={cls.date}>{formatDate(match.date)}</p>
                   {match.homeScore} - {match.awayScore}
                   {match.penalty && (
                     <div className={cls.penalty}>
@@ -207,6 +206,8 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
                       {match.penalty.awayTeamPenalties}
                     </div>
                   )}
+                  <p className={cls.date}>{formatDate(match.date)}</p>
+
                 </span>
                 <Link to={`/team/${match.awayTeam}`} className={cls.teamName}>
                   {awayTeam}

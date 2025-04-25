@@ -911,6 +911,18 @@
       "cups": [],
       "tournamentWinner": []
     }
+  },
+  {
+    "id": 77,
+    "name": "PSV Eindhoven",
+    "icon": "/logo/psv.svg",
+    "leagueId": 7,
+    "achievements": {
+      "tournamentChampion": [],
+      "leagueWinner": [],
+      "cups": [],
+      "tournamentWinner": []
+    }
   }
   
 ]

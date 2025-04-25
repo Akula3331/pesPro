@@ -1,26 +1,38 @@
 {
   "tournaments": [
     {
-      "id": 3,
-      "name": "Season 3",
-      "date": "06-02-2025",
+      "id": 4,
+      "name": "Season 4",
+      "date": "25-04-2025",
       "stages": [
         {
           "stageName": "Групповой этап",
-          "matchIds": [146, 148, 157, 159, 161, 163, 165, 167, 173, 175]
+          "matches": [
+            { "homeTeam": 14, "awayTeam": 33 },
+            { "homeTeam": 71, "awayTeam": 50 },
+            { "homeTeam": 30, "awayTeam": 39 },
+            { "homeTeam": 10, "awayTeam": 53 },
+            { "homeTeam": 21, "awayTeam": 66 },
+            { "homeTeam": 8, "awayTeam": 77 },
+            { "homeTeam": 40, "awayTeam": 59 },
+            { "homeTeam": 58, "awayTeam": 29 },
+            { "homeTeam": 38, "awayTeam": 76 },
+            { "homeTeam": 42, "awayTeam": 27 }
+          ]
+          
         },
         {
           "stageName": "Четвертьфинал",
-          "matchIds": [179, 185, 198, 201, 202],
+          "matchIds": [],
           "matches": []
         },
         {
           "stageName": "Полуфинал",
-          "matchIds": [206,209]
+          "matchIds": []
         },
         {
           "stageName": "Финал",
-          "matchIds": [210]
+          "matchIds": []
         }
       ]
     }

@@ -2377,5 +2377,105 @@
     "awayScore": 0,
     "matchType": "regular",
     "penalty": null
+  },
+  {
+    "id": 232,
+    "date": "230425",
+    "homeTeam": 23,
+    "awayTeam": 47,
+    "homeScore": 2,
+    "awayScore": 3,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 233,
+    "date": "230425",
+    "homeTeam": 60,
+    "awayTeam": 62,
+    "homeScore": 1,
+    "awayScore": 0,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 234,
+    "date": "230425",
+    "homeTeam": 60,
+    "awayTeam": 62,
+    "homeScore": 3,
+    "awayScore": 1,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 235,
+    "date": "230425",
+    "homeTeam": 8,
+    "awayTeam": 24,
+    "homeScore": 4,
+    "awayScore": 1,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 236,
+    "date": "230425",
+    "homeTeam": 8,
+    "awayTeam": 33,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 237,
+    "date": "230425",
+    "homeTeam": 5,
+    "awayTeam": 43,
+    "homeScore": 2,
+    "awayScore": 3,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 238,
+    "date": "230425",
+    "homeTeam": 8,
+    "awayTeam": 43,
+    "homeScore": 4,
+    "awayScore": 2,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 239,
+    "date": "240425",
+    "homeTeam": 75,
+    "awayTeam": 77,
+    "homeScore": 1,
+    "awayScore": 0,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 240,
+    "date": "240425",
+    "homeTeam": 8,
+    "awayTeam": 77,
+    "homeScore": 3,
+    "awayScore": 1,
+    "matchType": "league",
+    "penalty": null
+  },
+  {
+    "id": 241,
+    "date": "240425",
+    "homeTeam": 26,
+    "awayTeam": 31,
+    "homeScore": 0,
+    "awayScore": 1,
+    "matchType": "league",
+    "penalty": null
   }
 ]
