@@ -296,7 +296,7 @@
     "achievements": {
       "tournamentChampion": [],
       "leagueWinner": [],
-      "cups": [1, 2],
+      "cups": [1, 2,3],
       "tournamentWinner": [1]
     }
   },
