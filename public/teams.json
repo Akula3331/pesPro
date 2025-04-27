@@ -923,6 +923,18 @@
       "cups": [],
       "tournamentWinner": []
     }
+  },
+  {
+    "id": 78,
+    "name": "Akhmat Grozny",
+    "icon": "/logo/grozn.svg",
+    "leagueId": 11,
+    "achievements": {
+      "tournamentChampion": [],
+      "leagueWinner": [],
+      "cups": [],
+      "tournamentWinner": []
+    }
   }
   
 ]
