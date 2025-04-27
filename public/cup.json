@@ -32,7 +32,7 @@
       "flag": "/image/italy.svg",
       "seasons": [
         {
-          "matchIds": [105,214]
+          "matchIds": [105,214,278]
         }
       ]
     },
@@ -68,7 +68,7 @@
       "flag": "/image/europe.svg",
       "seasons": [
         {
-          "matchIds": [99, 160]
+          "matchIds": [99, 160,277]
         }
       ]
     },

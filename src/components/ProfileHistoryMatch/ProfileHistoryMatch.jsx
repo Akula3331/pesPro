@@ -8,7 +8,6 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
   const [selectedTournament, setSelectedTournament] = useState("all");
   const [goalDifferenceFilter, setGoalDifferenceFilter] = useState("");
   const [teamNameFilter, setTeamNameFilter] = useState("");
-  const [matchLimit, setMatchLimit] = useState(25);
 
   const formatDate = (dateInput) => {
     const dateString = String(dateInput).padStart(6, "0");
@@ -29,7 +28,7 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
   };
 
   const cupImages = {
-    cup:"/image/tourCup.svg",
+    cup: "/image/tourCup.svg",
     englandCup: "/image/england.svg",
     spainCup: "/image/spain.svg",
     franceCup: "/image/france.svg",
@@ -82,8 +81,6 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
     return sortOrder === "asc" ? a.id - b.id : b.id - a.id;
   });
 
-  const limitedMatches = sortedMatches.slice(0, matchLimit);
-
   const tournamentOptions = [
     { value: "all", label: "Все турниры" },
     { value: "tournament", label: "Турнирные" },
@@ -111,6 +108,7 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
       label: "Кубки",
     },
   ];
+
   const cupTypes = [
     "cup",
     "englandCup",
@@ -128,6 +126,7 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
     "europeCup",
     "asiaCup",
   ];
+
   const sortOptions = [
     { value: "desc", label: "По убыванию" },
     { value: "asc", label: "По возрастанию" },
@@ -162,66 +161,57 @@ const ProfileHistoryMatch = ({ matches, teams, teamId }) => {
           value={goalDifferenceFilter}
           onChange={(e) => setGoalDifferenceFilter(e.target.value)}
         />
-        <input
-          type="number"
-          placeholder="Количество матчей"
-          className={cls.matchLimit}
-          value={matchLimit}
-          onChange={(e) => setMatchLimit(Number(e.target.value))}
-        />
       </div>
 
       <div className={cls.con}>
-        {limitedMatches.length === 0 ? (
+        {sortedMatches.length === 0 ? (
           <p>Нет матчей для выбранных фильтров.</p>
         ) : (
-          limitedMatches.map((match) => {
+          sortedMatches.map((match) => {
             const homeTeam = getTeamNameById(match.homeTeam);
             const awayTeam = getTeamNameById(match.awayTeam);
             const cupImage = getCupImage(match.matchType);
 
             return (
               <div
-              key={match.id}
-              className={`${cls.block}  ${cls[match.matchType]} ${cupTypes.includes(match.matchType) ? cls.cupBlock : ""}`}
-            >
-              
-              <div className={cls.matchLogoCon}>
-              {cupImage && (
-                  <img
-                    src={cupImage}
-                    alt={match.matchType}
-                    className={cls.cupImage}
-                  />
-                )}
-                <div className={cls.matchDetails}>
-                <Link to={`/team/${match.homeTeam}`} className={cls.teamName}>
-                  {homeTeam}
-                </Link>
-                <span className={cls.score}>
-                  {match.homeScore} - {match.awayScore}
-                  {match.penalty && (
-                    <div className={cls.penalty}>
-                      {match.penalty.homeTeamPenalties} -{" "}
-                      {match.penalty.awayTeamPenalties}
-                    </div>
+                key={match.id}
+                className={`${cls.block}  ${cls[match.matchType]} ${
+                  cupTypes.includes(match.matchType) ? cls.cupBlock : ""
+                }`}
+              >
+                <div className={cls.matchLogoCon}>
+                  {cupImage && (
+                    <img
+                      src={cupImage}
+                      alt={match.matchType}
+                      className={cls.cupImage}
+                    />
                   )}
-                  <p className={cls.date}>{formatDate(match.date)}</p>
-
-                </span>
-                <Link to={`/team/${match.awayTeam}`} className={cls.teamName}>
-                  {awayTeam}
-                </Link>
+                  <div className={cls.matchDetails}>
+                    <Link to={`/team/${match.homeTeam}`} className={cls.teamName}>
+                      {homeTeam}
+                    </Link>
+                    <span className={cls.score}>
+                      {match.homeScore} - {match.awayScore}
+                      {match.penalty && (
+                        <div className={cls.penalty}>
+                          {match.penalty.homeTeamPenalties} -{" "}
+                          {match.penalty.awayTeamPenalties}
+                        </div>
+                      )}
+                      <p className={cls.date}>{formatDate(match.date)}</p>
+                    </span>
+                    <Link to={`/team/${match.awayTeam}`} className={cls.teamName}>
+                      {awayTeam}
+                    </Link>
+                  </div>
                 </div>
-              
-               
               </div>
-            </div>
-          );
-        })
-      )}
+            );
+          })
+        )}
+      </div>
     </div>
-  </div>
   );
 };
 

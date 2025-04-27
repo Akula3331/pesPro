@@ -6,9 +6,9 @@ const LeagueTable = () => {
   const [currentLeague, setCurrentLeague] = useState(null);
   const [matches, setMatches] = useState([]);
   const [teamStats, setTeamStats] = useState([]);
-  const [matchDetails, setMatchDetails] = useState([]); // Для хранения подробностей матчей
+  const [matchDetails, setMatchDetails] = useState([]);
+  const [openStageIndex, setOpenStageIndex] = useState(null); // Для открытия этапов
 
-  // Функция для разбивки матчей на этапы по 6 матчей
   const groupMatchesIntoStages = (matches, matchesPerStage = 6) => {
     const stages = [];
     for (let i = 0; i < matches.length; i += matchesPerStage) {
@@ -20,22 +20,19 @@ const LeagueTable = () => {
   useEffect(() => {
     fetch("/teams.json")
       .then((response) => response.json())
-      .then((data) => {
-        setTeams(data);
-      });
+      .then((data) => setTeams(data));
   }, []);
 
   useEffect(() => {
     fetch("/seasonLeague.json")
       .then((response) => response.json())
       .then((data) => {
-        const league = data.leagues[0]; // Выбираем первую лигу
+        const league = data.leagues[0];
         setCurrentLeague(league);
         setMatches(league.matches || []);
       });
   }, []);
 
-  // Загрузка подробной информации о матчах из matches.json
   useEffect(() => {
     if (matches.length > 0) {
       fetch("/matches.json")
@@ -43,7 +40,7 @@ const LeagueTable = () => {
         .then((data) => {
           const matchDetails = matches.map((match) => {
             const matchData = data.find((m) => m.id === match.matchId);
-            return matchData || match; // Если матч найден, используем его данные, иначе оставляем оригинал
+            return matchData || match;
           });
           setMatchDetails(matchDetails);
         });
@@ -54,20 +51,22 @@ const LeagueTable = () => {
     if (currentLeague && matchDetails.length > 0) {
       const calculateStats = () => {
         const stats = currentLeague.teams.map((teamId) => {
-          const teamMatches = matchDetails.filter(
-            (match) => {
-              const homeScore = Number(match.homeScore);
-              const awayScore = Number(match.awayScore);
+          const teamMatches = matchDetails.filter((match) => {
+            const homeScore = Number(match.homeScore);
+            const awayScore = Number(match.awayScore);
+            return (
+              (match.homeTeam === teamId || match.awayTeam === teamId) &&
+              !isNaN(homeScore) &&
+              !isNaN(awayScore)
+            );
+          });
 
-              return (
-                (match.homeTeam === teamId || match.awayTeam === teamId) &&
-                !isNaN(homeScore) &&
-                !isNaN(awayScore)
-              );
-            }
-          );
-
-          let wins = 0, losses = 0, draws = 0, goalsScored = 0, goalsConceded = 0, points = 0;
+          let wins = 0,
+            losses = 0,
+            draws = 0,
+            goalsScored = 0,
+            goalsConceded = 0,
+            points = 0;
 
           teamMatches.forEach((match) => {
             const isHome = match.homeTeam === teamId;
@@ -122,7 +121,10 @@ const LeagueTable = () => {
     return team ? team.name : "Unknown Team";
   };
 
-  // Разбиваем матчи на этапы по 6 матчей
+  const toggleStage = (index) => {
+    setOpenStageIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   const stages = groupMatchesIntoStages(matchDetails);
 
   return (
@@ -144,7 +146,8 @@ const LeagueTable = () => {
           {teamStats.map((team, index) => (
             <div className={cls.point} key={team.id}>
               <p className={cls.name}>
-                <span className={cls.place}>{index + 1}</span> <span className={cls.placeName}>{getTeamNameById(team.id)}</span> 
+                <span className={cls.place}>{index + 1}</span>{" "}
+                <span className={cls.placeName}>{getTeamNameById(team.id)}</span>
               </p>
               <p className={cls.pointText}>{team.played}</p>
               <p className={cls.pointText}>{team.wins}</p>
@@ -163,33 +166,53 @@ const LeagueTable = () => {
       <div className={cls.historyCon}>
         {stages.map((stage, stageIndex) => (
           <div key={stageIndex} className={cls.stage}>
-            <h3 className={cls.stageName}>Этап {stageIndex + 1}</h3>
-            {stage.map((match) => (
-              <div className={cls.matchBlock} key={match.id}>
-                <p className={cls.matchName}>{getTeamNameById(match.homeTeam)}</p>
-                <div className={cls.pointScore}>
-                  {match.date && (
-                    <p className={cls.date}>
-                      {match.date.split("").reduce((acc, char, index) => {
-                        if (index === 2 || index === 4) {
-                          acc += ".";
-                        }
-                        acc += char;
-                        return acc;
-                      }, "")}
+            <h3
+              className={cls.stageName}
+              onClick={() => toggleStage(stageIndex)}
+              style={{ cursor: "pointer" }}
+            >
+              Этап {stageIndex + 1}
+            </h3>
+
+            <div
+              className={`${cls.stageContent} ${
+                openStageIndex === stageIndex ? cls.open : ""
+              }`}
+            >
+              <div className={cls.innerContent}>
+                {stage.map((match) => (
+                  <div className={cls.matchBlock} key={match.id}>
+                    <p className={cls.matchName}>
+                      {getTeamNameById(match.homeTeam)}
                     </p>
-                  )}
-                  {match.homeScore !== undefined && match.awayScore !== undefined ? (
-                    <p>
-                      {match.homeScore} - {match.awayScore}
+                    <div className={cls.pointScore}>
+                      {match.date && (
+                        <p className={cls.date}>
+                          {match.date.split("").reduce((acc, char, index) => {
+                            if (index === 2 || index === 4) {
+                              acc += ".";
+                            }
+                            acc += char;
+                            return acc;
+                          }, "")}
+                        </p>
+                      )}
+                      {match.homeScore !== undefined &&
+                      match.awayScore !== undefined ? (
+                        <p>
+                          {match.homeScore} - {match.awayScore}
+                        </p>
+                      ) : (
+                        <p>Не сыгран</p>
+                      )}
+                    </div>
+                    <p className={cls.matchName}>
+                      {getTeamNameById(match.awayTeam)}
                     </p>
-                  ) : (
-                    <p>Не сыгран</p>
-                  )}
-                </div>
-                <p className={cls.matchName}>{getTeamNameById(match.awayTeam)}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         ))}
       </div>

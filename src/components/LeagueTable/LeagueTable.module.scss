@@ -28,6 +28,23 @@
   width: 60px;
   margin: 0;
 }
+.stageContent {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.stageContent.open {
+  max-height: 1000px; // Достаточно большая высота, чтобы вместить весь контент
+  opacity: 1;
+}
+
+.innerContent {
+  display: flex;
+  flex-direction: column;
+  gap:20px;// Чтобы контент не прилипал
+}
 
 .point {
   display: flex;
@@ -231,5 +248,8 @@
   .matchName {
     width: 80px;
     font-size: 14px;
+  }
+  .innerContent{
+    gap: 10px;
   }
 }
