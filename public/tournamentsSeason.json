@@ -14,12 +14,13 @@
         },
         {
           "stageName": "Четвертьфинал",
-          "matchIds": [279,284,286],
+          "matchIds": [279,284,286,294,301],
           "matches": []
         },
         {
           "stageName": "Полуфинал",
-          "matchIds": []
+          "matchIds": [],
+          "matches":[]
         },
         {
           "stageName": "Финал",
