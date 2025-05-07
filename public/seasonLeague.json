@@ -36,7 +36,7 @@
   { "id": 25, "matchId":293 },
   { "id": 26, "matchId":299 },
   { "id": 27, "matchId":302 },
-  { "id": 28, "homeTeam": 2, "awayTeam": 31 },
+  { "id": 28, "matchId": 308},
   { "id": 29, "homeTeam": 36, "awayTeam": 43 },
   { "id": 30, "homeTeam": 9, "awayTeam": 25 },
 

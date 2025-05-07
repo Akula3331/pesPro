@@ -3096,5 +3096,65 @@
     "awayScore": 2,
     "matchType": "league",
     "penalty": null
+  },
+  {
+    "id": 303,
+    "date": "060525",
+    "homeTeam": 78,
+    "awayTeam": 33,
+    "homeScore": 4,
+    "awayScore": 1,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 304,
+    "date": "060525",
+    "homeTeam": 2,
+    "awayTeam": 77,
+    "homeScore": 6,
+    "awayScore": 1,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 305,
+    "date": "070525",
+    "homeTeam": 78,
+    "awayTeam": 45,
+    "homeScore": 3,
+    "awayScore": 1,
+    "matchType": "regular",
+    "penalty": null
+  },
+  {
+    "id": 306,
+    "date": "070525",
+    "homeTeam": 14,
+    "awayTeam": 39,
+    "homeScore": 5,
+    "awayScore": 0,
+    "matchType": "tournament",
+    "penalty": null
+  },
+  {
+    "id": 307,
+    "date": "070525",
+    "homeTeam": 58,
+    "awayTeam": 57,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "asiaCup",
+    "penalty": null
+  },
+  {
+    "id": 308,
+    "date": "070525",
+    "homeTeam": 2,
+    "awayTeam": 31,
+    "homeScore": 3,
+    "awayScore": 2,
+    "matchType": "league",
+    "penalty": null
   }
 ]
