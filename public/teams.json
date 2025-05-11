@@ -19,7 +19,7 @@
     "owner":1,
     "achievements": {
       "tournamentChampion": [],
-      "leagueWinner": [],
+      "leagueWinner": [3],
       "cups": [1],
       "tournamentWinner": []
     }
@@ -90,10 +90,10 @@
     "icon": "/logo/liverpool.svg",
     "leagueId": 1,
     "achievements": {
-      "tournamentChampion": [],
+      "tournamentChampion": [4],
       "leagueWinner": [],
       "cups": [3],
-      "tournamentWinner": [3]
+      "tournamentWinner": [3,4]
     }
   },
   {
@@ -165,7 +165,7 @@
       "tournamentChampion": [],
       "leagueWinner": [],
       "cups": [],
-      "tournamentWinner": []
+      "tournamentWinner": [4]
     }
   },
   {
@@ -453,7 +453,7 @@
       "tournamentChampion": [],
       "leagueWinner": [],
       "cups": [2],
-      "tournamentWinner": []
+      "tournamentWinner": [4]
     }
   },
   {
@@ -705,7 +705,7 @@
       "tournamentChampion": [],
       "leagueWinner": [],
       "cups": [],
-      "tournamentWinner": []
+      "tournamentWinner": [4]
     }
   },
   {

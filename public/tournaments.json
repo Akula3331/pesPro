@@ -82,6 +82,39 @@
         "teamId": 22
       },
       "winners": [22, 8, 24]
+    },
+    {
+      "id": 4,
+      "name": "Season 4",
+      "date": "25-04-2025",
+      "endDate": "09-05-2025",
+      "stages": [
+        {
+          "stageName": "Групповой этап",
+          "matchIds": [
+            243,250,251,253,257,261,262,272,273,274
+          ]
+          
+        },
+        {
+          "stageName": "Четвертьфинал",
+          "matchIds": [279,284,286,294,301],
+          "matches": []
+        },
+        {
+          "stageName": "Полуфинал",
+          "matchIds": [306],
+          "matches":[]
+        },
+        {
+          "stageName": "Финал",
+          "matchIds": [311]
+        }
+      ],
+      "champion": {
+        "teamId": 8
+      },
+      "winners": [ 8,14,38, 59]
     }
   ]
 }
